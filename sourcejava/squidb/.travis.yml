@@ -1,0 +1,42 @@
+language: generic
+env:
+    global:
+        - ADB_INSTALL_TIMEOUT=8 # minutes (2 minutes by default)
+
+matrix:
+    include:
+        - os: linux
+          language: android
+          env: ANDROID_TARGET=android-15 SQUIDB_BINDING=android
+        - os: linux
+          language: android
+          env: ANDROID_TARGET=android-16 SQUIDB_BINDING=android
+        - os: linux
+          language: android
+          env: ANDROID_TARGET=android-16 SQUIDB_BINDING=sqlite
+        - os: linux
+          language: android
+          env: ANDROID_TARGET=android-19 SQUIDB_BINDING=android
+        - os: linux
+          language: android
+          env: ANDROID_TARGET=android-19 SQUIDB_BINDING=sqlite
+        - os: osx
+          osx_image: xcode7.2
+          language: objective-c
+          env: CI_IOS_TESTS=true J2OBJC_VERSION=1.0.0 J2OBJC_HOME=/tmp/j2objc-$J2OBJC_VERSION
+
+android:
+  components:
+    - build-tools-22.0.1
+    - android-15
+    - sys-img-armeabi-v7a-android-15
+    - android-16
+    - sys-img-armeabi-v7a-android-16
+    - android-19
+    - sys-img-armeabi-v7a-android-19
+    - extra-android-m2repository
+
+before_script:
+    - ./scripts/before-test.sh
+script:
+    - ./scripts/run-tests.sh

@@ -1,0 +1,74 @@
+/*
+ * Copyright 2015, Yahoo Inc.
+ * Copyrights licensed under the Apache 2.0 License.
+ * See the accompanying LICENSE file for terms.
+ */
+project.ext.artifactId = 'squidb-processor'
+group = 'com.yahoo.squidb'
+version = '3.0.0-beta'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+dependencies {
+    compile 'com.yahoo.squidb:apt-utils:1.0.2'
+    compile project(':squidb-annotations')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
+jar {
+    from('./src') {
+        include 'META-INF/services/javax.annotation.processing.Processor'
+    }
+}
+
+def siteUrl = 'https://github.com/yahoo/squidb'
+def gitUrl = 'https://github.com/yahoo/squidb.git'
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'jar'
+                name 'SquiDB Code Generator'
+                url siteUrl
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
