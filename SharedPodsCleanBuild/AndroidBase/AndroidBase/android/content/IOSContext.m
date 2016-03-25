@@ -15,7 +15,6 @@
 #include "java/io/FileInputStream.h"
 #include "java/io/FileNotFoundException.h"
 #include "java/io/FileOutputStream.h"
-#include "java/lang/System.h"
 #include "java/lang/UnsupportedOperationException.h"
 
 @interface AndroidContentIOSContext ()
@@ -24,11 +23,15 @@
 
 - (JavaIoFile *)getRootDir;
 
+- (NSString *)getRootDirString;
+
 @end
 
 __attribute__((unused)) static JavaIoFile *AndroidContentIOSContext_findLocalFileWithNSString_(AndroidContentIOSContext *self, NSString *name);
 
 __attribute__((unused)) static JavaIoFile *AndroidContentIOSContext_getRootDir(AndroidContentIOSContext *self);
+
+__attribute__((unused)) static NSString *AndroidContentIOSContext_getRootDirString(AndroidContentIOSContext *self);
 
 NSString *AndroidContentIOSContext_DATABASES = @"databases";
 
@@ -66,6 +69,10 @@ NSString *AndroidContentIOSContext_DATABASES = @"databases";
 
 - (JavaIoFile *)getRootDir {
   return AndroidContentIOSContext_getRootDir(self);
+}
+
+- (NSString *)getRootDirString {
+  return AndroidContentIOSContext_getRootDirString(self);
 }
 
 - (JavaIoFile *)getExternalFilesDirWithNSString:(NSString *)type {
@@ -136,6 +143,7 @@ J2OBJC_IGNORE_DESIGNATED_END
     { "getFileStreamPathWithNSString:", "getFileStreamPath", "Ljava.io.File;", 0x1, NULL, NULL },
     { "getFilesDir", NULL, "Ljava.io.File;", 0x1, NULL, NULL },
     { "getRootDir", NULL, "Ljava.io.File;", 0x2, NULL, NULL },
+    { "getRootDirString", NULL, "Ljava.lang.String;", 0x102, NULL, NULL },
     { "getExternalFilesDirWithNSString:", "getExternalFilesDir", "Ljava.io.File;", 0x1, NULL, NULL },
     { "getExternalFilesDirsWithNSString:", "getExternalFilesDirs", "[Ljava.io.File;", 0x1, NULL, NULL },
     { "getCacheDir", NULL, "Ljava.io.File;", 0x1, NULL, NULL },
@@ -151,7 +159,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   static const J2ObjcFieldInfo fields[] = {
     { "DATABASES", "DATABASES", 0x19, "Ljava.lang.String;", &AndroidContentIOSContext_DATABASES, NULL, .constantValue.asLong = 0 },
   };
-  static const J2ObjcClassInfo _AndroidContentIOSContext = { 2, "IOSContext", "android.content", NULL, 0x1, 19, methods, 1, fields, 0, NULL, 0, NULL, NULL, NULL };
+  static const J2ObjcClassInfo _AndroidContentIOSContext = { 2, "IOSContext", "android.content", NULL, 0x1, 20, methods, 1, fields, 0, NULL, 0, NULL, NULL, NULL };
   return &_AndroidContentIOSContext;
 }
 
@@ -162,7 +170,17 @@ JavaIoFile *AndroidContentIOSContext_findLocalFileWithNSString_(AndroidContentIO
 }
 
 JavaIoFile *AndroidContentIOSContext_getRootDir(AndroidContentIOSContext *self) {
-  return new_JavaIoFile_initWithNSString_(JavaLangSystem_getenvWithNSString_(@"HOME"));
+  JavaIoFile *file = new_JavaIoFile_initWithNSString_(AndroidContentIOSContext_getRootDirString(self));
+  [file mkdirs];
+  return file;
+}
+
+NSString *AndroidContentIOSContext_getRootDirString(AndroidContentIOSContext *self) {
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+  
+  NSString *documentsDirectory = [paths firstObject];
+  
+  return documentsDirectory;
 }
 
 void AndroidContentIOSContext_init(AndroidContentIOSContext *self) {

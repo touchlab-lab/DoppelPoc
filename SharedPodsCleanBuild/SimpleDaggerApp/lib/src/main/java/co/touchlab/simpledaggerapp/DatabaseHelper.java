@@ -1,6 +1,7 @@
 package co.touchlab.simpledaggerapp;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.sql.SQLException;
 
@@ -14,7 +15,7 @@ import co.touchlab.squeaky.table.TableUtils;
 public class DatabaseHelper extends SqueakyOpenHelper
 {
     private final        Class[] tableClasses = new Class[] {TheDbMessage.class};
-    private final static int     VERSION      = 1;
+    private final static int     VERSION      = 4;
 
     private static DatabaseHelper INSTANCE;
 
@@ -44,6 +45,7 @@ public class DatabaseHelper extends SqueakyOpenHelper
     @Override
     public void onCreate(SQLiteDatabase db)
     {
+        SqliteMessage.createTable(db);
         try
         {
             TableUtils.createTables(new SQLiteDatabaseImpl(db), tableClasses);
@@ -57,6 +59,23 @@ public class DatabaseHelper extends SqueakyOpenHelper
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
+        try
+        {
+            SqliteMessage.dropTable(db);
+        }
+        catch(Exception e)
+        {
+            Log.w("qwert", "", e);
+        }
+        try
+        {
+            TableUtils.dropTables(new SQLiteDatabaseImpl(db), true, tableClasses);
+        }
+        catch(SQLException e)
+        {
+            throw new RuntimeException(e);
+        }
 
+        onCreate(db);
     }
 }

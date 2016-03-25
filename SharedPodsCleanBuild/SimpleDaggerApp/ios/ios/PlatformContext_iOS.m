@@ -13,9 +13,9 @@
 
 -(NSString *)storageDir
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
     
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = [paths firstObject];
     
     // NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,@"notes"];
     

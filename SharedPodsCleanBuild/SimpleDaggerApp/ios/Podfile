@@ -5,9 +5,9 @@
 
 
 # J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY START - can be moved as a block
-def j2objc_shared
-    pod 'j2objc-shared-debug', :configuration => ['Debug'], :path => '../lib/build/j2objcOutputs'
-    pod 'j2objc-shared-release', :configuration => ['Release'], :path => '../lib/build/j2objcOutputs'
+def j2objc_lib
+    pod 'j2objc-lib-debug', :configuration => ['Debug'], :path => '../lib/build/j2objcOutputs'
+    pod 'j2objc-lib-release', :configuration => ['Release'], :path => '../lib/build/j2objcOutputs'
     pod 'Gson', :path => '../../Gson'
     pod 'Dagger2', :path => '../../Dagger2'
     pod 'Okhttp', :path => '../../Okhttp'
@@ -15,19 +15,21 @@ def j2objc_shared
     pod 'Retrofit', :path => '../../Retrofit'
     pod 'AndroidBase', :path => '../../AndroidBase'
     pod 'SqueakyCore', :path => '../../SqueakyCore'
+    pod 'EventBus', :path => '../../EventBus'
+    pod 'MagicThreads', :path => '../../MagicThreads'
     pod 'J2OBJC', :path => '../../J2OBJC'
 end
 # J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY END
 
 target 'ios' do
     platform :ios, '8.3'
-    j2objc_shared
+    j2objc_lib
 
 end
 
 target 'iosTests' do
     platform :ios, '8.3'
-    j2objc_shared
+    j2objc_lib
 
 end
 

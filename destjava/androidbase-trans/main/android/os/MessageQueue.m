@@ -317,7 +317,7 @@ void AndroidOsMessageQueue_nativeInit(AndroidOsMessageQueue *self) {
   if([NSThread isMainThread])
   opQueue = [NSOperationQueue mainQueue];
   else
-  opQueue = [NSOperationQueue new];
+  opQueue = [[NSOperationQueue alloc] init];
 }
 
 void AndroidOsMessageQueue_dopNudgeThreadNow(AndroidOsMessageQueue *self) {

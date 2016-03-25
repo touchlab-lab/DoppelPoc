@@ -195,7 +195,8 @@ void AndroidOsLooper_loop() {
   AndroidOsLooper_initialize();
   AndroidOsLooper *me = AndroidOsLooper_myLooper();
   if (me == nil) {
-    @throw new_JavaLangRuntimeException_initWithNSString_(@"No Looper; Looper.prepare() wasn't called on this thread.");
+    AndroidOsLooper_prepare();
+    me = AndroidOsLooper_myLooper();
   }
   AndroidOsMessageQueue *queue = ((AndroidOsLooper *) nil_chk(me))->mQueue_;
   while (true) {

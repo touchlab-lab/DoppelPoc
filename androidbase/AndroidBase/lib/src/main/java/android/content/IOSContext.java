@@ -71,8 +71,18 @@ public class IOSContext extends Context
 
     private File getRootDir()
     {
-        return new File(System.getenv("HOME"));
+        final File file = new File(getRootDirString());
+        file.mkdirs();
+        return file;
     }
+
+    private native String getRootDirString()/*-[
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+
+    NSString *documentsDirectory = [paths firstObject];
+
+return documentsDirectory;
+]-*/;
 
     @Override
     public File getExternalFilesDir(@Nullable String type)

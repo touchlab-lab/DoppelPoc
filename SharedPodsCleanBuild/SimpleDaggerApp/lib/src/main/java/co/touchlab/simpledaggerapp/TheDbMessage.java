@@ -32,6 +32,7 @@ public class TheDbMessage
     @DatabaseField(canBeNull = false)
     public long channelId;
 
+
     @Override
     public String toString()
     {

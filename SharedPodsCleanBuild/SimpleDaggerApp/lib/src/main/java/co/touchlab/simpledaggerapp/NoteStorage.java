@@ -1,4 +1,7 @@
 package co.touchlab.simpledaggerapp;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
 import android.os.Looper;
@@ -20,6 +23,9 @@ import java.util.Random;
 
 import javax.inject.Inject;
 
+import co.touchlab.android.threading.eventbus.EventBusExt;
+import co.touchlab.android.threading.tasks.TaskQueue;
+import co.touchlab.android.threading.utils.UiThreadContext;
 import co.touchlab.simpledaggerapp.conference.ConferenceDataHelper;
 import co.touchlab.simpledaggerapp.conference.ConferenceDayHolder;
 import co.touchlab.simpledaggerapp.conference.Convention;
@@ -31,16 +37,16 @@ import retrofit.RestAdapter;
  */
 public class NoteStorage
 {
-    public static final String NOTE_PREFIX = "note_";
-    private final PlatformContext platformContext;
-//    private Handler handler;
+    public static final String          NOTE_PREFIX = "note_";
+    private final       PlatformContext platformContext;
+
+    //    private Handler handler;
 
     @Inject
     public NoteStorage(PlatformContext platformContext)
     {
         this.platformContext = platformContext;
     }
-
 
     public void init()
     {
@@ -56,6 +62,13 @@ public class NoteStorage
             note1.setNote("qwert");
             save(note1);
         }
+
+
+    }
+
+    public void onEventMainThread(DbTestTask testTask)
+    {
+        Log.w("1235", "Hello! In Main? "+ UiThreadContext.isInUiThread());
     }
 
     public void save(Note note)
@@ -215,7 +228,22 @@ public class NoteStorage
             final RefreshScheduleDataRequest refreshScheduleDataRequest = restAdapter
                     .create(RefreshScheduleDataRequest.class);
 
-            Looper.prepare();
+            Looper.prepareMainLooper();
+
+            final Context context = platformContext.appContext();
+
+            List<String> heyo = new LinkedList<>();
+
+            for(int i=0; i<20000; i++)
+            {
+                heyo.add("asdf "+ i);
+            }
+
+            final TaskQueue taskQueue = TaskQueue.loadQueueDefault(context);
+            taskQueue
+                     .execute(new DbTestTask(platformContext));
+
+            EventBusExt.getDefault().register(this);
 
 //            handler = new Handler();
             /*handler.postDelayed(new LoopingRunnable(), 2000);
@@ -270,18 +298,7 @@ public class NoteStorage
                 }
             });*/
 
-            long start = System.currentTimeMillis();
-            saveLots();
-            Log.w("QWERT", "saveLots done: " + (System.currentTimeMillis() - start));
-            start = System.currentTimeMillis();
-            saveLots();
-            Log.w("QWERT", "saveLots done: " + (System.currentTimeMillis() - start));
-            start = System.currentTimeMillis();
-            saveLots();
-            Log.w("QWERT", "saveLots done: " + (System.currentTimeMillis() - start));
-            start = System.currentTimeMillis();
-            saveLots();
-            Log.w("QWERT", "saveLots done: " + (System.currentTimeMillis() - start));
+
         }
         catch(Exception e)
         {
@@ -289,51 +306,7 @@ public class NoteStorage
         }
     }
 
-    private void saveLots() throws java.sql.SQLException
-    {
-        final DatabaseHelper databaseHelper = DatabaseHelper
-                .getInstance(platformContext.appContext(), "squeakytest");
-        final SQLiteDatabase theDb = databaseHelper.getWritableDatabase();
 
-        final Dao<TheDbMessage> dao = databaseHelper.getDao(TheDbMessage.class);
-
-        int NUM_MESSAGE_INSERTS = 50000;
-
-        List<TheDbMessage> messages = new LinkedList<TheDbMessage>();
-        final Random random = new Random();
-        for (int i = 0; i < NUM_MESSAGE_INSERTS; i++) {
-            TheDbMessage newMessage = new TheDbMessage();
-            newMessage.commandId = (i);
-            newMessage.sortedBy = (System.nanoTime());
-            newMessage.content = "Some content: "+ random.nextInt(100);
-            newMessage.clientId = (System.currentTimeMillis());
-            newMessage
-                    .senderId = (Math.round(Math.random() * NUM_MESSAGE_INSERTS));
-            newMessage
-                    .channelId = (Math.round(Math.random() * NUM_MESSAGE_INSERTS));
-            newMessage.createdAt = ((int) (System.currentTimeMillis() / 1000L));
-
-            messages.add(newMessage);
-        }
-
-        long start = System.currentTimeMillis();
-        SQLiteDatabase db = databaseHelper.getReadableDatabase();
-        db.beginTransaction();
-
-        try {
-
-            for (TheDbMessage m : messages) {
-                dao.create(m);
-            }
-
-            db.setTransactionSuccessful();
-        } finally {
-            db.endTransaction();
-        }
-
-        Log.w("ASDF", "Inserted " + NUM_MESSAGE_INSERTS + " rows. Time: " + (System
-                .currentTimeMillis() - start) + "/count: " + dao.countOf());
-    }
 
     private File noteFile(Note note)
     {

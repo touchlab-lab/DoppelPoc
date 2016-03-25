@@ -139,7 +139,7 @@ CoTouchlabSqueakyDaoSqueakyContext *create_CoTouchlabSqueakyDaoSqueakyContext_in
 id<CoTouchlabSqueakyTableGeneratedTableMapper> CoTouchlabSqueakyDaoSqueakyContext_loadGeneratedTableMapperWithIOSClass_(IOSClass *clazz) {
   CoTouchlabSqueakyDaoSqueakyContext_initialize();
   @try {
-    return (id<CoTouchlabSqueakyTableGeneratedTableMapper>) cast_check([((IOSClass *) nil_chk(IOSClass_forName_(JreStrcat("$$", [((IOSClass *) nil_chk(clazz)) getName], @"$$Configuration")))) newInstance], CoTouchlabSqueakyTableGeneratedTableMapper_class_());
+    return (id<CoTouchlabSqueakyTableGeneratedTableMapper>) cast_check([((IOSClass *) nil_chk(IOSClass_forName_(JreStrcat("$$", [((IOSClass *) nil_chk(clazz)) getName], @"$Configuration")))) newInstance], CoTouchlabSqueakyTableGeneratedTableMapper_class_());
   }
   @catch (JavaLangException *e) {
     @throw new_JavaLangRuntimeException_initWithNSException_(e);

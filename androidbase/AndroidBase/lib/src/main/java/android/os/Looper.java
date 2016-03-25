@@ -109,7 +109,10 @@ public class Looper implements ThreadNudger {
     public static void loop() {
         Looper me = myLooper();
         if (me == null) {
-            throw new RuntimeException("No Looper; Looper.prepare() wasn't called on this thread.");
+//            throw new RuntimeException("No Looper; Looper.prepare() wasn't called on this thread.");
+            //TODO: Make sure this is OK
+            prepare();
+            me = myLooper();
         }
         MessageQueue queue = me.mQueue;
         

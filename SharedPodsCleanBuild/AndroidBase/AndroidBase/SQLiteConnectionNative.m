@@ -35,6 +35,7 @@
 @synthesize openFlags;
 
 static const int BUSY_TIMEOUT_MS = 2500;
+static const int SQLITE_SOFT_HEAP_LIMIT = (4 * 1024 * 1024);
 
 enum {
     OPEN_READWRITE          = 0x00000000,
@@ -97,6 +98,8 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
         throw_sqlite3_exception_errcode(err, "Could not open database");
         return 0;
     }
+    sqlite3_soft_heap_limit(SQLITE_SOFT_HEAP_LIMIT);
+    
     err = sqlite3_create_collation(db, "localized", SQLITE_UTF8, 0, coll_localized);
     if (err != SQLITE_OK) {
         throw_sqlite3_exception_errcode(err, "Could not register collation");

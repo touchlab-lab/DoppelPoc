@@ -1,39 +1,26 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.android.tools.build:gradle:0.13.3'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
-
-sourceCompatibility = 1.7
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    androidTestApt project(':EventBusAnnotationProcessor')
     androidTestCompile project(':EventBus')
-    compile fileTree(dir: 'libs', include: '*.jar')
-    androidTestCompile 'com.android.support.test:runner:0.4.1'
-    androidTestCompile 'com.android.support.test:rules:0.4.1'
 }
 
 android {
-    buildToolsVersion '23.0.2' // When updating, don't forget to adjust .travis.yml
+    buildToolsVersion '20.0.0'
     compileSdkVersion 19
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_7
-        targetCompatibility = JavaVersion.VERSION_1_7
-    }
 
     sourceSets {
         main {
@@ -47,13 +34,6 @@ android {
 
     defaultConfig {
         testApplicationId "de.greenrobot.event.test"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
     }
 }
-
-apt {
-    arguments {
-        eventBusIndex "org.greenrobot.eventbus.EventBusTestsIndex"
-    }
-}
-

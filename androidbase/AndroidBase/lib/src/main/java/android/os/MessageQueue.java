@@ -49,7 +49,7 @@ public class MessageQueue {
         if([NSThread isMainThread])
             opQueue = [NSOperationQueue mainQueue];
         else
-            opQueue = [NSOperationQueue new];
+            opQueue = [[NSOperationQueue alloc] init];
      ]-*/;
 
     private native void nativeDestroy()/*-[
