@@ -1,0 +1,43 @@
+apply plugin: 'java'
+apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'co.touchlab.squeaky:squeaky-core:0.5.0.0'
+    compile 'junit:junit:4.11'
+}
+
+j2objcConfig {
+    // Sets up libraries you depend on
+    autoConfigureDeps true
+
+    //headerMappingFiles 'j2objcheaders.properties'
+
+testPattern {
+
+        // Exclude a single test without needing to specify the full path
+        exclude '**/*.java'
+
+    }
+
+    extraObjcCompilerArgs '-I/Users/kgalligan/devel/xp/gradletrans/squeaky/trans/core/build/j2objcOutputs/src/main/objc', '-I/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/src/main/objc', '-Wno-deprecated'
+    extraLinkerArgs '-L/Users/kgalligan/devel/xp/gradletrans/squeaky/trans/core/build/j2objcOutputs/lib/x86_64Debug', '-L/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/lib/x86_64Debug'
+    extraLinkerArgs '-lcore-j2objc', '-llib-j2objc', '-lsqlite3'
+
+    finalConfigure()          // Must be last call to configuration
+
+    testMinExpectedTests 0
+
+extraObjcCompilerArgs '-Wno-deprecated'
+
+    /*translateArgs '--prefix', 'com.google.gson=GSON'
+    translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'
+    translateArgs '--prefix', 'com.google.gson.internal=GSONInternal'
+    translateArgs '--prefix', 'com.google.gson.reflect=GSONReflect'
+    translateArgs '--prefix', 'com.google.gson.stream=GSONStream'
+
+    translatedPathPrefix("ComGoogleGson", "GSON")*/
+}
