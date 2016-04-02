@@ -1,0 +1,20 @@
+# Uncomment this line to define a global platform for your project
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+
+# J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY START - can be moved as a block
+def j2objc_javalib
+    pod 'J2OBJC', :path => ENV['J2OBJC_HOME']
+pod 'AndroidBase', :path => '../../AndroidBase'
+end
+# J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY END
+
+target 'MagicThreadsFramework' do
+    platform :ios, '8.3'
+    j2objc_javalib
+
+end
+

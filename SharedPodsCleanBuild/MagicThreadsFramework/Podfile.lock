@@ -1,0 +1,19 @@
+PODS:
+  - AndroidBase (0.0.1)
+  - J2OBJC (0.0.1)
+
+DEPENDENCIES:
+  - AndroidBase (from `/Users/kgalligan/devel/xp/SharedPodsCleanBuild/AndroidBase`)
+  - J2OBJC (from `/Users/kgalligan/devel/j2objc/dist`)
+
+EXTERNAL SOURCES:
+  AndroidBase:
+    :path: /Users/kgalligan/devel/xp/SharedPodsCleanBuild/AndroidBase
+  J2OBJC:
+    :path: /Users/kgalligan/devel/j2objc/dist
+
+SPEC CHECKSUMS:
+  AndroidBase: d5bc62955804919bbd01d699343122fd322a49f9
+  J2OBJC: 02a0b51095a447ea65d336de18f609c50ef62a51
+
+COCOAPODS: 0.39.0

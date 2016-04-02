@@ -8,8 +8,11 @@
 def j2objc_lib
     pod 'j2objc-lib-debug', :configuration => ['Debug'], :path => '../lib/build/j2objcOutputs'
     pod 'j2objc-lib-release', :configuration => ['Release'], :path => '../lib/build/j2objcOutputs'
-    pod 'Gson', :path => '../../Gson'
-    pod 'Dagger2', :path => '../../Dagger2'
+    pod 'j2objc-gson-debug', :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
+    #pod 'j2objc-gson-release', :configuration => ['Release'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
+    #pod 'Gson', :path => '../../Gson'
+    pod 'j2objc-core-debug', :path => '../../../gradletrans/dagger/trans/core/build/j2objcOutputs'
+    #pod 'Dagger2', :path => '../../Dagger2'
     pod 'Okhttp', :path => '../../Okhttp'
     pod 'RxJava', :path => '../../RxJava'
     pod 'Retrofit', :path => '../../Retrofit'
@@ -17,7 +20,7 @@ def j2objc_lib
     pod 'SqueakyCore', :path => '../../SqueakyCore'
     pod 'EventBus', :path => '../../EventBus'
     pod 'MagicThreads', :path => '../../MagicThreads'
-    pod 'J2OBJC', :path => '../../J2OBJC'
+    pod 'J2OBJC', :path => ENV['J2OBJC_HOME']
 end
 # J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY END
 

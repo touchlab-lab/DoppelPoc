@@ -1,9 +1,9 @@
 PODS:
   - AndroidBase (0.0.1)
-  - Dagger2 (0.0.1)
   - EventBus (0.0.1)
-  - Gson (0.0.1)
   - J2OBJC (0.0.1)
+  - j2objc-core-debug (1.0)
+  - j2objc-gson-debug (1.0)
   - j2objc-lib-debug (1.0)
   - j2objc-lib-release (1.0)
   - MagicThreads (0.0.1)
@@ -14,10 +14,10 @@ PODS:
 
 DEPENDENCIES:
   - AndroidBase (from `../../AndroidBase`)
-  - Dagger2 (from `../../Dagger2`)
   - EventBus (from `../../EventBus`)
-  - Gson (from `../../Gson`)
-  - J2OBJC (from `../../J2OBJC`)
+  - J2OBJC (from `/Users/kgalligan/bin/j2objc-1.0.1`)
+  - j2objc-core-debug (from `../../../gradletrans/dagger/trans/core/build/j2objcOutputs`)
+  - j2objc-gson-debug (from `../../../gradletrans/gson/trans/gson/build/j2objcOutputs`)
   - j2objc-lib-debug (from `../lib/build/j2objcOutputs`)
   - j2objc-lib-release (from `../lib/build/j2objcOutputs`)
   - MagicThreads (from `../../MagicThreads`)
@@ -29,14 +29,14 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   AndroidBase:
     :path: ../../AndroidBase
-  Dagger2:
-    :path: ../../Dagger2
   EventBus:
     :path: ../../EventBus
-  Gson:
-    :path: ../../Gson
   J2OBJC:
-    :path: ../../J2OBJC
+    :path: /Users/kgalligan/bin/j2objc-1.0.1
+  j2objc-core-debug:
+    :path: ../../../gradletrans/dagger/trans/core/build/j2objcOutputs
+  j2objc-gson-debug:
+    :path: ../../../gradletrans/gson/trans/gson/build/j2objcOutputs
   j2objc-lib-debug:
     :path: ../lib/build/j2objcOutputs
   j2objc-lib-release:
@@ -54,13 +54,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AndroidBase: d5bc62955804919bbd01d699343122fd322a49f9
-  Dagger2: 3973b893c1f92c87b66d704a6135910479998487
   EventBus: 66d917b6f482ed334c136d65f3419bbcab696a37
-  Gson: f8b20f5ff44bc24e70f02b12bd1c0dc991e4246e
-  J2OBJC: 97318d71a13e7b50c1cc03b01c500df3cd852342
+  J2OBJC: c5d93c9e5d9df2f972df35578f0d71633305a39d
+  j2objc-core-debug: c8d72738f39707a3749e1fd62be03b8e658bc724
+  j2objc-gson-debug: 19a86f9f2333891d3c1e39fe5f968d8f3c07b270
   j2objc-lib-debug: 885834d599febec72ef4510bcfe8fdb68b75e55a
   j2objc-lib-release: 8b1a3d71559bcd53de9999b26aad1302091ac9de
-  MagicThreads: 331e04fdb95eb77597ca217a3a0ba257b0ae0956
+  MagicThreads: 913cee910d3808c37ac59b73be52300bd47033b1
   Okhttp: 56a9eb4e185672e4d9ce4b33c34e927a7d901752
   Retrofit: 742e6e2bdfd08471f38c57f2fb6893d9cb43f8c2
   RxJava: 93af949d8dc7af9a3793a45467e336625141a4b6
