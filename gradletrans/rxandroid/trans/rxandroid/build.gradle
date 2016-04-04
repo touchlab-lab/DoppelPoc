@@ -25,6 +25,8 @@ j2objcConfig {
 
     }
 
+    extraLinkerArgs '-lsqlite3'
+
     finalConfigure()          // Must be last call to configuration
 
     testMinExpectedTests 0

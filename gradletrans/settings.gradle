@@ -1,0 +1,21 @@
+include ":androidbase"
+include ":dagger"
+include ":eventbus"
+include ":gson"
+include ":magicthreads"
+include ":retrofit"
+include ":rxandroid"
+include ":rxjava"
+include ":squeakycore"
+include ":squeakyquery"
+
+project(":androidbase").projectDir = new File("androidbase/trans/lib")
+project(":dagger").projectDir = new File("dagger/trans/core")
+project(":eventbus").projectDir = new File("eventbus/trans/eb")
+project(":gson").projectDir = new File("gson/trans/gson")
+project(":magicthreads").projectDir = new File("magicthreads/trans/magicthreads")
+project(":retrofit").projectDir = new File("retrofit/trans/retrofit")
+project(":rxandroid").projectDir = new File("rxandroid/trans/RxAndroid")
+project(":rxjava").projectDir = new File("rxjava/trans/rxjava")
+project(":squeakycore").projectDir = new File("squeaky/trans/core")
+project(":squeakyquery").projectDir = new File("squeaky/trans/query")

@@ -1,0 +1,11 @@
+include ':jobqueue'
+include ":androidbase"
+include ":eventbus"
+include ":gson"
+include ":retrofit"
+include ":rxjava"
+project(":androidbase").projectDir = new File("../../androidbase/trans/lib")
+project(":eventbus").projectDir = new File("../../eventbus/trans/eb")
+project(":gson").projectDir = new File("../../gson/trans/gson")
+project(":retrofit").projectDir = new File("../../retrofit/trans/retrofit")
+project(":rxjava").projectDir = new File("../../rxjava/trans/rxjava")

@@ -1,3 +1,0 @@
-include ':eb'
-include ":androidbase"
-project(":androidbase").projectDir = new File("../../androidbase/trans/lib")
