@@ -1,0 +1,6 @@
+include ':rxjava'
+//include ":gson"
+//include ":dagger"
+
+//project(":gson").projectDir = new File("../../gson/trans/gson")
+//project(":dagger").projectDir = new File("../../dagger/trans/core")

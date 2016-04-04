@@ -1,0 +1,41 @@
+apply plugin: 'java'
+apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'junit:junit:4.11'
+    compile project(":rxjava")
+    compile project(":androidbase")
+    
+}
+
+j2objcConfig {
+    // Sets up libraries you depend on
+    autoConfigureDeps true
+
+    //headerMappingFiles 'j2objcheaders.properties'
+
+    testPattern {
+
+        // Exclude a single test without needing to specify the full path
+        exclude '**/*.java'
+
+    }
+
+    finalConfigure()          // Must be last call to configuration
+
+    testMinExpectedTests 0
+
+extraObjcCompilerArgs '-Wno-deprecated'
+
+    /*translateArgs '--prefix', 'com.google.gson=GSON'
+    translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'
+    translateArgs '--prefix', 'com.google.gson.internal=GSONInternal'
+    translateArgs '--prefix', 'com.google.gson.reflect=GSONReflect'
+    translateArgs '--prefix', 'com.google.gson.stream=GSONStream'
+
+    translatedPathPrefix("ComGoogleGson", "GSON")*/
+}

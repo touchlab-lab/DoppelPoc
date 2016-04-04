@@ -1,0 +1,6 @@
+include ':lib', ':app'
+include ":gson"
+include ":dagger"
+
+project(":gson").projectDir = new File("../../gradletrans/gson/trans/gson")
+project(":dagger").projectDir = new File("../../gradletrans/dagger/trans/core")

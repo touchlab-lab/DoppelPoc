@@ -1,0 +1,6 @@
+include ':rxandroid'
+include ":rxjava"
+include ":androidbase"
+
+project(":rxjava").projectDir = new File("../../rxjava/trans/rxjava")
+project(":androidbase").projectDir = new File("../../androidbase/trans/lib")

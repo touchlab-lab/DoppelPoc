@@ -1,0 +1,43 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+
+# J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY START - can be moved as a block
+def j2objc_lib
+    pod 'j2objc-lib-debug', :configuration => ['Debug'], :path => '../lib/build/j2objcOutputs'
+    pod 'j2objc-lib-release', :configuration => ['Release'], :path => '../lib/build/j2objcOutputs'
+    pod 'J2OBJC', :path => '../../J2OBJC'
+end
+def j2objc_gson
+    pod 'j2objc-gson-debug', :configuration => ['Debug'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
+    pod 'j2objc-gson-release', :configuration => ['Release'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
+    pod 'J2OBJC', :path => '../../J2OBJC'
+end
+def j2objc_dagger
+    pod 'j2objc-dagger-debug', :configuration => ['Debug'], :path => '../../../gradletrans/dagger/trans/core/build/j2objcOutputs'
+    pod 'j2objc-dagger-release', :configuration => ['Release'], :path => '../../../gradletrans/dagger/trans/core/build/j2objcOutputs'
+    pod 'J2OBJC', :path => '../../J2OBJC'
+end
+# J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY END
+
+target 'ios' do
+    platform :ios, '8.3'
+    j2objc_lib
+    j2objc_gson
+    j2objc_dagger
+
+end
+
+target 'iosTests' do
+    platform :ios, '8.3'
+    j2objc_lib
+    j2objc_gson
+    j2objc_dagger
+
+end
+
+target 'iosUITests' do
+
+end

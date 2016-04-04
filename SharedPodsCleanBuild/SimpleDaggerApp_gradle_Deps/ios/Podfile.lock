@@ -1,0 +1,44 @@
+PODS:
+  - J2OBJC (0.0.1)
+  - j2objc-dagger-debug (1.0)
+  - j2objc-dagger-release (1.0)
+  - j2objc-gson-debug (1.0)
+  - j2objc-gson-release (1.0)
+  - j2objc-lib-debug (1.0)
+  - j2objc-lib-release (1.0)
+
+DEPENDENCIES:
+  - J2OBJC (from `../../J2OBJC`)
+  - j2objc-dagger-debug (from `../../../gradletrans/dagger/trans/core/build/j2objcOutputs`)
+  - j2objc-dagger-release (from `../../../gradletrans/dagger/trans/core/build/j2objcOutputs`)
+  - j2objc-gson-debug (from `../../../gradletrans/gson/trans/gson/build/j2objcOutputs`)
+  - j2objc-gson-release (from `../../../gradletrans/gson/trans/gson/build/j2objcOutputs`)
+  - j2objc-lib-debug (from `../lib/build/j2objcOutputs`)
+  - j2objc-lib-release (from `../lib/build/j2objcOutputs`)
+
+EXTERNAL SOURCES:
+  J2OBJC:
+    :path: ../../J2OBJC
+  j2objc-dagger-debug:
+    :path: ../../../gradletrans/dagger/trans/core/build/j2objcOutputs
+  j2objc-dagger-release:
+    :path: ../../../gradletrans/dagger/trans/core/build/j2objcOutputs
+  j2objc-gson-debug:
+    :path: ../../../gradletrans/gson/trans/gson/build/j2objcOutputs
+  j2objc-gson-release:
+    :path: ../../../gradletrans/gson/trans/gson/build/j2objcOutputs
+  j2objc-lib-debug:
+    :path: ../lib/build/j2objcOutputs
+  j2objc-lib-release:
+    :path: ../lib/build/j2objcOutputs
+
+SPEC CHECKSUMS:
+  J2OBJC: 97318d71a13e7b50c1cc03b01c500df3cd852342
+  j2objc-dagger-debug: dcb25fe6603ad5820bdd8edabe2d66e3a4a4206f
+  j2objc-dagger-release: e67c10eb3921c1003f4ff40bfff40ddb48c8bc89
+  j2objc-gson-debug: 960e9216e9a53c7cefccb6d377e317e46145ca1d
+  j2objc-gson-release: 91ad2a96710b018e48784c10f3db88ee0f8510cf
+  j2objc-lib-debug: 885834d599febec72ef4510bcfe8fdb68b75e55a
+  j2objc-lib-release: 8b1a3d71559bcd53de9999b26aad1302091ac9de
+
+COCOAPODS: 0.39.0

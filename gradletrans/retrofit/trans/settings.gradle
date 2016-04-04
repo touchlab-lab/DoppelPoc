@@ -1,0 +1,8 @@
+include ':retrofit'
+include ":gson"
+include ":rxjava"
+//include ":dagger"
+
+project(":gson").projectDir = new File("../../gson/trans/gson")
+project(":rxjava").projectDir = new File("../../rxjava/trans/rxjava")
+//project(":dagger").projectDir = new File("../../dagger/trans/core")

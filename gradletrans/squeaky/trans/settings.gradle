@@ -1,1 +1,1 @@
-include ':core', ':query', ':tests'
+include ':core', ':query'
