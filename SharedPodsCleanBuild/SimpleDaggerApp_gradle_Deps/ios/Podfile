@@ -11,8 +11,8 @@ def j2objc_lib
     pod 'J2OBJC', :path => '../../J2OBJC'
 end
 def j2objc_gson
-    pod 'j2objc-gson-debug', :configuration => ['Debug'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
-    pod 'j2objc-gson-release', :configuration => ['Release'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
+    pod 'gson', :configuration => ['Debug'], :path => '../../../gradletrans/gson/trans/gson'
+    pod 'gson', :configuration => ['Release'], :path => '../../../gradletrans/gson/trans/gson'
     pod 'J2OBJC', :path => '../../J2OBJC'
 end
 def j2objc_dagger

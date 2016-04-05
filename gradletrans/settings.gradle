@@ -8,6 +8,7 @@ include ":rxandroid"
 include ":rxjava"
 include ":squeakycore"
 include ":squeakyquery"
+include ":truthcore"
 
 project(":androidbase").projectDir = new File("androidbase/trans/lib")
 project(":dagger").projectDir = new File("dagger/trans/core")
@@ -19,3 +20,4 @@ project(":rxandroid").projectDir = new File("rxandroid/trans/RxAndroid")
 project(":rxjava").projectDir = new File("rxjava/trans/rxjava")
 project(":squeakycore").projectDir = new File("squeaky/trans/core")
 project(":squeakyquery").projectDir = new File("squeaky/trans/query")
+project(":truthcore").projectDir = new File("truth/trans/core")

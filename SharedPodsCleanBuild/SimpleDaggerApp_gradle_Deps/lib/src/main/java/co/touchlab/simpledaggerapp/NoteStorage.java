@@ -81,6 +81,7 @@ public class NoteStorage
         {
             final String localDir = platformContext.storageDir();
             final File storageDir = new File(localDir);
+            storageDir.mkdirs();
             final File[] fileList = storageDir.listFiles(new FilenameFilter()
             {
                 @Override
