@@ -10,6 +10,8 @@ include ":squeakycore"
 include ":squeakyquery"
 include ":truthcore"
 include ":commons-io"
+include ":commons-lang3"
+//include ":easymock"
 
 project(":androidbase").projectDir = new File("androidbase/trans/lib")
 project(":dagger").projectDir = new File("dagger/trans/core")
@@ -23,3 +25,5 @@ project(":squeakycore").projectDir = new File("squeaky/trans/core")
 project(":squeakyquery").projectDir = new File("squeaky/trans/query")
 project(":truthcore").projectDir = new File("truth/trans/core")
 project(":commons-io").projectDir = new File("commons-io/trans/commons-io")
+project(":commons-lang3").projectDir = new File("commons-lang3/trans/commons-lang3")
+//project(":easymock").projectDir = new File("easymock/trans/easymock")

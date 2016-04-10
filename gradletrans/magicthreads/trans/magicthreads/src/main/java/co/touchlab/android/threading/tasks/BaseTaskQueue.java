@@ -1,5 +1,6 @@
 package co.touchlab.android.threading.tasks;
 
+import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
@@ -20,7 +21,7 @@ import co.touchlab.android.threading.utils.UiThreadContext;
  */
 public abstract class BaseTaskQueue
 {
-    protected final Context            application;
+    protected final Application            application;
     protected final Handler            handler;
     protected final QueueWrapper<Task> tasks;
     private         Task               currentTask;
@@ -37,7 +38,7 @@ public abstract class BaseTaskQueue
     private         List<QueueListener> listeners       = new ArrayList<QueueListener>();
     private         boolean             startedCalled   = false;
 
-    public BaseTaskQueue(Context application, QueueWrapper<Task> queueWrapper)
+    public BaseTaskQueue(Application application, QueueWrapper<Task> queueWrapper)
     {
         this.application = application;
         tasks = queueWrapper;

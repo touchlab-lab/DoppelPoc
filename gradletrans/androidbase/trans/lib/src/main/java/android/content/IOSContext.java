@@ -1,26 +1,131 @@
 package android.content;
 import android.annotation.Nullable;
+import android.app.Application;
+import android.app.SharedPreferencesImpl;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.FileUtils;
+import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import android.os.FileUtils.FileStatus;
+
+import rename.com.android.internal.util.XmlUtils;
+
 
 /**
  * Created by kgalligan on 3/21/16.
  */
-public class IOSContext extends Context
+public class IOSContext extends Application
 {
     public static final String DATABASES = "databases";
+    public static final String TAG = "IOSContext";
+
+
+    private final Object mSync = new Object();
+    private File mPreferencesDir;
+
+    private static final HashMap<String, SharedPreferencesImpl> sSharedPrefs = new HashMap<String, SharedPreferencesImpl>();
 
     @Override
     public Looper getMainLooper()
     {
         return Looper.getMainLooper();
     }
+
+    private static File makeBackupFile(File prefsFile)
+    {
+        return new File(prefsFile.getPath() + ".bak");
+    }
+
+    @Override
+    public File getSharedPrefsFile(String name)
+    {
+        return makeFilename(getPreferencesDir(), name + ".xml");
+    }
+
+    private File makeFilename(File base, String name) {
+        if (name.indexOf(File.separatorChar) < 0) {
+            return new File(base, name);
+        }
+        throw new IllegalArgumentException(
+                "File " + name + " contains a path separator");
+    }
+
+    @Override
+    public SharedPreferences getSharedPreferences(String name, int mode)
+    {
+        SharedPreferencesImpl sp;
+        File prefsFile;
+        boolean needInitialLoad = false;
+        synchronized(sSharedPrefs) {
+            sp = sSharedPrefs.get(name);
+            if (sp != null && !sp.hasFileChangedUnexpectedly()) {
+                return sp;
+            }
+            prefsFile = getSharedPrefsFile(name);
+            if (sp == null) {
+                sp = new SharedPreferencesImpl(prefsFile, mode, null, new Handler(Looper.getMainLooper()));
+                sSharedPrefs.put(name, sp);
+                needInitialLoad = true;
+            }
+        }
+
+        synchronized (sp) {
+            if (needInitialLoad && sp.isLoaded()) {
+                // lost the race to load; another thread handled it
+                return sp;
+            }
+            File backup = makeBackupFile(prefsFile);
+            if (backup.exists()) {
+                prefsFile.delete();
+                backup.renameTo(prefsFile);
+            }
+
+            // Debugging
+            if (prefsFile.exists() && !prefsFile.canRead()) {
+                Log.w(TAG, "Attempt to read preferences file " + prefsFile + " without permission");
+            }
+
+            Map map = null;
+            FileUtils.FileStatus stat = new FileStatus();
+            if (FileUtils.getFileStatus(prefsFile.getPath(), stat) && prefsFile.canRead()) {
+                try {
+                    FileInputStream str = new FileInputStream(prefsFile);
+                    map = XmlUtils.readMapXml(str);
+                    str.close();
+                } catch (org.xmlpull.v1.XmlPullParserException e) {
+                    Log.w(TAG, "getSharedPreferences", e);
+                } catch (FileNotFoundException e) {
+                    Log.w(TAG, "getSharedPreferences", e);
+                } catch (IOException e) {
+                    Log.w(TAG, "getSharedPreferences", e);
+                }
+            }
+            sp.replace(map, stat);
+        }
+        return sp;
+    }
+
+    private File getPreferencesDir() {
+        synchronized (mSync) {
+            if (mPreferencesDir == null) {
+                mPreferencesDir = getDir("shared_prefs", MODE_PRIVATE);
+            }
+            return mPreferencesDir;
+        }
+    }
+
+
 
     @Override
     public FileInputStream openFileInput(String name) throws FileNotFoundException

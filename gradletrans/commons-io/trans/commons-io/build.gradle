@@ -11,7 +11,7 @@ dependencies {
 
 j2objcConfig {
     // Sets up libraries you depend on
-    autoConfigureDeps true
+//    autoConfigureDeps true
 
     //headerMappingFiles 'j2objcheaders.properties'
 

@@ -1,5 +1,6 @@
 package co.touchlab.android.threading.tasks.persisted.storage;
 
+import android.app.Application;
 import android.content.Context;
 
 import co.touchlab.android.threading.tasks.persisted.ConfigException;
@@ -26,7 +27,7 @@ public class DefaultPersistedTaskQueue
             {
                 throw new RuntimeException(e);
             }
-            INSTANCE = new PersistedTaskQueue(context.getApplicationContext(), build);
+            INSTANCE = new PersistedTaskQueue((Application) context.getApplicationContext(), build);
         }
 
         return INSTANCE;

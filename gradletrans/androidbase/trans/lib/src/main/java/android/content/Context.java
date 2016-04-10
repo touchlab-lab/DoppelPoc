@@ -106,38 +106,38 @@ public abstract class Context {
      */
     public abstract Looper getMainLooper();
 
-//    /**
-//     * {@hide}
-//     * Return the full path to the shared prefs file for the given prefs group name.
-//     *
-//     * <p>Note: this is not generally useful for applications, since they should
-//     * not be directly accessing the file system.
-//     */
-//    public abstract File getSharedPrefsFile(String name);
-//
-//    /**
-//     * Retrieve and hold the contents of the preferences file 'name', returning
-//     * a SharedPreferences through which you can retrieve and modify its
-//     * values.  Only one instance of the SharedPreferences object is returned
-//     * to any callers for the same name, meaning they will see each other's
-//     * edits as soon as they are made.
-//     *
-//     * @param name Desired preferences file. If a preferences file by this name
-//     * does not exist, it will be created when you retrieve an
-//     * editor (SharedPreferences.edit()) and then commit changes (Editor.commit()).
-//     * @param mode Operating mode.  Use 0 or {@link #MODE_PRIVATE} for the
-//     * default operation, {@link #MODE_WORLD_READABLE}
-//     * and {@link #MODE_WORLD_WRITEABLE} to control permissions.
-//     *
-//     * @return The single {@link SharedPreferences} instance that can be used
-//     *         to retrieve and modify the preference values.
-//     *
-//     * @see #MODE_PRIVATE
-//     * @see #MODE_WORLD_READABLE
-//     * @see #MODE_WORLD_WRITEABLE
-//     */
-//    public abstract SharedPreferences getSharedPreferences(String name,
-//            int mode);
+    /**
+     * {@hide}
+     * Return the full path to the shared prefs file for the given prefs group name.
+     *
+     * <p>Note: this is not generally useful for applications, since they should
+     * not be directly accessing the file system.
+     */
+    public abstract File getSharedPrefsFile(String name);
+
+    /**
+     * Retrieve and hold the contents of the preferences file 'name', returning
+     * a SharedPreferences through which you can retrieve and modify its
+     * values.  Only one instance of the SharedPreferences object is returned
+     * to any callers for the same name, meaning they will see each other's
+     * edits as soon as they are made.
+     *
+     * @param name Desired preferences file. If a preferences file by this name
+     * does not exist, it will be created when you retrieve an
+     * editor (SharedPreferences.edit()) and then commit changes (Editor.commit()).
+     * @param mode Operating mode.  Use 0 or {@link #MODE_PRIVATE} for the
+     * default operation, {@link #MODE_WORLD_READABLE}
+     * and {@link #MODE_WORLD_WRITEABLE} to control permissions.
+     *
+     * @return The single {@link SharedPreferences} instance that can be used
+     *         to retrieve and modify the preference values.
+     *
+     * @see #MODE_PRIVATE
+     * @see #MODE_WORLD_READABLE
+     * @see #MODE_WORLD_WRITEABLE
+     */
+    public abstract SharedPreferences getSharedPreferences(String name,
+            int mode);
 
     /**
      * Open a private file associated with this Context's application package

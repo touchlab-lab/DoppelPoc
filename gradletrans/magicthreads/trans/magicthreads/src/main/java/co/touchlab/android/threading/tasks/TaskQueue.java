@@ -1,5 +1,6 @@
 package co.touchlab.android.threading.tasks;
 
+import android.app.Application;
 import android.content.Context;
 import android.os.Message;
 
@@ -38,7 +39,7 @@ public class TaskQueue extends BaseTaskQueue
 
         if(taskQueueActual == null)
         {
-            taskQueueActual = new TaskQueue(context.getApplicationContext(), fifo);
+            taskQueueActual = new TaskQueue((Application) context.getApplicationContext(), fifo);
             queueMap.put(name, taskQueueActual);
         }
         else
@@ -78,12 +79,12 @@ public class TaskQueue extends BaseTaskQueue
     //*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
     private final boolean fifo;
 
-    public TaskQueue(Context application)
+    public TaskQueue(Application application)
     {
         this(application, true);
     }
 
-    public TaskQueue(Context application, boolean fifo)
+    public TaskQueue(Application application, boolean fifo)
     {
         super(application, new LinkedListQueue<Task>(fifo));
         this.fifo = fifo;

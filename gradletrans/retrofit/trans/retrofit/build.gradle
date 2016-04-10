@@ -3,12 +3,20 @@ apply plugin: 'com.github.j2objccontrib.j2objcgradle'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
+configurations {
+    provided
+    compile.extendsFrom provided
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'junit:junit:4.11'
     compile project(":gson")
+    j2objcLinkage project(":gson")
     compile project(":rxjava")
+    j2objcLinkage project(":rxjava")
+    provided 'com.google.android:android:4.1.1.4'
+    j2objcLinkage project(":androidbase")
 }
 
 j2objcConfig {
@@ -29,6 +37,7 @@ j2objcConfig {
     testMinExpectedTests 0
 
 extraObjcCompilerArgs '-Wno-deprecated'
+    extraLinkerArgs '-lsqlite3'
 
     /*translateArgs '--prefix', 'com.google.gson=GSON'
     translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'

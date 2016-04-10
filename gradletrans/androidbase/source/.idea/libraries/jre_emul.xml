@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jre_emul">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/libs/jre_emul.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

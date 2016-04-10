@@ -1,5 +1,6 @@
 package co.touchlab.android.threading.tasks.persisted;
 
+import android.app.Application;
 import android.content.Context;
 import android.os.Message;
 
@@ -33,7 +34,7 @@ public class PersistedTaskQueue extends BaseTaskQueue
     private CommandPurgePolicy  commandPurgePolicy;
     private BusLog              log;
 
-    public PersistedTaskQueue(Context appContext, PersistedTaskQueueConfig config)
+    public PersistedTaskQueue(Application appContext, PersistedTaskQueueConfig config)
     {
         super(appContext, new PriorityQueueWrapper());
         provider = config.getPersistenceProvider();

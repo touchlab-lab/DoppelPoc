@@ -469,7 +469,8 @@ public final class SQLiteConnection /*implements CancellationSignal.OnCancelList
         mConfiguration.updateParametersFrom(configuration);
 
         // Update prepared statement cache size.
-        mPreparedStatementCache.resize(configuration.maxSqlCacheSize);
+        //TODO: Figure out what this was about
+//        mPreparedStatementCache.resize(configuration.maxSqlCacheSize);
 
         // Update foreign key mode.
         if (foreignKeyModeChanged) {
