@@ -84,7 +84,7 @@ public class FileUtils
     jboolean ret = false;
 
     struct stat s;
-    int res = stat(path, &s);
+    int res = stat([path cStringUsingEncoding: NSASCIIStringEncoding], &s);
     if (res == 0) {
         ret = true;
         if (status != NULL) {
@@ -131,12 +131,12 @@ public class FileUtils
         return ENOENT;
     }
     if (uid >= 0 || gid >= 0) {
-        int res = chown(file, uid, gid);
+        int res = chown([file cStringUsingEncoding: NSASCIIStringEncoding], uid, gid);
         if (res != 0) {
             return errno;
         }
     }
-    return chmod(file, mode) == 0 ? 0 : errno;
+    return chmod([file cStringUsingEncoding: NSASCIIStringEncoding], mode) == 0 ? 0 : errno;
     ]-*/;
 
     /** returns the FAT file system volume ID for the volume mounted
