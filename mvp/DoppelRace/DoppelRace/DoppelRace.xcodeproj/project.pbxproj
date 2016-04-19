@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63EE30541CBED47900B64D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30531CBED47900B64D3D /* AppDelegate.swift */; };
+		63EE30561CBED47900B64D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30551CBED47900B64D3D /* ViewController.swift */; };
+		63EE30591CBED47900B64D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE30571CBED47900B64D3D /* Main.storyboard */; };
+		63EE305B1CBED47900B64D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EE305A1CBED47900B64D3D /* Assets.xcassets */; };
+		63EE305E1CBED47900B64D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE305C1CBED47900B64D3D /* LaunchScreen.storyboard */; };
+		63EE30691CBED47900B64D3D /* DoppelRaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30681CBED47900B64D3D /* DoppelRaceTests.swift */; };
+		71F0BC3937AD2EDE282CF0FD /* libPods-DoppelRaceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A1838C61A298F8149E75E9 /* libPods-DoppelRaceTests.a */; };
+		84857F71E18921AEE0405FD5 /* libPods-DoppelRace.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 870DE7C87AE588A4E1915B86 /* libPods-DoppelRace.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63EE30651CBED47900B64D3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63EE30481CBED47900B64D3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63EE304F1CBED47900B64D3D;
+			remoteInfo = DoppelRace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4AAA530FB2E768DE6953C963 /* Pods-DoppelRace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoppelRace.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoppelRace/Pods-DoppelRace.release.xcconfig"; sourceTree = "<group>"; };
+		63EE30501CBED47900B64D3D /* DoppelRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoppelRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EE30531CBED47900B64D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63EE30551CBED47900B64D3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63EE30581CBED47900B64D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63EE305A1CBED47900B64D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63EE305D1CBED47900B64D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63EE305F1CBED47900B64D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63EE30641CBED47900B64D3D /* DoppelRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoppelRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EE30681CBED47900B64D3D /* DoppelRaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoppelRaceTests.swift; sourceTree = "<group>"; };
+		63EE306A1CBED47900B64D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63EE30731CBEEE6900B64D3D /* DoppelRace-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DoppelRace-Bridging-Header.h"; sourceTree = "<group>"; };
+		708CC057DE1E6EED9892F094 /* Pods-DoppelRaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoppelRaceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoppelRaceTests/Pods-DoppelRaceTests.release.xcconfig"; sourceTree = "<group>"; };
+		80A1838C61A298F8149E75E9 /* libPods-DoppelRaceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoppelRaceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		870DE7C87AE588A4E1915B86 /* libPods-DoppelRace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoppelRace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D9707774C0CFFC3CF18E36 /* Pods-DoppelRaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoppelRaceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoppelRaceTests/Pods-DoppelRaceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC2CF1C96C1F7DBE56C89E06 /* Pods-DoppelRace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoppelRace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoppelRace/Pods-DoppelRace.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63EE304D1CBED47900B64D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84857F71E18921AEE0405FD5 /* libPods-DoppelRace.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63EE30611CBED47900B64D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F0BC3937AD2EDE282CF0FD /* libPods-DoppelRaceTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BF031DF2EDB08C79DB16D58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CF1C96C1F7DBE56C89E06 /* Pods-DoppelRace.debug.xcconfig */,
+				4AAA530FB2E768DE6953C963 /* Pods-DoppelRace.release.xcconfig */,
+				D0D9707774C0CFFC3CF18E36 /* Pods-DoppelRaceTests.debug.xcconfig */,
+				708CC057DE1E6EED9892F094 /* Pods-DoppelRaceTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		63EE30471CBED47900B64D3D = {
+			isa = PBXGroup;
+			children = (
+				63EE30521CBED47900B64D3D /* DoppelRace */,
+				63EE30671CBED47900B64D3D /* DoppelRaceTests */,
+				63EE30511CBED47900B64D3D /* Products */,
+				1BF031DF2EDB08C79DB16D58 /* Pods */,
+				F0690AC5CCED729FF39D5FCD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63EE30511CBED47900B64D3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63EE30501CBED47900B64D3D /* DoppelRace.app */,
+				63EE30641CBED47900B64D3D /* DoppelRaceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63EE30521CBED47900B64D3D /* DoppelRace */ = {
+			isa = PBXGroup;
+			children = (
+				63EE30531CBED47900B64D3D /* AppDelegate.swift */,
+				63EE30551CBED47900B64D3D /* ViewController.swift */,
+				63EE30571CBED47900B64D3D /* Main.storyboard */,
+				63EE305A1CBED47900B64D3D /* Assets.xcassets */,
+				63EE305C1CBED47900B64D3D /* LaunchScreen.storyboard */,
+				63EE305F1CBED47900B64D3D /* Info.plist */,
+				63EE30731CBEEE6900B64D3D /* DoppelRace-Bridging-Header.h */,
+			);
+			path = DoppelRace;
+			sourceTree = "<group>";
+		};
+		63EE30671CBED47900B64D3D /* DoppelRaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				63EE30681CBED47900B64D3D /* DoppelRaceTests.swift */,
+				63EE306A1CBED47900B64D3D /* Info.plist */,
+			);
+			path = DoppelRaceTests;
+			sourceTree = "<group>";
+		};
+		F0690AC5CCED729FF39D5FCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				870DE7C87AE588A4E1915B86 /* libPods-DoppelRace.a */,
+				80A1838C61A298F8149E75E9 /* libPods-DoppelRaceTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63EE304F1CBED47900B64D3D /* DoppelRace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63EE306D1CBED47900B64D3D /* Build configuration list for PBXNativeTarget "DoppelRace" */;
+			buildPhases = (
+				7255600E34B4456375EB3B20 /* 📦 Check Pods Manifest.lock */,
+				63EE304C1CBED47900B64D3D /* Sources */,
+				63EE304D1CBED47900B64D3D /* Frameworks */,
+				63EE304E1CBED47900B64D3D /* Resources */,
+				8C8B30D3F10885AD4F1D1957 /* 📦 Embed Pods Frameworks */,
+				005B6671CC62AA8F01A7810E /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoppelRace;
+			productName = DoppelRace;
+			productReference = 63EE30501CBED47900B64D3D /* DoppelRace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63EE30631CBED47900B64D3D /* DoppelRaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63EE30701CBED47900B64D3D /* Build configuration list for PBXNativeTarget "DoppelRaceTests" */;
+			buildPhases = (
+				03103FF163A115A67710AEDE /* 📦 Check Pods Manifest.lock */,
+				63EE30601CBED47900B64D3D /* Sources */,
+				63EE30611CBED47900B64D3D /* Frameworks */,
+				63EE30621CBED47900B64D3D /* Resources */,
+				2145C350ABA4F99FD8B5FEC6 /* 📦 Embed Pods Frameworks */,
+				8D1496B6C29363DBC5C3BA8A /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63EE30661CBED47900B64D3D /* PBXTargetDependency */,
+			);
+			name = DoppelRaceTests;
+			productName = DoppelRaceTests;
+			productReference = 63EE30641CBED47900B64D3D /* DoppelRaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63EE30481CBED47900B64D3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kevin Galligan";
+				TargetAttributes = {
+					63EE304F1CBED47900B64D3D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					63EE30631CBED47900B64D3D = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 63EE304F1CBED47900B64D3D;
+					};
+				};
+			};
+			buildConfigurationList = 63EE304B1CBED47900B64D3D /* Build configuration list for PBXProject "DoppelRace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63EE30471CBED47900B64D3D;
+			productRefGroup = 63EE30511CBED47900B64D3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63EE304F1CBED47900B64D3D /* DoppelRace */,
+				63EE30631CBED47900B64D3D /* DoppelRaceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63EE304E1CBED47900B64D3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EE305E1CBED47900B64D3D /* LaunchScreen.storyboard in Resources */,
+				63EE305B1CBED47900B64D3D /* Assets.xcassets in Resources */,
+				63EE30591CBED47900B64D3D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63EE30621CBED47900B64D3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		005B6671CC62AA8F01A7810E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoppelRace/Pods-DoppelRace-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		03103FF163A115A67710AEDE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2145C350ABA4F99FD8B5FEC6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoppelRaceTests/Pods-DoppelRaceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7255600E34B4456375EB3B20 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8B30D3F10885AD4F1D1957 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoppelRace/Pods-DoppelRace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D1496B6C29363DBC5C3BA8A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoppelRaceTests/Pods-DoppelRaceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63EE304C1CBED47900B64D3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EE30561CBED47900B64D3D /* ViewController.swift in Sources */,
+				63EE30541CBED47900B64D3D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63EE30601CBED47900B64D3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EE30691CBED47900B64D3D /* DoppelRaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63EE30661CBED47900B64D3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63EE304F1CBED47900B64D3D /* DoppelRace */;
+			targetProxy = 63EE30651CBED47900B64D3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63EE30571CBED47900B64D3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63EE30581CBED47900B64D3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63EE305C1CBED47900B64D3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63EE305D1CBED47900B64D3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63EE306B1CBED47900B64D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63EE306C1CBED47900B64D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63EE306E1CBED47900B64D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC2CF1C96C1F7DBE56C89E06 /* Pods-DoppelRace.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoppelRace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/kgalligan/bin/j2objc-1.0.2/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"ObjC\"",
+					"-l\"guava\"",
+					"-l\"icucore\"",
+					"-l\"javax_inject\"",
+					"-l\"jre_emul\"",
+					"-l\"jsr305\"",
+					"-l\"z\"",
+					"-l\"sqlite3\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.DoppelRace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoppelRace/DoppelRace-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		63EE306F1CBED47900B64D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AAA530FB2E768DE6953C963 /* Pods-DoppelRace.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoppelRace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/kgalligan/bin/j2objc-1.0.2/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"ObjC\"",
+					"-l\"guava\"",
+					"-l\"icucore\"",
+					"-l\"javax_inject\"",
+					"-l\"jre_emul\"",
+					"-l\"jsr305\"",
+					"-l\"z\"",
+					"-l\"sqlite3\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.DoppelRace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoppelRace/DoppelRace-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		63EE30711CBED47900B64D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D9707774C0CFFC3CF18E36 /* Pods-DoppelRaceTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DoppelRaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.DoppelRaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoppelRace.app/DoppelRace";
+			};
+			name = Debug;
+		};
+		63EE30721CBED47900B64D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 708CC057DE1E6EED9892F094 /* Pods-DoppelRaceTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DoppelRaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.DoppelRaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoppelRace.app/DoppelRace";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63EE304B1CBED47900B64D3D /* Build configuration list for PBXProject "DoppelRace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EE306B1CBED47900B64D3D /* Debug */,
+				63EE306C1CBED47900B64D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63EE306D1CBED47900B64D3D /* Build configuration list for PBXNativeTarget "DoppelRace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EE306E1CBED47900B64D3D /* Debug */,
+				63EE306F1CBED47900B64D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63EE30701CBED47900B64D3D /* Build configuration list for PBXNativeTarget "DoppelRaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EE30711CBED47900B64D3D /* Debug */,
+				63EE30721CBED47900B64D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63EE30481CBED47900B64D3D /* Project object */;
+}

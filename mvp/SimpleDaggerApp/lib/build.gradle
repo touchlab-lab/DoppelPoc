@@ -1,0 +1,92 @@
+/*apply plugin: 'java'
+apply plugin: 'net.ltgt.apt'
+apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    apt 'com.google.dagger:dagger-compiler:2.0.2'
+    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'javax.inject:javax.inject:1'
+
+    compile 'com.google.code.gson:gson:2.6.2'
+}
+
+j2objcConfig {
+    // Sets up libraries you depend on
+    autoConfigureDeps true
+
+    // Omit these two lines if you don't configure your Xcode project with CocoaPods
+    xcodeProjectDir '../ios'  //  suggested directory name
+    xcodeTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
+
+    finalConfigure()          // Must be last call to configuration
+
+    testMinExpectedTests 0
+}*/
+
+apply plugin: 'java'
+apply plugin: "net.ltgt.apt"
+apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+configurations {
+    provided
+    compile.extendsFrom provided
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    provided 'com.google.android:android:4.1.1.4'
+    apt 'com.google.dagger:dagger-compiler:2.0.2'
+
+//    compile 'com.google.android:android:4.1.1.4'
+    
+//    compile 'com.intellij:annotations:9.0.4'
+    compile project(":retrofit")
+    j2objcLinkage project(":retrofit")
+    compile project(":rxjava")
+    j2objcLinkage project(":rxjava")
+    compile project(":gson")
+    j2objcLinkage project(":gson")
+//    compile project(":dagger")
+    j2objcLinkage project(":dagger")
+
+    compile 'co.touchlab.squeaky:squeaky-core:0.5.0.0'
+//    apt 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
+
+    j2objcLinkage project(":squeakycore")
+    j2objcLinkage project(":squeakyquery")
+    provided project(":magicthreads")
+    j2objcLinkage project(":magicthreads")
+    compile project(":eventbus")
+    j2objcLinkage project(":eventbus")
+    j2objcLinkage project(":androidbase")
+
+    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'javax.inject:javax.inject:1'
+}
+
+j2objcConfig {
+    // Sets up libraries you depend on
+//    autoConfigureDeps true
+
+    // Omit these two lines if you don't configure your Xcode project with CocoaPods
+    xcodeProjectDir '../ios'  //  suggested directory name
+    xcodeTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
+
+    testMinExpectedTests 0
+
+    translateArgs '--prefix', 'co.touchlab.simpledaggerapp.conference=SDAC'
+    translateArgs '--prefix', 'co.touchlab.simpledaggerapp=SDA'
+
+//    podDependency 'J2OBJC,../../J2OBJC'
+    extraLinkerArgs '-lsqlite3'
+
+    finalConfigure()          // Must be last call to configuration
+}

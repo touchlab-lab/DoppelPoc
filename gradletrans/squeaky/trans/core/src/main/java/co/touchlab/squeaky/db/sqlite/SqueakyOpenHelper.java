@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.google.j2objc.annotations.Weak;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.dao.SqueakyContext;
 import co.touchlab.squeaky.table.GeneratedTableMapper;
@@ -15,6 +18,7 @@ import co.touchlab.squeaky.table.GeneratedTableMapper;
  */
 public abstract class SqueakyOpenHelper extends SQLiteOpenHelper implements co.touchlab.squeaky.db.SQLiteOpenHelper
 {
+	@Weak
 	private final SqueakyContext squeakyContext;
 	private SQLiteDatabaseImpl sqLiteDatabase;
 

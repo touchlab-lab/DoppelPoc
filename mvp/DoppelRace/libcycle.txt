@@ -1,0 +1,275 @@
+Listening for transport dt_socket at address: 5006
+WARNING: Conflict with dependency 'junit:junit'. Resolved versions for app (4.11) and test app (4.12) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+WARNING: Conflict with dependency 'junit:junit'. Resolved versions for app (4.11) and test app (4.12) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+:androidbase:j2objcTranslatedMainLibraryExtraction UP-TO-DATE
+:androidbase:compileJava UP-TO-DATE
+:androidbase:processResources UP-TO-DATE
+:androidbase:classes UP-TO-DATE
+:androidbase:j2objcTranslatedTestLibraryExtraction UP-TO-DATE
+:androidbase:compileTestJava UP-TO-DATE
+:androidbase:processTestResources UP-TO-DATE
+:androidbase:testClasses UP-TO-DATE
+:androidbase:test
+:androidbase:j2objcPreBuild
+:androidbase:j2objcAssembleResources UP-TO-DATE
+:androidbase:j2objcTranslate UP-TO-DATE
+:androidbase:j2objcAssembleSource UP-TO-DATE
+:androidbase:compileIos_arm64DebugAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkIos_arm64DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:ios_arm64DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileIos_arm64DebugAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createIos_arm64DebugAndroidbase-j2objcStaticLibrary
+:androidbase:ios_arm64DebugAndroidbase-j2objcStaticLibrary
+:androidbase:compileIos_armv7DebugAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkIos_armv7DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:ios_armv7DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileIos_armv7DebugAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createIos_armv7DebugAndroidbase-j2objcStaticLibrary
+:androidbase:ios_armv7DebugAndroidbase-j2objcStaticLibrary
+:androidbase:compileIos_x86_64DebugAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkIos_x86_64DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:ios_x86_64DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileIos_x86_64DebugAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createIos_x86_64DebugAndroidbase-j2objcStaticLibrary
+:androidbase:ios_x86_64DebugAndroidbase-j2objcStaticLibrary
+:androidbase:compileX86_64DebugAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkX86_64DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:x86_64DebugAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileX86_64DebugAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createX86_64DebugAndroidbase-j2objcStaticLibrary
+:androidbase:x86_64DebugAndroidbase-j2objcStaticLibrary
+:androidbase:j2objcBuildObjcDebug
+:androidbase:j2objcPackLibrariesDebug
+:androidbase:j2objcPodspec UP-TO-DATE
+:androidbase:j2objcXcode UP-TO-DATE
+:androidbase:j2objcAssembleDebug
+:androidbase:compileDebugTestJ2objcExecutableTestJ2objcObjc UP-TO-DATE
+:androidbase:linkDebugTestJ2objcExecutable
+:androidbase:debugTestJ2objcExecutable
+:androidbase:j2objcTestDebug
+Min Test check disabled due to: 'testMinExpectedTests 0'
+:androidbase:j2objcBuildDebug
+:androidbase:compileIos_arm64ReleaseAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkIos_arm64ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:ios_arm64ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileIos_arm64ReleaseAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createIos_arm64ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:ios_arm64ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:compileIos_armv7ReleaseAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkIos_armv7ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:ios_armv7ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileIos_armv7ReleaseAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createIos_armv7ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:ios_armv7ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:compileIos_x86_64ReleaseAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkIos_x86_64ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:ios_x86_64ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileIos_x86_64ReleaseAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createIos_x86_64ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:ios_x86_64ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:compileX86_64ReleaseAndroidbase-j2objcSharedLibraryAndroidbase-j2objcObjc SKIPPED
+:androidbase:linkX86_64ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:x86_64ReleaseAndroidbase-j2objcSharedLibrary SKIPPED
+:androidbase:compileX86_64ReleaseAndroidbase-j2objcStaticLibraryAndroidbase-j2objcObjc UP-TO-DATE
+:androidbase:createX86_64ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:x86_64ReleaseAndroidbase-j2objcStaticLibrary
+:androidbase:j2objcBuildObjcRelease
+:androidbase:j2objcPackLibrariesRelease
+:androidbase:j2objcAssembleRelease
+:androidbase:compileReleaseTestJ2objcExecutableTestJ2objcObjc UP-TO-DATE
+:androidbase:linkReleaseTestJ2objcExecutable
+:androidbase:releaseTestJ2objcExecutable
+:androidbase:j2objcTestRelease
+Min Test check disabled due to: 'testMinExpectedTests 0'
+:androidbase:j2objcBuildRelease
+:androidbase:j2objcBuild
+:androidbase:jar
+:eventbus:j2objcTranslatedMainLibraryExtraction UP-TO-DATE
+:eventbus:compileJava UP-TO-DATE
+:eventbus:processResources UP-TO-DATE
+:eventbus:classes UP-TO-DATE
+:eventbus:j2objcTranslatedTestLibraryExtraction UP-TO-DATE
+:eventbus:compileTestJava UP-TO-DATE
+:eventbus:processTestResources UP-TO-DATE
+:eventbus:testClasses UP-TO-DATE
+:eventbus:test UP-TO-DATE
+:eventbus:j2objcPreBuild
+:eventbus:j2objcAssembleResources UP-TO-DATE
+:eventbus:j2objcTranslate
+#######sourcepathDirs: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/build/mainTranslationExtraction /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/build/classes/main /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/build/generated/source/apt/main 
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/AsyncPoster.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/BackgroundPoster.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/EventBus.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/EventBusBuilder.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/EventBusException.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/HandlerPoster.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/NoSubscriberEvent.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/PendingPost.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/PendingPostQueue.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/SubscriberExceptionEvent.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/SubscriberMethod.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/SubscriberMethodFinder.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/Subscription.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/ThreadMode.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/util/ExceptionToResourceMapping.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/util/HasExecutionScope.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/src/main/java/de/greenrobot/event/util/ThrowableFailureEvent.java
+:eventbus:j2objcAssembleSource UP-TO-DATE
+:eventbus:compileIos_arm64DebugEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkIos_arm64DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:ios_arm64DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileIos_arm64DebugEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createIos_arm64DebugEventbus-j2objcStaticLibrary
+:eventbus:ios_arm64DebugEventbus-j2objcStaticLibrary
+:eventbus:compileIos_armv7DebugEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkIos_armv7DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:ios_armv7DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileIos_armv7DebugEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createIos_armv7DebugEventbus-j2objcStaticLibrary
+:eventbus:ios_armv7DebugEventbus-j2objcStaticLibrary
+:eventbus:compileIos_x86_64DebugEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkIos_x86_64DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:ios_x86_64DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileIos_x86_64DebugEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createIos_x86_64DebugEventbus-j2objcStaticLibrary
+:eventbus:ios_x86_64DebugEventbus-j2objcStaticLibrary
+:eventbus:compileX86_64DebugEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkX86_64DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:x86_64DebugEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileX86_64DebugEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createX86_64DebugEventbus-j2objcStaticLibrary
+:eventbus:x86_64DebugEventbus-j2objcStaticLibrary
+:eventbus:j2objcBuildObjcDebug
+:eventbus:j2objcPackLibrariesDebug
+:eventbus:j2objcPodspec UP-TO-DATE
+:eventbus:j2objcXcode UP-TO-DATE
+:eventbus:j2objcAssembleDebug
+:eventbus:compileDebugTestJ2objcExecutableTestJ2objcObjc UP-TO-DATE
+:eventbus:linkDebugTestJ2objcExecutable
+:eventbus:debugTestJ2objcExecutable
+:eventbus:j2objcTestDebug
+Min Test check disabled due to: 'testMinExpectedTests 0'
+:eventbus:j2objcBuildDebug
+:eventbus:compileIos_arm64ReleaseEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkIos_arm64ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:ios_arm64ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileIos_arm64ReleaseEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createIos_arm64ReleaseEventbus-j2objcStaticLibrary
+:eventbus:ios_arm64ReleaseEventbus-j2objcStaticLibrary
+:eventbus:compileIos_armv7ReleaseEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkIos_armv7ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:ios_armv7ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileIos_armv7ReleaseEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createIos_armv7ReleaseEventbus-j2objcStaticLibrary
+:eventbus:ios_armv7ReleaseEventbus-j2objcStaticLibrary
+:eventbus:compileIos_x86_64ReleaseEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkIos_x86_64ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:ios_x86_64ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileIos_x86_64ReleaseEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createIos_x86_64ReleaseEventbus-j2objcStaticLibrary
+:eventbus:ios_x86_64ReleaseEventbus-j2objcStaticLibrary
+:eventbus:compileX86_64ReleaseEventbus-j2objcSharedLibraryEventbus-j2objcObjc SKIPPED
+:eventbus:linkX86_64ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:x86_64ReleaseEventbus-j2objcSharedLibrary SKIPPED
+:eventbus:compileX86_64ReleaseEventbus-j2objcStaticLibraryEventbus-j2objcObjc UP-TO-DATE
+:eventbus:createX86_64ReleaseEventbus-j2objcStaticLibrary
+:eventbus:x86_64ReleaseEventbus-j2objcStaticLibrary
+:eventbus:j2objcBuildObjcRelease
+:eventbus:j2objcPackLibrariesRelease
+:eventbus:j2objcAssembleRelease
+:eventbus:compileReleaseTestJ2objcExecutableTestJ2objcObjc UP-TO-DATE
+:eventbus:linkReleaseTestJ2objcExecutable
+:eventbus:releaseTestJ2objcExecutable
+:eventbus:j2objcTestRelease UP-TO-DATE
+:eventbus:j2objcBuildRelease
+:eventbus:j2objcBuild
+:eventbus:jar
+:gson:j2objcTranslatedMainLibraryExtraction UP-TO-DATE
+:gson:compileJava UP-TO-DATE
+:gson:processResources UP-TO-DATE
+:gson:classes UP-TO-DATE
+:gson:j2objcTranslatedTestLibraryExtraction UP-TO-DATE
+:gson:compileTestJava UP-TO-DATE
+:gson:processTestResources UP-TO-DATE
+:gson:testClasses UP-TO-DATE
+:gson:test UP-TO-DATE
+:gson:j2objcPreBuild UP-TO-DATE
+:gson:j2objcAssembleResources
+:gson:j2objcTranslate
+#######sourcepathDirs: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/build/mainTranslationExtraction /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/build/classes/main /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/build/generated/source/apt/main 
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/ExclusionStrategy.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/FieldAttributes.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/FieldNamingPolicy.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/FieldNamingStrategy.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/Gson.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/GsonBuilder.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/InstanceCreator.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonArray.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonDeserializationContext.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonDeserializer.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonElement.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonIOException.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonNull.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonObject.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonParseException.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonParser.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonPrimitive.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonSerializationContext.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonSerializer.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonStreamParser.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/JsonSyntaxException.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/LongSerializationPolicy.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/package-info.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/TreeTypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/TypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/TypeAdapterFactory.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/annotations/Expose.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/annotations/package-info.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/annotations/SerializedName.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/annotations/Since.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/annotations/Until.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/$Gson$Preconditions.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/Excluder.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/JsonReaderInternalAccess.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/ObjectConstructor.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/package-info.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/Primitives.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/Streams.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/UnsafeAllocator.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/DateTypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/ObjectTypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/SqlDateTypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/TimeTypeAdapter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/reflect/package-info.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/reflect/TypeToken.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/stream/JsonReader.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/stream/JsonScope.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/stream/JsonToken.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/stream/JsonWriter.java
+totranslate: /Users/kgalligan/devel/xp/gradletrans/gson/trans/gson/src/main/java/com/google/gson/stream/MalformedJsonException.java
+:gson:j2objcAssembleSource
+:gson:compileIos_arm64DebugGson-j2objcSharedLibraryGson-j2objcObjc SKIPPED
+:gson:linkIos_arm64DebugGson-j2objcSharedLibrary SKIPPED
+:gson:ios_arm64DebugGson-j2objcSharedLibrary SKIPPED
+:gson:compileIos_arm64DebugGson-j2objcStaticLibraryGson-j2objcObjc FAILED
+
+BUILD FAILED
+
+Total time: 41.652 secs

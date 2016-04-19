@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../../gradletrans/androidbase/trans/lib" />
+            <option value="$PROJECT_DIR$/../../gradletrans/commons-io/trans/commons-io" />
+            <option value="$PROJECT_DIR$/../../gradletrans/commons-lang3/trans/commons-lang3" />
+            <option value="$PROJECT_DIR$/../../gradletrans/dagger/trans/core" />
+            <option value="$PROJECT_DIR$/../../gradletrans/eventbus/trans/eb" />
+            <option value="$PROJECT_DIR$/../../gradletrans/gson/trans/gson" />
+            <option value="$PROJECT_DIR$/../../gradletrans/intellij/trans/intellij" />
+            <option value="$PROJECT_DIR$/../../gradletrans/magicthreads/trans/magicthreads" />
+            <option value="$PROJECT_DIR$/../../gradletrans/retrofit/trans/retrofit" />
+            <option value="$PROJECT_DIR$/../../gradletrans/rxandroid/trans/rxandroid" />
+            <option value="$PROJECT_DIR$/../../gradletrans/rxjava/trans/rxjava" />
+            <option value="$PROJECT_DIR$/../../gradletrans/squeaky/trans/core" />
+            <option value="$PROJECT_DIR$/../../gradletrans/squeaky/trans/query" />
+            <option value="$PROJECT_DIR$/../../gradletrans/truth/trans/core" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/mobile" />
+            <option value="$PROJECT_DIR$/tv" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

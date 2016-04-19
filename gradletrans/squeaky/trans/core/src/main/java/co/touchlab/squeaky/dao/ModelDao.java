@@ -27,16 +27,18 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ModelDao<T> implements Dao<T>
 {
 	public static final String DEFAULT_TABLE_PREFIX = "t";
-	public static final String EQ_OPERATION = "= ?";
+	public static final String EQ_OPERATION         = "= ?";
 
-	private final Class<T> entityClass;
+	private final Class<T>                entityClass;
 	private final GeneratedTableMapper<T> generatedTableMapper;
 	private final Set<DaoObserver> daoObserverSet = Collections.newSetFromMap(new ConcurrentHashMap<DaoObserver, Boolean>());
-	private final String[] tableCols;
+	private final String[]       tableCols;
 	private final SqueakyContext squeakyContext;
-	private final FieldType idFieldType;
-	private final List<SQLiteStatement> statementList = Collections.synchronizedList(new ArrayList<SQLiteStatement>());
-	private ThreadLocal<SQLiteStatement> createStatement = new ThreadLocal<SQLiteStatement>(){
+	private final FieldType      idFieldType;
+	private final List<SQLiteStatement>        statementList   = Collections
+			.synchronizedList(new ArrayList<SQLiteStatement>());
+	private       ThreadLocal<SQLiteStatement> createStatement = new ThreadLocal<SQLiteStatement>()
+	{
 		@Override
 		protected SQLiteStatement initialValue()
 		{
@@ -45,7 +47,8 @@ public class ModelDao<T> implements Dao<T>
 			return sqLiteStatement;
 		}
 	};
-	private ThreadLocal<SQLiteStatement> updateStatement = new ThreadLocal<SQLiteStatement>(){
+	private       ThreadLocal<SQLiteStatement> updateStatement = new ThreadLocal<SQLiteStatement>()
+	{
 		@Override
 		protected SQLiteStatement initialValue()
 		{
@@ -65,9 +68,9 @@ public class ModelDao<T> implements Dao<T>
 
 			FieldType idField = null;
 			FieldType[] fieldTypes = generatedTableMapper.getTableConfig().getFieldTypes();
-			for (FieldType fieldType : fieldTypes)
+			for(FieldType fieldType : fieldTypes)
 			{
-				if (fieldType.isId() || fieldType.isGeneratedId())
+				if(fieldType.isId() || fieldType.isGeneratedId())
 				{
 					idField = fieldType;
 					break;
@@ -78,7 +81,7 @@ public class ModelDao<T> implements Dao<T>
 
 			tableCols = buildSelect();
 		}
-		catch (Exception e)
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
@@ -86,7 +89,7 @@ public class ModelDao<T> implements Dao<T>
 
 	public void cleanUp()
 	{
-		for (SQLiteStatement sqLiteStatement : statementList)
+		for(SQLiteStatement sqLiteStatement : statementList)
 		{
 			sqLiteStatement.close();
 		}
@@ -97,7 +100,7 @@ public class ModelDao<T> implements Dao<T>
 		FieldType[] fieldTypes = generatedTableMapper.getTableConfig().getFieldTypes();
 		String[] selectList = new String[fieldTypes.length];
 
-		for (int i = 0; i < fieldTypes.length; i++)
+		for(int i = 0; i < fieldTypes.length; i++)
 		{
 			selectList[i] = DEFAULT_TABLE_PREFIX + "." + fieldTypes[i].getColumnName();
 		}
@@ -108,7 +111,9 @@ public class ModelDao<T> implements Dao<T>
 	public T queryForId(Object id) throws SQLException
 	{
 		List<T> tList = queryForEq(idFieldType.getColumnName(), id).list();
-		return tList.size() == 0 ? null : tList.get(0);
+		return tList.size() == 0
+				? null
+				: tList.get(0);
 	}
 
 	@Override

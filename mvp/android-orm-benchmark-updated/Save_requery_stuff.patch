@@ -1,0 +1,303 @@
+Index: ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/DataBaseHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/DataBaseHelper.java	(revision )
++++ ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/DataBaseHelper.java	(revision )
+@@ -0,0 +1,73 @@
++package com.littleinc.orm_benchmark.requery;
++
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++
++import io.requery.android.sqlite.DatabaseSource;
++import io.requery.sql.SchemaModifier;
++
++public class DataBaseHelper extends DatabaseSource
++{
++    // DB CONFIG
++    private static      int    DB_VERSION = 1;
++
++    private static String DB_NAME = "requery_db";
++
++    private static DataBaseHelper sInstance;
++
++    public static void init(Context context, boolean isInMemory)
++    {
++        sInstance = new DataBaseHelper(context, isInMemory);
++    }
++
++    public static DataBaseHelper getInstance()
++    {
++        if(sInstance == null)
++        {
++            throw new InstantiationError();
++        }
++        return sInstance;
++    }
++
++    private DataBaseHelper(Context context, boolean isInMemory)
++    {
++        super(context, Models.DEFAULT, DB_VERSION);
++//        super(context, (isInMemory
++//                ? null
++//                : DB_NAME), null, DB_VERSION);
++    }
++
++
++   /* @Override
++    public void onUpgrade(SQLiteDatabase db,
++            int oldVersion, int newVersion) {
++    }
++
++    @Override
++    public void onCreate(SQLiteDatabase sqLiteDatabase)
++    {
++
++    }*/
++
++    @Override
++    public void onCreate(SQLiteDatabase db)
++    {
++
++    }
++
++    @Override
++    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
++    {
++
++    }
++
++    public void createTables(SQLiteDatabase db)
++    {
++        super.onCreate(db);
++    }
++
++    public void dropTables()
++    {
++        new SchemaModifier(getConfiguration()).dropTables();
++    }
++}
+Index: ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/User.java	(revision )
++++ ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/User.java	(revision )
+@@ -0,0 +1,18 @@
++package com.littleinc.orm_benchmark.requery;
++
++import io.requery.Entity;
++import io.requery.Generated;
++import io.requery.Key;
++
++/**
++ * Created by kgalligan on 10/24/15.
++ */
++@Entity
++public class User
++{
++    @Key
++    @Generated
++    public long   id;
++    public String lastName;
++    public String firstName;
++}
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision ce668ccbd8416524b2d8d845955e3c1aa9097551)
++++ build.gradle	(revision )
+@@ -4,6 +4,7 @@
+     repositories {
+         jcenter()
+         mavenLocal()
++        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:1.0.1'
+@@ -18,5 +19,6 @@
+         jcenter()
+         mavenLocal()
+         maven { url "https://raw.github.com/Raizlabs/maven-releases/master/releases" }
++        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+     }
+ }
+\ No newline at end of file
+Index: ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/Message.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/Message.java	(revision )
++++ ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/Message.java	(revision )
+@@ -0,0 +1,31 @@
++package com.littleinc.orm_benchmark.requery;
++import com.orm.SugarRecord;
++
++import io.requery.Entity;
++import io.requery.Generated;
++import io.requery.Key;
++
++/**
++ * Created by kgalligan on 10/24/15.
++ */
++@Entity
++public class Message
++{
++    @Key
++    @Generated
++    public long id;
++
++    public long clientId;
++
++    public long commandId;
++
++    public double sortedBy;
++
++    public int createdAt;
++
++    public String content;
++
++    public long senderId;
++
++    public long channelId;
++}
+Index: ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/RequeryExecutor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/RequeryExecutor.java	(revision )
++++ ORM-Benchmark/src/main/java/com/littleinc/orm_benchmark/requery/RequeryExecutor.java	(revision )
+@@ -0,0 +1,126 @@
++package com.littleinc.orm_benchmark.requery;
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.util.Log;
++
++import com.littleinc.orm_benchmark.BenchmarkExecutable;
++
++import com.littleinc.orm_benchmark.util.Util;
++
++import java.sql.Connection;
++import java.sql.SQLException;
++import java.util.LinkedList;
++import java.util.List;
++import java.util.Random;
++
++import io.requery.sql.EntityDataStore;
++import io.requery.sql.SchemaModifier;
++import io.requery.sql.TableCreationMode;
++
++/**
++ * Created by kgalligan on 10/24/15.
++ */
++public class RequeryExecutor implements BenchmarkExecutable
++{
++
++    private static final String TAG = "RequeryExecutor";
++
++    private DataBaseHelper mHelper;
++
++    @Override
++    public void init(Context context, boolean useInMemoryDb)
++    {
++        Log.d(TAG, "Creating DataBaseHelper");
++        com.littleinc.orm_benchmark.squeakyfinal.DataBaseHelper.init(context, useInMemoryDb);
++        mHelper = DataBaseHelper.getInstance();
++    }
++
++    @Override
++    public long createDbStructure() throws SQLException
++    {
++        long start = System.nanoTime();
++
++        mHelper.createTables(mHelper.getWritableDatabase());
++//        TableUtils.createTables(mHelper.getWrappedDatabase(),
++//                                com.littleinc.orm_benchmark.squeakyfinal.User.class,
++//                                com.littleinc.orm_benchmark.squeakyfinal.Message.class);
++        return System.nanoTime() - start;
++    }
++
++    @Override
++    public long writeWholeData() throws SQLException
++    {
++        Random random = new Random();
++        List<User> users = new LinkedList<User>();
++        for (int i = 0; i < NUM_USER_INSERTS; i++) {
++            User newUser = new User();
++            newUser.lastName = (Util.getRandomString(10));
++            newUser.firstName = (Util.getRandomString(10));
++
++            users.add(newUser);
++        }
++
++        List<Message> messages = new LinkedList<Message>();
++        for (int i = 0; i < NUM_MESSAGE_INSERTS; i++) {
++            Message newMessage = new Message();
++            newMessage.commandId = (i);
++            newMessage.sortedBy = (System.nanoTime());
++            newMessage.content = (Util.getRandomString(100));
++            newMessage.clientId = (System.currentTimeMillis());
++            newMessage
++                    .senderId = (Math.round(Math.random() * NUM_USER_INSERTS));
++            newMessage
++                    .channelId = (Math.round(Math.random() * NUM_USER_INSERTS));
++            newMessage.createdAt = ((int) (System.currentTimeMillis() / 1000L));
++
++            messages.add(newMessage);
++        }
++
++        long start = System.nanoTime();
++        SQLiteDatabase db = mHelper.getWritableDatabase();
++        db.beginTransaction();
++
++        final EntityDataStore<User> userStore = new EntityDataStore<>(
++                mHelper.getConfiguration());
++        final EntityDataStore<Message> messageStore = new EntityDataStore<>(
++                mHelper.getConfiguration());
++
++        try {
++
++            for (User user : users) {
++                userStore.insert(user);
++            }
++            Log.d(TAG, "Done, wrote " + NUM_USER_INSERTS + " users");
++
++            for (Message message : messages) {
++                messageStore.insert(message);
++            }
++            Log.d(TAG, "Done, wrote " + NUM_MESSAGE_INSERTS + " messages");
++
++            db.setTransactionSuccessful();
++        } finally {
++            db.endTransaction();
++        }
++        return System.nanoTime() - start;
++    }
++
++    @Override
++    public long readWholeData() throws SQLException {
++        long start = System.nanoTime();
++//        Log.d(TAG, "Read, " + mHelper.getDao(com.littleinc.orm_benchmark.squeakyfinal.Message.class)
++//                                     .queryForAll().list().size() + " rows");
++        return System.nanoTime() - start;
++    }
++
++    @Override
++    public long dropDb() throws SQLException {
++        long start = System.nanoTime();
++        mHelper.dropTables();
++        return System.nanoTime() - start;
++    }
++
++    @Override
++    public String getOrmName() {
++        return "SqueakyFinal";
++    }
++}

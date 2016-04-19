@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DoppelRace.iml" filepath="$PROJECT_DIR$/DoppelRace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/androidbase/trans/lib/androidbase.iml" filepath="$PROJECT_DIR$/../../gradletrans/androidbase/trans/lib/androidbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/commons-io/trans/commons-io/commons-io.iml" filepath="$PROJECT_DIR$/../../gradletrans/commons-io/trans/commons-io/commons-io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/commons-lang3/trans/commons-lang3/commons-lang3.iml" filepath="$PROJECT_DIR$/../../gradletrans/commons-lang3/trans/commons-lang3/commons-lang3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/dagger/trans/core/dagger.iml" filepath="$PROJECT_DIR$/../../gradletrans/dagger/trans/core/dagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/eventbus/trans/eb/eventbus.iml" filepath="$PROJECT_DIR$/../../gradletrans/eventbus/trans/eb/eventbus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/gson/trans/gson/gson.iml" filepath="$PROJECT_DIR$/../../gradletrans/gson/trans/gson/gson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/intellij/trans/intellij/intellij.iml" filepath="$PROJECT_DIR$/../../gradletrans/intellij/trans/intellij/intellij.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/magicthreads/trans/magicthreads/magicthreads.iml" filepath="$PROJECT_DIR$/../../gradletrans/magicthreads/trans/magicthreads/magicthreads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobile/mobile.iml" filepath="$PROJECT_DIR$/mobile/mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/retrofit/trans/retrofit/retrofit.iml" filepath="$PROJECT_DIR$/../../gradletrans/retrofit/trans/retrofit/retrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/rxandroid/trans/rxandroid/rxandroid.iml" filepath="$PROJECT_DIR$/../../gradletrans/rxandroid/trans/rxandroid/rxandroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/rxjava/trans/rxjava/rxjava.iml" filepath="$PROJECT_DIR$/../../gradletrans/rxjava/trans/rxjava/rxjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/squeaky/trans/core/squeakycore.iml" filepath="$PROJECT_DIR$/../../gradletrans/squeaky/trans/core/squeakycore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/squeaky/trans/query/squeakyquery.iml" filepath="$PROJECT_DIR$/../../gradletrans/squeaky/trans/query/squeakyquery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../gradletrans/truth/trans/core/truthcore.iml" filepath="$PROJECT_DIR$/../../gradletrans/truth/trans/core/truthcore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tv/tv.iml" filepath="$PROJECT_DIR$/tv/tv.iml" />
+    </modules>
+  </component>
+</project>

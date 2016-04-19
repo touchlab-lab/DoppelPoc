@@ -16,6 +16,7 @@ import java.util.Map;
  */
 public class SqueakyContext
 {
+	//Cyclic reference, but long lived.  Should refactor out, though.
 	private final SQLiteOpenHelper helper;
 	private final Map<Class, ModelDao> daoMap = new HashMap<Class, ModelDao>();
 	private final Map<Class, GeneratedTableMapper> generatedTableMapperMap = new HashMap<Class, GeneratedTableMapper>();

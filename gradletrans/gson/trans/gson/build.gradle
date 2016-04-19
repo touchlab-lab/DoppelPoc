@@ -6,7 +6,9 @@ targetCompatibility = 1.7
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
     compile 'junit:junit:4.11'
+    compile 'com.google.j2objc:j2objc-annotations:0.1'
 }
 
 j2objcConfig {
@@ -22,11 +24,13 @@ j2objcConfig {
 
     }
 
+    j2objcCycleFinder { enabled = true }
+
     finalConfigure()          // Must be last call to configuration
 
     testMinExpectedTests 0
 
-extraObjcCompilerArgs '-Wno-deprecated'
+    extraObjcCompilerArgs '-Wno-deprecated'
 
     /*translateArgs '--prefix', 'com.google.gson=GSON'
     translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'

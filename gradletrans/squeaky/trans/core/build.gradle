@@ -15,6 +15,7 @@ dependencies {
     provided project(':androidbase')
     j2objcLinkage project(':androidbase')
     compile 'junit:junit:4.11'
+    compile 'com.google.j2objc:j2objc-annotations:0.1'
 }
 
 j2objcConfig {
@@ -30,13 +31,15 @@ testPattern {
 
     }
 
-extraObjcCompilerArgs '-I/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/src/main/objc', '-Wno-deprecated'
-    extraLinkerArgs '-L/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/lib/x86_64Debug'
+//extraObjcCompilerArgs '-I/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/src/main/objc', '-Wno-deprecated'
+    extraObjcCompilerArgs '-Wno-deprecated'
     extraLinkerArgs '-lsqlite3'
 
     finalConfigure()          // Must be last call to configuration
 
     testMinExpectedTests 0
+
+//    podRetainSource true
 
     /*translateArgs '--prefix', 'com.google.gson=GSON'
     translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'

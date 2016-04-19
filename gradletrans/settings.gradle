@@ -8,6 +8,8 @@ include ":rxandroid"
 include ":rxjava"
 include ":squeakycore"
 include ":squeakyquery"
+include ":cupboard"
+include ":greendao"
 include ":truthcore"
 include ":commons-io"
 include ":commons-lang3"
@@ -23,6 +25,8 @@ project(":rxandroid").projectDir = new File("rxandroid/trans/RxAndroid")
 project(":rxjava").projectDir = new File("rxjava/trans/rxjava")
 project(":squeakycore").projectDir = new File("squeaky/trans/core")
 project(":squeakyquery").projectDir = new File("squeaky/trans/query")
+project(":cupboard").projectDir = new File("cupboard/trans/cupboard")
+project(":greendao").projectDir = new File("greendao/trans/greendao")
 project(":truthcore").projectDir = new File("truth/trans/core")
 project(":commons-io").projectDir = new File("commons-io/trans/commons-io")
 project(":commons-lang3").projectDir = new File("commons-lang3/trans/commons-lang3")

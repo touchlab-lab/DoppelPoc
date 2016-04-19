@@ -1,0 +1,2573 @@
+Listening for transport dt_socket at address: 5006
+WARNING: Conflict with dependency 'junit:junit'. Resolved versions for app (4.11) and test app (4.12) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+WARNING: Conflict with dependency 'junit:junit'. Resolved versions for app (4.11) and test app (4.12) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+:gson:j2objcTranslatedMainLibraryExtraction UP-TO-DATE
+:gson:compileJava UP-TO-DATE
+:gson:processResources UP-TO-DATE
+:gson:classes UP-TO-DATE
+:gson:j2objcTranslatedTestLibraryExtraction UP-TO-DATE
+:gson:compileTestJava UP-TO-DATE
+:gson:processTestResources UP-TO-DATE
+:gson:testClasses UP-TO-DATE
+:gson:test UP-TO-DATE
+:gson:j2objcPreBuild UP-TO-DATE
+:gson:j2objcCycleFinder
+
+***** Found reference cycle *****
+LinkedHashSet<Object> -> (superclass HashSet<Object> has (field map with type HashMap<Object,Object>))
+HashMap<Object,Object> -> (superclass AbstractMap<Object,Object> has (LinkedHashSet<Object> subtype of (field keySet with type Set<Object>)))
+----- Full Types -----
+Ljava/util/LinkedHashSet<Ljava/lang/Object;>;
+Ljava/util/HashMap<Ljava/lang/Object;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+CollectionView<Object,Object,Object> -> (field map with type ConcurrentHashMap<Object,Object>)
+ConcurrentHashMap<Object,Object> -> (superclass AbstractMap<Object,Object> has (CollectionView<Object,Object,Object> subtype of (field values with type Collection<Object>)))
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<>.CollectionView<Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Object;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+TreeMap<Object,Object> -> (superclass AbstractMap<Object,Object> has (TreeSet<Object> subtype of (field keySet with type Set<Object>)))
+TreeSet<Object> -> (TreeMap<Object,Object> subtype of (field m with type NavigableMap<Object,Object>))
+----- Full Types -----
+Ljava/util/TreeMap<Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/TreeSet<Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+EntrySetView<Object,Object> -> (superclass CollectionView<Object,Object,Entry<Object,Object>> has (field map with type ConcurrentHashMap<Object,Object>))
+ConcurrentHashMap<Object,Object> -> (field entrySet with type EntrySetView<Object,Object>)
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<>.EntrySetView<Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Object;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+ConcurrentHashMap<String,Object> -> (field values with type ValuesView<String,Object>)
+ValuesView<String,Object> -> (superclass CollectionView<String,Object,Object> has (field map with type ConcurrentHashMap<String,Object>))
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<>.ValuesView<Ljava/lang/String;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+CollectionView<String,Object,Object> -> (field map with type ConcurrentHashMap<String,Object>)
+ConcurrentHashMap<String,Object> -> (superclass AbstractMap<String,Object> has (CollectionView<String,Object,Object> subtype of (field values with type Collection<Object>)))
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<>.CollectionView<Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+ConcurrentSkipListMap<Object,Object> -> (field entrySet with type EntrySet<Object,Object>)
+EntrySet<Object,Object> -> (ConcurrentSkipListMap<Object,Object> subtype of (field m with type ConcurrentNavigableMap<Object,Object>))
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentSkipListMap<Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentSkipListMap<>.EntrySet<Ljava/lang/Object;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+ValuesView<Object,Object> -> (superclass CollectionView<Object,Object,Object> has (field map with type ConcurrentHashMap<Object,Object>))
+ConcurrentHashMap<Object,Object> -> (field values with type ValuesView<Object,Object>)
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<>.ValuesView<Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Object;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+KeySetView<Object,Object> -> (superclass CollectionView<Object,Object,Object> has (field map with type ConcurrentHashMap<Object,Object>))
+ConcurrentHashMap<Object,Object> -> (field keySet with type KeySetView<Object,Object>)
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<>.KeySetView<Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Object;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+HashSet<Object> -> (field map with type HashMap<Object,Object>)
+HashMap<Object,Object> -> (superclass AbstractMap<Object,Object> has (HashSet<Object> subtype of (field keySet with type Set<Object>)))
+----- Full Types -----
+Ljava/util/HashSet<Ljava/lang/Object;>;
+Ljava/util/HashMap<Ljava/lang/Object;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+LinkedHashMap<Object,Object> -> (superclass AbstractMap<Object,Object> has (LinkedHashSet<Object> subtype of (field keySet with type Set<Object>)))
+LinkedHashSet<Object> -> (superclass HashSet<Object> has (LinkedHashMap<Object,Object> subtype of (field map with type HashMap<Object,Object>)))
+----- Full Types -----
+Ljava/util/LinkedHashMap<Ljava/lang/Object;Ljava/lang/Object;>;
+Ljava/util/LinkedHashSet<Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+EntrySetView<String,Object> -> (superclass CollectionView<String,Object,Entry<String,Object>> has (field map with type ConcurrentHashMap<String,Object>))
+ConcurrentHashMap<String,Object> -> (field entrySet with type EntrySetView<String,Object>)
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<>.EntrySetView<Ljava/lang/String;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+KeySetView<String,Object> -> (superclass CollectionView<String,Object,String> has (field map with type ConcurrentHashMap<String,Object>))
+ConcurrentHashMap<String,Object> -> (field keySet with type KeySetView<String,Object>)
+----- Full Types -----
+Ljava/util/concurrent/ConcurrentHashMap<>.KeySetView<Ljava/lang/String;Ljava/lang/Object;>;
+Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+Version<?> -> (field classValue with type ClassValue<?>)
+ClassValue<?> -> (field version with type Version<?>)
+----- Full Types -----
+Ljava/lang/ClassValue<>.Version<Ljava/lang/ClassValue$Entry;{0}*>;
+Ljava/lang/ClassValue<Ljava/lang/ClassValue$Entry;{0}*>;
+
+***** Found reference cycle *****
+Entry<?> -> (superclass WeakReference<Version<?>> has (superclass Reference<Version<?>> has (field referent with type Version<?>)))
+Version<?> -> (field promise with type Entry<?>)
+----- Full Types -----
+Ljava/lang/ClassValue<>.Entry<Ljava/lang/ClassValue$Entry;{0}*>;
+Ljava/lang/ClassValue<>.Version<Ljava/lang/ClassValue$Entry;{0}*>;
+
+***** Found reference cycle *****
+Era -> (Date subtype of (field sinceDate with type CalendarDate))
+Date -> (superclass CalendarDate has (field era with type Era))
+----- Full Types -----
+Lsun/util/calendar/Era;
+Lsun/util/calendar/BaseCalendar$Date;
+
+***** Found reference cycle *****
+CalendarDate -> (field era with type Era)
+Era -> (field sinceDate with type CalendarDate)
+----- Full Types -----
+Lsun/util/calendar/CalendarDate;
+Lsun/util/calendar/Era;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3297;3310;>;>;
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3297;3310;>;
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3297;3310;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3297;3310;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5731;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5731;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5731;>;
+
+***** Found reference cycle *****
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Method subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<Long> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<Long> subtype of (field parameterTypeCache with type Type))
+Class<Long> -> (field reflectionData with type SoftReference<ReflectionData<Long>>)
+SoftReference<ReflectionData<Long>> -> (superclass Reference<ReflectionData<Long>> has (field referent with type ReflectionData<Long>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Long;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Long;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Long;>;>;
+
+***** Found reference cycle *****
+Class<? super TypeAdapterFactory> -> (field cachedConstructor with type Constructor<? super TypeAdapterFactory>)
+Constructor<? super TypeAdapterFactory> -> (field clazz with type Class<? super TypeAdapterFactory>)
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/TypeAdapterFactory;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/TypeAdapterFactory;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9749;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/text/DateFormat;3878;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7026;7039;>;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7026;7039;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7026;7039;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*4593;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4593;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:2TT;3313;>;>;
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:2TT;3313;>;
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:2TT;3313;>;
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:2TT;3313;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;:1TT;3363;>;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;:1TT;3363;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;:1TT;3363;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/MapTypeAdapterFactory;:1TT;4461;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9749;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9749;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9749;>;>;
+
+***** Found reference cycle *****
+ReflectionData<? super T> -> (field declaredConstructors with type Constructor<? super T>[])
+Constructor<? super T> -> (field clazz with type Class<? super T>)
+Class<? super T> -> (field reflectionData with type SoftReference<ReflectionData<? super T>>)
+SoftReference<ReflectionData<? super T>> -> (superclass Reference<ReflectionData<? super T>> has (field referent with type ReflectionData<? super T>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/Gson;:16TT;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/Gson;:16TT;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/Gson;:16TT;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/Gson;:16TT;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1999;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}*1999;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1999;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}*8835;8851;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;5346;>;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;5346;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;5346;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5731;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5731;>;
+
+***** Found reference cycle *****
+MethodRepository -> (Class<? super T> subtype of (field returnType with type Type))
+Class<? super T> -> (field cachedConstructor with type Constructor<? super T>)
+Constructor<? super T> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+----- Full Types -----
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/Gson;:16TT;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/Gson;:16TT;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$30153;:1TT2;30371;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$30153;:1TT2;30371;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$30153;:1TT2;30371;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$30153;:1TT2;30371;>;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/Gson;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;25379;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2481;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5503;>;
+Lcom/google/gson/internal/Excluder;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*5503;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5503;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5503;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*12322;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*12322;>;
+
+***** Found reference cycle *****
+FieldRepository -> (Class<> subtype of (field genericType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field genericInfo with type FieldRepository)
+----- Full Types -----
+Lsun/reflect/generics/repository/FieldRepository;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7210;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7210;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7210;>;
+Ljava/lang/reflect/Field;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field clazz with type Class<?>)
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/SqlDateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1501;:1TT;1731;>;>;
+Lcom/google/gson/internal/bind/SqlDateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1501;:1TT;1731;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Lcom/google/gson/internal/bind/SqlDateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1501;:1TT;1731;>;
+
+***** Found reference cycle *****
+ReflectionData<E> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<E> subtype of (field parameterTypeCache with type Type))
+Class<E> -> (field reflectionData with type SoftReference<ReflectionData<E>>)
+SoftReference<ReflectionData<E>> -> (superclass Reference<ReflectionData<E>> has (field referent with type ReflectionData<E>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/internal/bind/ArrayTypeAdapter;:TE;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Lcom/google/gson/internal/bind/ArrayTypeAdapter;:TE;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/internal/bind/ArrayTypeAdapter;:TE;>;>;
+
+***** Found reference cycle *****
+ReflectionData<? super > -> (field declaredConstructors with type Constructor<? super >[])
+Constructor<? super > -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<? super > subtype of (field exceptionTypes with type Type[]))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*2148;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*2148;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*2148;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*2148;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10322;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10322;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10322;>;>;
+
+***** Found reference cycle *****
+Constructor<? super > -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<? super > subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*5499;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5482;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;:1TT;1547;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;:1TT;1547;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;:1TT;1547;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/LinkedHashTreeMap;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;5698;>;>;
+Lcom/google/gson/internal/LinkedHashTreeMap;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;5698;>;
+Lcom/google/gson/internal/LinkedHashTreeMap;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;5698;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/LinkedHashTreeMap;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;5698;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*10120;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*3458;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*3458;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*3458;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*3458;>;>;
+
+***** Found reference cycle *****
+ReflectionData<? super TypeAdapterFactory> -> (field declaredConstructors with type Constructor<? super TypeAdapterFactory>[])
+Constructor<? super TypeAdapterFactory> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<? super TypeAdapterFactory> subtype of (field exceptionTypes with type Type[]))
+Class<? super TypeAdapterFactory> -> (field reflectionData with type SoftReference<ReflectionData<? super TypeAdapterFactory>>)
+SoftReference<ReflectionData<? super TypeAdapterFactory>> -> (superclass Reference<ReflectionData<? super TypeAdapterFactory>> has (field referent with type ReflectionData<? super TypeAdapterFactory>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/TypeAdapterFactory;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/TypeAdapterFactory;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/TypeAdapterFactory;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/TypeAdapterFactory;>;>;
+
+***** Found reference cycle *****
+Class<T> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<T> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Ljava/lang/Class<Lcom/google/gson/internal/Primitives;:5TT;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2481;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*2481;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2481;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2481;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7712;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7712;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7712;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7712;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TimeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TimeTypeAdapter$1525;:1TT;1755;>;>;
+Lcom/google/gson/internal/bind/TimeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TimeTypeAdapter$1525;:1TT;1755;>;
+Lcom/google/gson/internal/bind/TimeTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TimeTypeAdapter$1525;:1TT;1755;>;
+Lcom/google/gson/internal/bind/TimeTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TimeTypeAdapter$1525;:1TT;1755;>;
+
+***** Found reference cycle *****
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+Constructor<? super > -> (field clazz with type Class<? super >)
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*38975;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*38975;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;11395;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;11395;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;11395;>;>;
+
+***** Found reference cycle *****
+Constructor<? extends Annotation> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<? extends Annotation> subtype of (field returnType with type Type))
+Class<? extends Annotation> -> (field cachedConstructor with type Constructor<? extends Annotation>)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}+Ljava/lang/annotation/Annotation;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}+Ljava/lang/annotation/Annotation;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field clazz with type Class<?>)
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2752;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2752;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2752;>;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5576;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2347;>;>;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2347;>;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*2347;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2347;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}*8835;8851;>;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}*8835;8851;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}*8835;8851;>;
+
+***** Found reference cycle *****
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/DateTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/DateTypeAdapter$1581;:1TT;1811;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/DateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/DateTypeAdapter$1581;:1TT;1811;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ObjectTypeAdapter$1329;:1TT;1492;>;>;
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ObjectTypeAdapter$1329;:1TT;1492;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ObjectTypeAdapter$1329;:1TT;1492;>;
+
+***** Found reference cycle *****
+Class<> -> (field cachedConstructor with type Constructor<>)
+Constructor<> -> (field clazz with type Class<>)
+----- Full Types -----
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonPrimitive;8676;>;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonPrimitive;8676;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/util/ISO8601Utils;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Exception;11563;>;
+Lcom/google/gson/internal/bind/util/ISO8601Utils;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Exception;11563;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8209;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+Constructor<? super > -> (field clazz with type Class<? super >)
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*5499;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*5499;>;
+
+***** Found reference cycle *****
+Constructor<? super Date> -> (field clazz with type Class<? super Date>)
+Class<? super Date> -> (field cachedConstructor with type Constructor<? super Date>)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Ljava/sql/Date;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Ljava/sql/Date;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field genericInfo with type FieldRepository)
+FieldRepository -> (Class<> subtype of (field genericType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;25359;>;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;25359;>;
+Ljava/lang/reflect/Field;
+Lsun/reflect/generics/repository/FieldRepository;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;25359;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4937;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;8694;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;8694;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field clazz with type Class<?>)
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/JsonTreeReader;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/internal/bind/JsonTreeReader;6688;>;>;
+Lcom/google/gson/internal/bind/JsonTreeReader;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/internal/bind/JsonTreeReader;6688;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Lcom/google/gson/internal/bind/JsonTreeReader;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/internal/bind/JsonTreeReader;6688;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/Gson;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;25379;>;
+Lcom/google/gson/Gson;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;25379;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/Gson;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;25379;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/Gson;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;25379;>;>;
+
+***** Found reference cycle *****
+ReflectionData<T> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<T> subtype of (field parameterTypeCache with type Type))
+Class<T> -> (field reflectionData with type SoftReference<ReflectionData<T>>)
+SoftReference<ReflectionData<T>> -> (superclass Reference<ReflectionData<T>> has (field referent with type ReflectionData<T>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/Gson;:8TT;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Lcom/google/gson/Gson;:8TT;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/Gson;:8TT;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2200;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*2200;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2200;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2200;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/SqlDateTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1501;:1TT;1731;>;
+Lcom/google/gson/internal/bind/SqlDateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1501;:1TT;1731;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;11395;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/reflect/TypeToken<>;2131;>;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/reflect/TypeToken<>;2131;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/reflect/TypeToken<>;2131;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/Excluder;:2TT;3849;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/Excluder;:2TT;3849;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/Excluder;:2TT;3849;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4876;>;
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4876;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4876;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4876;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;7873;>;>;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;7873;>;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;7873;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;7873;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/ArrayTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1912;>;
+Lcom/google/gson/internal/bind/ArrayTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*1912;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/ArrayTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}*1912;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/ArrayTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1912;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;8401;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Class<> -> (field cachedConstructor with type Constructor<>)
+Constructor<> -> (field clazz with type Class<>)
+----- Full Types -----
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2377;>;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*2377;>;
+
+***** Found reference cycle *****
+ReflectionData<? super > -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super > subtype of (field parameterTypeCache with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*38975;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*38975;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*38975;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:1TT;1954;>;>;
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:1TT;1954;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:1TT;1954;>;
+
+***** Found reference cycle *****
+Class<? super T> -> (field cachedConstructor with type Constructor<? super T>)
+Constructor<? super T> -> (field clazz with type Class<? super T>)
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:TT;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:TT;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6216;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6216;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6216;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/DefaultDateTypeAdapter;3127;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonPrimitive;8676;>;>;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonPrimitive;8676;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonPrimitive;8676;>;
+
+***** Found reference cycle *****
+ReflectionData<? super > -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super > subtype of (field parameterTypeCache with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*29079;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*29079;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*29079;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2377;>;>;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2377;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2377;>;
+
+***** Found reference cycle *****
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*5482;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5482;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9226;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*10120;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*10120;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*10120;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*10120;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;5346;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;5346;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<!Ljava/lang/Class;{0}*3453;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/Excluder;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/Excluder;:2TT;3849;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/Excluder;:2TT;3849;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10322;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Class<> -> (field cachedConstructor with type Constructor<>)
+Constructor<> -> (field clazz with type Class<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27105;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27105;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$27963;:1TT;28199;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$27963;:1TT;28199;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$27963;:1TT;28199;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7026;7039;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7026;7039;>;
+
+***** Found reference cycle *****
+ReflectionData<? super > -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<? super > subtype of (field returnType with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*6578;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*6578;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*6578;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/text/DateFormat;3878;>;
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/text/DateFormat;3878;>;
+
+***** Found reference cycle *****
+Constructor<Boolean> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<Boolean> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Boolean;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Package -> (field packageInfo with type Class<?>)
+Class<?> -> (field classLoader with type ClassLoader)
+ClassLoader -> (field packages with type HashMap<String,Package>)
+HashMap<String,Package> -> (field table with type Node<String,Package>[])
+Node<String,Package> -> (field value with type Package)
+----- Full Types -----
+Ljava/lang/Package;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/ClassLoader;
+Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Package;>;
+Ljava/util/HashMap<>.Node<Ljava/lang/String;Ljava/lang/Package;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/ConstructorConstructor;:1TT;1954;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/Gson;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;27443;>;
+Lcom/google/gson/Gson;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;27443;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/Gson;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;27443;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/Gson;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;27443;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;2801;>;
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;2801;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8713;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/FieldAttributes;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*1489;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<!Ljava/lang/Class;{0}*1489;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;7210;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field genericInfo with type FieldRepository)
+FieldRepository -> (Class<> subtype of (field genericType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10893;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10893;>;
+Ljava/lang/reflect/Field;
+Lsun/reflect/generics/repository/FieldRepository;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10893;>;
+
+***** Found reference cycle *****
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+Constructor<? super > -> (field clazz with type Class<? super >)
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19496;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19496;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;7203;>;
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;7203;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;7203;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/ConstructorConstructor;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;7203;>;>;
+
+***** Found reference cycle *****
+Class<? super Object> -> (field cachedConstructor with type Constructor<? super Object>)
+Constructor<? super Object> -> (field clazz with type Class<? super Object>)
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-Ljava/lang/Object;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+Class<? super > -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<? super > subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*4839;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+Constructor<? super > -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<? super > subtype of (field exceptionTypes with type Type[]))
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*4839;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*4839;>;
+
+***** Found reference cycle *****
+Class<T> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<T> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Ljava/lang/Class<Lcom/google/gson/Gson;:13TT;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+ReflectionData<? super > -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<? super > subtype of (field returnType with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1920;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1920;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1920;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5223;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5223;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;2801;>;>;
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;2801;>;
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;2801;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;2801;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5576;>;>;
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5576;>;
+Lcom/google/gson/internal/Excluder;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*5576;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/Excluder;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5576;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5482;>;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5482;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*5482;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5482;>;
+
+***** Found reference cycle *****
+Class<> -> (field cachedConstructor with type Constructor<>)
+Constructor<> -> (field clazz with type Class<>)
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4062;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*4062;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;25359;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;25359;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/Gson;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;23384;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/Gson;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;23384;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/Gson;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;23384;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4336;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*4336;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4336;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4336;>;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/stream/JsonReader;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/stream/JsonReader;46427;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*6219;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*6219;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*6219;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$18967;:1TT;19194;>;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$18967;:1TT;19194;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$18967;:1TT;19194;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<T>> -> (superclass Reference<ReflectionData<T>> has (field referent with type ReflectionData<T>))
+ReflectionData<T> -> (field declaredConstructors with type Constructor<T>[])
+Constructor<T> -> (field clazz with type Class<T>)
+Class<T> -> (field reflectionData with type SoftReference<ReflectionData<T>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/internal/Primitives;:4TT;>;>;
+Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/internal/Primitives;:4TT;>;
+Ljava/lang/reflect/Constructor<Lcom/google/gson/internal/Primitives;:4TT;>;
+Ljava/lang/Class<Lcom/google/gson/internal/Primitives;:4TT;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8209;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8209;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;30981;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/LinkedTreeMap;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;5210;>;>;
+Lcom/google/gson/internal/LinkedTreeMap;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;5210;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/LinkedTreeMap;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;5210;>;
+
+***** Found reference cycle *****
+Constructor<Long> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<Long> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Long;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<? super T> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<? super T> subtype of (field exceptionTypes with type Type[]))
+Class<? super T> -> (field reflectionData with type SoftReference<ReflectionData<? super T>>)
+SoftReference<ReflectionData<? super T>> -> (superclass Reference<ReflectionData<? super T>> has (field referent with type ReflectionData<? super T>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:5TT;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:5TT;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:5TT;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super T>> -> (superclass Reference<ReflectionData<? super T>> has (field referent with type ReflectionData<? super T>))
+ReflectionData<? super T> -> (field declaredConstructors with type Constructor<? super T>[])
+Constructor<? super T> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super T> subtype of (field parameterTypeCache with type Type))
+Class<? super T> -> (field reflectionData with type SoftReference<ReflectionData<? super T>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;>;
+
+***** Found reference cycle *****
+Class<> -> (field cachedConstructor with type Constructor<>)
+Constructor<> -> (field clazz with type Class<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$29301;:1TT;29557;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$29301;:1TT;29557;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<Void>> -> (superclass Reference<ReflectionData<Void>> has (field referent with type ReflectionData<Void>))
+ReflectionData<Void> -> (field declaredFields with type Field[])
+Field -> (field genericInfo with type FieldRepository)
+FieldRepository -> (Class<Void> subtype of (field genericType with type Type))
+Class<Void> -> (field reflectionData with type SoftReference<ReflectionData<Void>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Void;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Void;>;
+Ljava/lang/reflect/Field;
+Lsun/reflect/generics/repository/FieldRepository;
+Ljava/lang/Class<Ljava/lang/Void;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*16487;>;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*16487;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*16487;>;
+
+***** Found reference cycle *****
+ReflectionData<T> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<T> subtype of (field returnType with type Type))
+Class<T> -> (field reflectionData with type SoftReference<ReflectionData<T>>)
+SoftReference<ReflectionData<T>> -> (superclass Reference<ReflectionData<T>> has (field referent with type ReflectionData<T>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/Gson;:10TT;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Lcom/google/gson/Gson;:10TT;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/Gson;:10TT;>;>;
+
+***** Found reference cycle *****
+ReflectionData<Integer> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<Integer> subtype of (field returnType with type Type))
+Class<Integer> -> (field reflectionData with type SoftReference<ReflectionData<Integer>>)
+SoftReference<ReflectionData<Integer>> -> (superclass Reference<ReflectionData<Integer>> has (field referent with type ReflectionData<Integer>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Integer;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Integer;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Integer;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4937;>;>;
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4937;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/TreeTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter$SingleTypeFactory;:1TT;4937;>;
+
+***** Found reference cycle *****
+ReflectionData<? super > -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super > subtype of (field parameterTypeCache with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7008;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7008;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7008;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6703;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6703;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+ReflectionData<? super > -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<? super > subtype of (field returnType with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19705;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19705;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19705;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$28568;:1TT;28824;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*2516;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2516;>;
+
+***** Found reference cycle *****
+ReflectionData<? super Date> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<? super Date> subtype of (field returnType with type Type))
+Class<? super Date> -> (field reflectionData with type SoftReference<ReflectionData<? super Date>>)
+SoftReference<ReflectionData<? super Date>> -> (superclass Reference<ReflectionData<? super Date>> has (field referent with type ReflectionData<? super Date>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/util/Date;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Ljava/util/Date;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/util/Date;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/text/DateFormat;3878;>;
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/text/DateFormat;3878;>;
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/text/DateFormat;3878;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/text/DateFormat;3878;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;8401;>;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;8401;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;8401;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/reflect/Type;8401;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/stream/JsonReader;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/stream/JsonReader;46427;>;>;
+Lcom/google/gson/stream/JsonReader;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/stream/JsonReader;46427;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/stream/JsonReader;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/stream/JsonReader;46427;>;
+
+***** Found reference cycle *****
+Constructor<? super > -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<? super > subtype of (field returnType with type Type))
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19705;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19705;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super Date>> -> (superclass Reference<ReflectionData<? super Date>> has (field referent with type ReflectionData<? super Date>))
+ReflectionData<? super Date> -> (field declaredMethods with type Method[])
+Method -> (field clazz with type Class<?>)
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<? super Date> subtype of (field superInterfaces with type Type[]))
+Class<? super Date> -> (field reflectionData with type SoftReference<ReflectionData<? super Date>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/sql/Date;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/sql/Date;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Ljava/sql/Date;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<T>> -> (superclass Reference<ReflectionData<T>> has (field referent with type ReflectionData<T>))
+ReflectionData<T> -> (field declaredConstructors with type Constructor<T>[])
+Constructor<T> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<T> subtype of (field exceptionTypes with type Type[]))
+Class<T> -> (field reflectionData with type SoftReference<ReflectionData<T>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/Gson;:13TT;>;>;
+Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/Gson;:13TT;>;
+Ljava/lang/reflect/Constructor<Lcom/google/gson/Gson;:13TT;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Lcom/google/gson/Gson;:13TT;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4593;>;
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*4593;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4593;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4593;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super T>> -> (superclass Reference<ReflectionData<? super T>> has (field referent with type ReflectionData<? super T>))
+ReflectionData<? super T> -> (field declaredConstructors with type Constructor<? super T>[])
+Constructor<? super T> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super T> subtype of (field parameterTypeCache with type Type))
+Class<? super T> -> (field reflectionData with type SoftReference<ReflectionData<? super T>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:TT;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:TT;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:TT;>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:TT;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*3453;>;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*3453;>;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<!Ljava/lang/Class;{0}*3453;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*3453;>;>;
+
+***** Found reference cycle *****
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+Constructor<? super > -> (field clazz with type Class<? super >)
+----- Full Types -----
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1795;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1795;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9226;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9226;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9226;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;9226;>;>;
+
+***** Found reference cycle *****
+ReflectionData<? super Timestamp> -> (field declaredConstructors with type Constructor<? super Timestamp>[])
+Constructor<? super Timestamp> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super Timestamp> subtype of (field parameterTypeCache with type Type))
+Class<? super Timestamp> -> (field reflectionData with type SoftReference<ReflectionData<? super Timestamp>>)
+SoftReference<ReflectionData<? super Timestamp>> -> (superclass Reference<ReflectionData<? super Timestamp>> has (field referent with type ReflectionData<? super Timestamp>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/sql/Timestamp;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Ljava/sql/Timestamp;>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Ljava/sql/Timestamp;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/sql/Timestamp;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+ReflectionData<? super > -> (field declaredConstructors with type Constructor<? super >[])
+Constructor<? super > -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super > subtype of (field parameterTypeCache with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1795;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1795;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1795;>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1795;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+ReflectionData<? super > -> (field declaredConstructors with type Constructor<? super >[])
+Constructor<? super > -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super > subtype of (field parameterTypeCache with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7190;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8209;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8209;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8209;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8209;>;
+
+***** Found reference cycle *****
+ReflectionData<T> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<T> subtype of (field returnType with type Type))
+Class<T> -> (field reflectionData with type SoftReference<ReflectionData<T>>)
+SoftReference<ReflectionData<T>> -> (superclass Reference<ReflectionData<T>> has (field referent with type ReflectionData<T>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/internal/Primitives;:5TT;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Lcom/google/gson/internal/Primitives;:5TT;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Lcom/google/gson/internal/Primitives;:5TT;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*1999;>;
+Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}*1999;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;3075;>;>;
+Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;3075;>;
+Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;3075;>;
+Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;3075;>;
+
+***** Found reference cycle *****
+Class<> -> (field cachedConstructor with type Constructor<>)
+Constructor<> -> (field clazz with type Class<>)
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*14742;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*14742;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4902;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/JsonTreeReader;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/internal/bind/JsonTreeReader;6688;>;
+Lcom/google/gson/internal/bind/JsonTreeReader;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/internal/bind/JsonTreeReader;6688;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$27963;:1TT;28199;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5266;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5266;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*5266;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field clazz with type Class<?>)
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*14742;>;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*14742;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*14742;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/UnsafeAllocator;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1229;>;
+Lcom/google/gson/internal/UnsafeAllocator;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*1229;>;
+Lcom/google/gson/internal/UnsafeAllocator;&Ljava/lang/Class<!Ljava/lang/Class;{0}*1229;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/UnsafeAllocator;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1229;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3885;3898;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3885;3898;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10893;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;10893;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<Boolean>> -> (superclass Reference<ReflectionData<Boolean>> has (field referent with type ReflectionData<Boolean>))
+ReflectionData<Boolean> -> (field declaredMethods with type Method[])
+Method -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<Boolean> subtype of (field parameterTypeCache with type Type))
+Class<Boolean> -> (field reflectionData with type SoftReference<ReflectionData<Boolean>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Boolean;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Boolean;>;
+Ljava/lang/reflect/Method;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Boolean;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;:1TT;1679;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<? super Date> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<? super Date> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Ljava/util/Date;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<? super > -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<? super > subtype of (field returnType with type Type))
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1920;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*1920;>;
+
+***** Found reference cycle *****
+ProtectionDomain -> (field key with type Key)
+Key -> (field this$0 with type ProtectionDomain)
+----- Full Types -----
+Ljava/security/ProtectionDomain;
+Ljava/security/ProtectionDomain$Key;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/DefaultDateTypeAdapter;3127;>;>;
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/DefaultDateTypeAdapter;3127;>;
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/DefaultDateTypeAdapter;3127;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/DefaultDateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/DefaultDateTypeAdapter;3127;>;
+
+***** Found reference cycle *****
+ReflectionData<Character> -> (field declaredConstructors with type Constructor<Character>[])
+Constructor<Character> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<Character> subtype of (field exceptionTypes with type Type[]))
+Class<Character> -> (field reflectionData with type SoftReference<ReflectionData<Character>>)
+SoftReference<ReflectionData<Character>> -> (superclass Reference<ReflectionData<Character>> has (field referent with type ReflectionData<Character>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Character;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Character;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Ljava/lang/Character;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Character;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4093;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4093;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/Primitives;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4093;>;>;
+
+***** Found reference cycle *****
+ReflectionData<? super > -> (field declaredConstructors with type Constructor<? super >[])
+Constructor<? super > -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<? super > subtype of (field exceptionTypes with type Type[]))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*4839;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*4839;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*4839;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*4839;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27268;27284;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27268;27284;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/Primitives;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*4093;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;8694;>;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;8694;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;8694;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonPrimitive;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;8694;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1489;>;
+Lcom/google/gson/FieldAttributes;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*1489;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<!Ljava/lang/Class;{0}*1489;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*1489;>;>;
+
+***** Found reference cycle *****
+Constructor<? super > -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<? super > subtype of (field returnType with type Type))
+Class<? super > -> (field cachedConstructor with type Constructor<? super >)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*6578;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*6578;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;:1TT;1547;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field genericInfo with type FieldRepository)
+FieldRepository -> (Class<> subtype of (field genericType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/util/ISO8601Utils;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Exception;11563;>;>;
+Lcom/google/gson/internal/bind/util/ISO8601Utils;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Exception;11563;>;
+Ljava/lang/reflect/Field;
+Lsun/reflect/generics/repository/FieldRepository;
+Lcom/google/gson/internal/bind/util/ISO8601Utils;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Exception;11563;>;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;4917;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4062;>;>;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4062;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4062;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4902;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*4902;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*4902;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*4902;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+ReflectionData<? super > -> (field declaredConstructors with type Constructor<? super >[])
+Constructor<? super > -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<? super > subtype of (field exceptionTypes with type Type[]))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*5499;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*5499;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*5499;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*5499;>;
+
+***** Found reference cycle *****
+Constructor<T> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<T> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Lcom/google/gson/Gson;:8TT;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6703;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6703;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6703;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6703;>;
+
+***** Found reference cycle *****
+ReflectionData<?> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field reflectionData with type SoftReference<ReflectionData<?>>)
+SoftReference<ReflectionData<?>> -> (superclass Reference<ReflectionData<?>> has (field referent with type ReflectionData<?>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}*>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<> subtype of (field parameterTypeCache with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/MapTypeAdapterFactory;:1TT;4461;>;>;
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/MapTypeAdapterFactory;:1TT;4461;>;
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/MapTypeAdapterFactory;:1TT;4461;>;
+Ljava/lang/reflect/Parameter;
+Lcom/google/gson/internal/bind/MapTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/MapTypeAdapterFactory;:1TT;4461;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/DateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/DateTypeAdapter$1581;:1TT;1811;>;
+Lcom/google/gson/internal/bind/DateTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/DateTypeAdapter$1581;:1TT;1811;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/DateTypeAdapter;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/DateTypeAdapter$1581;:1TT;1811;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/DateTypeAdapter;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/DateTypeAdapter$1581;:1TT;1811;>;>;
+
+***** Found reference cycle *****
+ReflectionData<? extends Annotation> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<? extends Annotation> subtype of (field returnType with type Type))
+Class<? extends Annotation> -> (field reflectionData with type SoftReference<ReflectionData<? extends Annotation>>)
+SoftReference<ReflectionData<? extends Annotation>> -> (superclass Reference<ReflectionData<? extends Annotation>> has (field referent with type ReflectionData<? extends Annotation>))
+----- Full Types -----
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}+Ljava/lang/annotation/Annotation;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}+Ljava/lang/annotation/Annotation;>;
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}+Ljava/lang/annotation/Annotation;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5223;>;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5223;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5223;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;5223;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$18967;:1TT;19194;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*12322;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*12322;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*12322;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/reflect/TypeToken<>;2131;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<Integer> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<Integer> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Integer;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ClassValueMap -> (field type with type Class<?>)
+Class<?> -> (field classValueMap with type ClassValueMap)
+----- Full Types -----
+Ljava/lang/ClassValue<>.ClassValueMap;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/stream/JsonReader;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/stream/JsonReader;46427;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27268;27284;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27268;27284;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27268;27284;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27268;27284;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;30981;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;30981;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;30981;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/LinkedTreeMap;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;5210;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$28568;:1TT;28824;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$28568;:1TT;28824;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$28568;:1TT;28824;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3885;3898;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3885;3898;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3885;3898;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*3885;3898;>;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super T>> -> (superclass Reference<ReflectionData<? super T>> has (field referent with type ReflectionData<? super T>))
+ReflectionData<? super T> -> (field declaredFields with type Field[])
+Field -> (field clazz with type Class<?>)
+Class<?> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<? super T> subtype of (field superInterfaces with type Type[]))
+Class<? super T> -> (field reflectionData with type SoftReference<ReflectionData<? super T>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter;:TT;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter;:TT;>;
+Ljava/lang/reflect/Field;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/ClassRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter;:TT;>;
+
+***** Found reference cycle *****
+Constructor<Void> -> (field clazz with type Class<Void>)
+Class<Void> -> (field cachedConstructor with type Constructor<Void>)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Void;>;
+Ljava/lang/Class<Ljava/lang/Void;>;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super >> -> (superclass Reference<ReflectionData<? super >> has (field referent with type ReflectionData<? super >))
+ReflectionData<? super > -> (field declaredConstructors with type Constructor<? super >[])
+Constructor<? super > -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Class<? super > subtype of (field parameterTypeCache with type Type))
+Class<? super > -> (field reflectionData with type SoftReference<ReflectionData<? super >>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19496;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19496;>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19496;>;
+Ljava/lang/reflect/Parameter;
+Ljava/lang/Class<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*19496;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;4917;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;4917;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Ljava/lang/Object;4917;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Ljava/lang/Object;4917;>;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2516;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2516;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}*2516;>;>;
+
+***** Found reference cycle *****
+Constructor<? super T> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<? super T> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/reflect/TypeToken;:5TT;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$29301;:1TT;29557;>;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$29301;:1TT;29557;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$29301;:1TT;29557;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$29301;:1TT;29557;>;
+
+***** Found reference cycle *****
+Constructor<E> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<E> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Lcom/google/gson/internal/bind/ArrayTypeAdapter;:TE;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Class<> -> (field genericInfo with type ClassRepository)
+ClassRepository -> (Class<> subtype of (field superInterfaces with type Type[]))
+----- Full Types -----
+Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;:1TT;1679;>;
+Lsun/reflect/generics/repository/ClassRepository;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/FieldAttributes;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*2752;>;
+Lcom/google/gson/FieldAttributes;&Ljava/lang/Class<!Ljava/lang/Class;{0}*2752;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field genericInfo with type ConstructorRepository)
+ConstructorRepository -> (Class<> subtype of (field exceptionTypes with type Type[]))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8713;>;
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8713;>;
+Lsun/reflect/generics/repository/ConstructorRepository;
+Lcom/google/gson/JsonElement;&Ljava/lang/Class<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8713;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/JsonElement;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;8713;>;>;
+
+***** Found reference cycle *****
+Constructor<T> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<T> subtype of (field returnType with type Type))
+Class<T> -> (field cachedConstructor with type Constructor<T>)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Lcom/google/gson/Gson;:10TT;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Lcom/google/gson/Gson;:10TT;>;
+
+***** Found reference cycle *****
+Constructor<? super T> -> (field clazz with type Class<? super T>)
+Class<? super T> -> (field cachedConstructor with type Constructor<? super T>)
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter;:TT;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Lcom/google/gson/TreeTypeAdapter;:TT;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/Gson;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Ljava/lang/Object;23384;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*16487;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*5266;>;
+Lcom/google/gson/internal/$Gson$Types;&Ljava/lang/Class<!Ljava/lang/Class;{0}*5266;>;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field declaredConstructors with type Constructor<>[])
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27105;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27105;>;
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27105;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$26895;:1TT;27105;>;>;
+
+***** Found reference cycle *****
+Constructor<? super > -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<? super > subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*29079;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/JsonElement;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}+Lcom/google/gson/JsonElement;6216;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+SoftReference<ReflectionData<? super Object>> -> (superclass Reference<ReflectionData<? super Object>> has (field referent with type ReflectionData<? super Object>))
+ReflectionData<? super Object> -> (field declaredMethods with type Method[])
+Method -> (field genericInfo with type MethodRepository)
+MethodRepository -> (Class<? super Object> subtype of (field returnType with type Type))
+Class<? super Object> -> (field reflectionData with type SoftReference<ReflectionData<? super Object>>)
+----- Full Types -----
+Ljava/lang/ref/SoftReference<Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/lang/Object;>;>;
+Ljava/lang/Class<>.ReflectionData<Ljava/lang/Class;{0}-Ljava/lang/Object;>;
+Ljava/lang/reflect/Method;
+Lsun/reflect/generics/repository/MethodRepository;
+Ljava/lang/Class<Ljava/lang/Class;{0}-Ljava/lang/Object;>;
+
+***** Found reference cycle *****
+Executable -> (field parameters with type Parameter[])
+Parameter -> (field executable with type Executable)
+----- Full Types -----
+Ljava/lang/reflect/Executable;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+ReflectionData<> -> (field interfaces with type Class<?>[])
+Class<?> -> (field cachedConstructor with type Constructor<?>)
+Constructor<?> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field reflectionData with type SoftReference<ReflectionData<>>)
+SoftReference<ReflectionData<>> -> (superclass Reference<ReflectionData<>> has (field referent with type ReflectionData<>))
+----- Full Types -----
+Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;:1TT;1679;>;
+Ljava/lang/Class<Ljava/lang/Class;{0}*>;
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}*>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;:1TT;1679;>;
+Ljava/lang/ref/SoftReference<Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;&Ljava/lang/Class<>.ReflectionData<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;:1TT;1679;>;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/TypeAdapters;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/TypeAdapters$28568;:1TT;28824;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<> -> (MethodRepository subtype of (field genericInfo with type ConstructorRepository))
+MethodRepository -> (Class<> subtype of (field returnType with type Type))
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}*6219;>;
+Lsun/reflect/generics/repository/MethodRepository;
+Lcom/google/gson/reflect/TypeToken;&Ljava/lang/Class<!Ljava/lang/Class;{0}*6219;>;
+
+***** Found reference cycle *****
+Constructor<> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<> subtype of (field executable with type Executable))
+----- Full Types -----
+Lcom/google/gson/internal/bind/ObjectTypeAdapter;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ObjectTypeAdapter$1329;:1TT;1492;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<? super > -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<? super > subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Ljava/lang/Class;{0}-!Lcom/google/gson/reflect/TypeToken;{0}*7008;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+Constructor<> -> (field clazz with type Class<>)
+Class<> -> (field cachedConstructor with type Constructor<>)
+----- Full Types -----
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/reflect/Constructor<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;:1TT;3363;>;
+Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;&Ljava/lang/Class<!Ljava/lang/Class;{0}-Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;:1TT;3363;>;
+
+***** Found reference cycle *****
+Constructor<T> -> (superclass Executable has (field parameters with type Parameter[]))
+Parameter -> (Constructor<T> subtype of (field executable with type Executable))
+----- Full Types -----
+Ljava/lang/reflect/Constructor<Lcom/google/gson/internal/Primitives;:5TT;>;
+Ljava/lang/reflect/Parameter;
+
+***** Found reference cycle *****
+HashMap<Currency,Object> -> (superclass AbstractMap<Currency,Object> has (HashSet<Currency> subtype of (field keySet with type Set<Currency>)))
+HashSet<Currency> -> (field map with type HashMap<Currency,Object>)
+----- Full Types -----
+Ljava/util/HashMap<Ljava/util/Currency;Ljava/lang/Object;>;
+Ljava/util/HashSet<Ljava/util/Currency;>;
+
+***** Found reference cycle *****
+LinkedTreeMap<String,JsonElement> -> (field header with type Node<String,JsonElement>)
+Node<String,JsonElement> -> (JsonObject subtype of (field value with type JsonElement))
+JsonObject -> (field members with type LinkedTreeMap<String,JsonElement>)
+----- Full Types -----
+Lcom/google/gson/internal/LinkedTreeMap<Ljava/lang/String;Lcom/google/gson/JsonElement;>;
+Lcom/google/gson/internal/LinkedTreeMap<>.Node<Ljava/lang/String;Lcom/google/gson/JsonElement;>;
+Lcom/google/gson/JsonObject;
+
+248 CYCLES FOUND.
+:gson:j2objcCycleFinder FAILED
+
+BUILD FAILED
+
+Total time: 19.438 secs
