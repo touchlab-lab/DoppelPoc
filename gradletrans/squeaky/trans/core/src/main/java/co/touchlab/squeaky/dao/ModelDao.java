@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.text.TextUtils;
+
+import com.google.j2objc.annotations.AutoreleasePool;
+
 import co.touchlab.squeaky.Config;
 import co.touchlab.squeaky.db.SQLiteStatement;
 import co.touchlab.squeaky.db.SQLiteDatabase;
@@ -233,7 +236,7 @@ public class ModelDao<T> implements Dao<T>
 				do
 				{
 					T object = generatedTableMapper.createObject(cursor);
-					generatedTableMapper.fillRow(object, cursor, this, foreignRefreshMap, objectCache);
+					goFillRow(foreignRefreshMap, objectCache, cursor, object);
 					results.add(object);
 				} while (cursor.moveToNext());
 			}
@@ -244,6 +247,12 @@ public class ModelDao<T> implements Dao<T>
 		}
 
 		return results;
+	}
+
+	@AutoreleasePool
+	private void goFillRow(ForeignRefresh[] foreignRefreshMap, TransientCache objectCache, Cursor cursor, T object) throws SQLException
+	{
+		generatedTableMapper.fillRow(object, cursor, this, foreignRefreshMap, objectCache);
 	}
 
 	private Cursor makeCursor(String from, String where, String[] args, String orderBy, Integer limit, Integer offset)
@@ -498,7 +507,7 @@ public class ModelDao<T> implements Dao<T>
 			{
 				do
 				{
-					generatedTableMapper.fillRow(data, cursor, this, foreignRefreshMap, null);
+					goFillRow(foreignRefreshMap, null, cursor, data);
 				} while (cursor.moveToNext());
 			}
 		}

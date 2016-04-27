@@ -7,12 +7,9 @@ import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
-import com.littleinc.orm_benchmark.sqlite.SqliteMessage;
-import com.littleinc.orm_benchmark.sqlite.SqliteUser;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -43,7 +40,7 @@ public class OptimizedSQLiteExecutor implements BenchmarkExecutable {
 
     private static final String TAG = "OptimizedSQLiteExecutor";
 
-    private SqliteOptimizedDataBaseHelper mHelper;
+    private DataBaseHelper mHelper;
 
     @Override
     public String getOrmName()
@@ -55,33 +52,33 @@ public class OptimizedSQLiteExecutor implements BenchmarkExecutable {
     public void init(Context context, boolean useInMemoryDb)
     {
         Log.d(TAG, "Creating DataBaseHelper");
-        mHelper = new SqliteOptimizedDataBaseHelper(context, useInMemoryDb);
+        mHelper = new DataBaseHelper(context, useInMemoryDb);
     }
 
     @Override
     public long createDbStructure() throws SQLException
     {
         long start = System.nanoTime();
-        SqliteUser.createTable(mHelper);
-        SqliteMessage.createTable(mHelper);
+        com.littleinc.orm_benchmark.sqlite.User.createTable(mHelper);
+        com.littleinc.orm_benchmark.sqlite.Message.createTable(mHelper);
         return System.nanoTime() - start;
     }
 
     @Override
     public long writeWholeData() throws SQLException
     {
-        List<OptimizedUser> users = new ArrayList<>();
+        List<User> users = new ArrayList<>();
         for(int i = 0; i < NUM_USER_INSERTS; i++)
         {
-            OptimizedUser newUser = new OptimizedUser();
+            User newUser = new User();
             newUser.fillUserWithRandomData();
             users.add(newUser);
         }
 
-        List<OptimizedMessage> messages = new ArrayList<>();
+        List<Message> messages = new ArrayList<>();
         for(int i = 0; i < NUM_MESSAGE_INSERTS; i++)
         {
-            OptimizedMessage newMessage = new OptimizedMessage();
+            Message newMessage = new Message();
             newMessage.fillMessageWithRandomData(i, NUM_USER_INSERTS);
             messages.add(newMessage);
         }
@@ -90,29 +87,29 @@ public class OptimizedSQLiteExecutor implements BenchmarkExecutable {
         SQLiteDatabase db = mHelper.getWritableDatabase();
 
         SQLiteStatement insertUser = db.compileStatement(
-                String.format("Insert into %s (%s, %s) values (?,?)", OptimizedUser.TABLE_NAME,
-                              OptimizedUser.FIRST_NAME_COLUMN, OptimizedUser.LAST_NAME_COLUMN));
+                String.format("Insert into %s (%s, %s) values (?,?)", User.TABLE_NAME,
+                              User.FIRST_NAME_COLUMN, User.LAST_NAME_COLUMN));
 
         SQLiteStatement insertMessage = db.compileStatement(
                 String.format("Insert into %s (%s, %s, %s, %s, %s, %s, %s) values (?,?,?,?,?,?,?)",
-                              OptimizedMessage.TABLE_NAME, OptimizedMessage.CONTENT,
-                OptimizedMessage.SORTED_BY,
-                OptimizedMessage.CLIENT_ID,
-                OptimizedMessage.SENDER_ID,
-                OptimizedMessage.CHANNEL_ID,
-                OptimizedMessage.COMMAND_ID,
-                OptimizedMessage.CREATED_AT ));
+                              Message.TABLE_NAME, Message.CONTENT,
+                Message.SORTED_BY,
+                Message.CLIENT_ID,
+                Message.SENDER_ID,
+                Message.CHANNEL_ID,
+                Message.COMMAND_ID,
+                Message.CREATED_AT ));
 
         try {
             db.beginTransaction();
 
-            for (OptimizedUser user : users) {
+            for (User user : users) {
                 user.prepareForInsert(insertUser);
                 insertUser.execute();
             }
             Log.d(TAG, "Done, wrote " + NUM_USER_INSERTS + " users");
 
-            for (OptimizedMessage message : messages) {
+            for (Message message : messages) {
                 message.prepareForInsert(insertMessage);
                 insertMessage.execute();
             }
@@ -130,22 +127,22 @@ public class OptimizedSQLiteExecutor implements BenchmarkExecutable {
         Cursor c = null;
         try {
             SQLiteDatabase db = mHelper.getReadableDatabase();
-            List<OptimizedMessage> messages = new ArrayList<OptimizedMessage>();
-            c = db.query(OptimizedMessage.TABLE_NAME, OptimizedMessage.PROJECTION, null, null,
+            List<Message> messages = new ArrayList<Message>();
+            c = db.query(Message.TABLE_NAME, Message.PROJECTION, null, null,
                     null, null, null);
 
             if(c != null) {
 
-                int channelIdIndex = c.getColumnIndex(OptimizedMessage.CHANNEL_ID);
-                int clientIdIndex = c.getColumnIndex(OptimizedMessage.CLIENT_ID);
-                int commandIdIndex = c.getColumnIndex(OptimizedMessage.COMMAND_ID);
-                int contentIndex = c.getColumnIndex(OptimizedMessage.CONTENT);
-                int createdAtIndex = c.getColumnIndex(OptimizedMessage.CREATED_AT);
-                int senderIdIndex = c.getColumnIndex(OptimizedMessage.SENDER_ID);
-                int sortedByIndex = c.getColumnIndex(OptimizedMessage.SORTED_BY);
+                int channelIdIndex = c.getColumnIndex(Message.CHANNEL_ID);
+                int clientIdIndex = c.getColumnIndex(Message.CLIENT_ID);
+                int commandIdIndex = c.getColumnIndex(Message.COMMAND_ID);
+                int contentIndex = c.getColumnIndex(Message.CONTENT);
+                int createdAtIndex = c.getColumnIndex(Message.CREATED_AT);
+                int senderIdIndex = c.getColumnIndex(Message.SENDER_ID);
+                int sortedByIndex = c.getColumnIndex(Message.SORTED_BY);
 
                 while (c.moveToNext()) {
-                    OptimizedMessage newMessage = new OptimizedMessage();
+                    Message newMessage = new Message();
                     newMessage.setChannelId(c.getLong(channelIdIndex));
                     newMessage.setClientId(c.getLong(clientIdIndex));
                     newMessage.setCommandId(c.getLong(commandIdIndex));
@@ -169,8 +166,8 @@ public class OptimizedSQLiteExecutor implements BenchmarkExecutable {
     @Override
     public long dropDb() throws SQLException {
         long start = System.nanoTime();
-        SqliteUser.dropTable(mHelper);
-        SqliteMessage.dropTable(mHelper);
+        com.littleinc.orm_benchmark.sqlite.User.dropTable(mHelper);
+        com.littleinc.orm_benchmark.sqlite.Message.dropTable(mHelper);
         return System.nanoTime() - start;
     }
 }

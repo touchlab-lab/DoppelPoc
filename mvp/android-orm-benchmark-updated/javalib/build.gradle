@@ -51,9 +51,10 @@ j2objcConfig {
     testMinExpectedTests 0
 
 //    podRetainSource true
-
-//    translateArgs '--prefix', 'co.touchlab.simpledaggerapp.conference=SDAC'
-//    translateArgs '--prefix', 'co.touchlab.simpledaggerapp=SDA'
+//
+//    translateArgs '-use-arc'
+//
+//    extraObjcCompilerArgs '-fobjc-arc'
 
     extraLinkerArgs '-lsqlite3'
 

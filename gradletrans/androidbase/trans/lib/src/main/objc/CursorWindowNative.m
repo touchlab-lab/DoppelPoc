@@ -569,6 +569,7 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 }
 
 - (void)dealloc {
+NSLog(@"dealloc called !!!!!!!!!!!!");
     free(data);
     data = NULL;
     mHeader = NULL;

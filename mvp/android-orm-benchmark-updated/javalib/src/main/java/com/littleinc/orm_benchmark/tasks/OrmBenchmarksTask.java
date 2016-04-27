@@ -66,6 +66,8 @@ public class OrmBenchmarksTask extends Task
 
         for(@AutoreleasePool int i = 0; i < NUM_ITERATIONS; i++)
         {
+            StringBuilder sb = new StringBuilder();
+
             for(BenchmarkExecutable item : mOrms)
             {
                 for(BenchmarkTask task : BenchmarkTask.values())
@@ -102,22 +104,40 @@ public class OrmBenchmarksTask extends Task
                     Log.w(TAG, item.getOrmName() + "-" + task.name() +" end "+ result);
                     addProfilerResult(item.getOrmName(), task, result);
                 }
+
+                sb.append("Finished: ").append(item.getOrmName()).append("\n");
+                EventBusExt.getDefault().post(new BenchmarkMessage(sb.toString()));
             }
         }
 
-        buildResultString();
+        buildResultString(false);
 
         Log.w("RESULTS", resultString);
     }
 
-    private void buildResultString()
+    public static class BenchmarkMessage
     {
+        public final String message;
+
+        public BenchmarkMessage(String message)
+        {
+            this.message = message;
+        }
+    }
+
+    private void buildResultString(boolean outputHtml)
+    {
+
         StringBuilder sb = new StringBuilder();
 
         BenchmarkTask[] bTasks = new BenchmarkTask[]{BenchmarkTask.WRITE_DATA, BenchmarkTask.READ_DATA};
         for(BenchmarkTask bTask : bTasks)
         {
-            sb.append("<b>").append(bTask.name()).append("</b>").append("<br/>");
+            if(outputHtml)
+                sb.append("<b>").append(bTask.name()).append("</b>").append("<br/>");
+            else
+                sb.append("\n").append(bTask.name()).append("\n");
+
             Map<String, Long> stringLongMap = benchmarkResults.get(bTask.name());
             if(stringLongMap != null)
             {
@@ -137,7 +157,10 @@ public class OrmBenchmarksTask extends Task
                         sb.append(Math.round(printResult)).append("ms");
                     }
 
-                    sb.append("<br/>");
+                    if(outputHtml)
+                        sb.append("<br/>");
+                    else
+                        sb.append("\n");
 
                     Log.w("FOR_SPREADSHEET", ormName + "," + Math.round(printResult));
                 }

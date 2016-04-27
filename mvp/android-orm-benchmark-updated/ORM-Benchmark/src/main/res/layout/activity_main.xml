@@ -15,10 +15,11 @@
         android:id="@+id/runBenchmark"
         android:text="@string/run_benchmark" />
 
-    <Button
-        android:id="@+id/show_results_btn"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/show_results" />
+        android:id="@+id/resultOutput"
+        android:textSize="24sp"
+        />
 
 </LinearLayout>

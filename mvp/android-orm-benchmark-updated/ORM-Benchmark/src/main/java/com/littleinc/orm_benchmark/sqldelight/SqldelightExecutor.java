@@ -4,7 +4,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
-import com.littleinc.orm_benchmark.squeaky.SqueakyMessage;
+import com.littleinc.orm_benchmark.squeaky.Message;
 import com.wow.soreverse.MessageModel;
 import com.wow.soreverse.UserModel;
 
@@ -117,7 +117,7 @@ public class SqldelightExecutor implements BenchmarkExecutable
     @Override
     public long readWholeData() throws SQLException {
 
-        List<SqueakyMessage> results = new ArrayList<>();
+        List<Message> results = new ArrayList<>();
         long start = System.nanoTime();
 
         /*final UserModel.Mapper mapper = new UserModel.Mapper();

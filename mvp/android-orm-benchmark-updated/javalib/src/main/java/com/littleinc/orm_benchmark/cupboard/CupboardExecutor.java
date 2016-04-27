@@ -9,7 +9,6 @@ import com.littleinc.orm_benchmark.util.BenchUtil;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import nl.qbusict.cupboard.QueryResultIterable;
@@ -25,7 +24,7 @@ public class CupboardExecutor  implements BenchmarkExecutable
 
     private static final String TAG = "SQLiteExecutor";
 
-    private CupboardDataBaseHelper mHelper;
+    private DataBaseHelper mHelper;
 
     @Override
     public String getOrmName()
@@ -37,7 +36,7 @@ public class CupboardExecutor  implements BenchmarkExecutable
     public void init(Context context, boolean useInMemoryDb)
     {
         Log.d(TAG, "Creating DataBaseHelper");
-        mHelper = new CupboardDataBaseHelper(context, useInMemoryDb);
+        mHelper = new DataBaseHelper(context, useInMemoryDb);
     }
 
     @Override
@@ -50,18 +49,18 @@ public class CupboardExecutor  implements BenchmarkExecutable
 
     @Override
     public long writeWholeData() throws SQLException {
-        List<CupboardUser> users = new ArrayList<>();
+        List<User> users = new ArrayList<>();
         for (int i = 0; i < NUM_USER_INSERTS; i++) {
-            CupboardUser newUser = new CupboardUser();
+            User newUser = new User();
             newUser.lastName = (BenchUtil.getRandomString(10));
             newUser.firstName = (BenchUtil.getRandomString(10));
 
             users.add(newUser);
         }
 
-        List<CupboardMessage> messages = new ArrayList<>();
+        List<Message> messages = new ArrayList<>();
         for (int i = 0; i < NUM_MESSAGE_INSERTS; i++) {
-            CupboardMessage newMessage = new CupboardMessage();
+            Message newMessage = new Message();
             newMessage.commandId = (i);
             newMessage.sortedBy = (System.nanoTime());
             newMessage.content = (BenchUtil.getRandomString(100));
@@ -80,12 +79,12 @@ public class CupboardExecutor  implements BenchmarkExecutable
         try {
             db.beginTransaction();
 
-            for (CupboardUser user : users) {
+            for (User user : users) {
                 cupboard().withDatabase(mHelper.getWritableDatabase()).put(user);
             }
             Log.d(TAG, "Done, wrote " + NUM_USER_INSERTS + " users");
 
-            for (CupboardMessage message : messages) {
+            for (Message message : messages) {
                 cupboard().withDatabase(mHelper.getWritableDatabase()).put(message);
             }
             Log.d(TAG, "Done, wrote " + NUM_MESSAGE_INSERTS + " messages");
@@ -100,13 +99,13 @@ public class CupboardExecutor  implements BenchmarkExecutable
     public long readWholeData() throws SQLException {
         long start = System.nanoTime();
 
-        Cursor cursor = cupboard().withDatabase(mHelper.getWritableDatabase()).query(CupboardMessage.class)
+        Cursor cursor = cupboard().withDatabase(mHelper.getWritableDatabase()).query(Message.class)
                                   .getCursor();
-        QueryResultIterable<CupboardMessage> iterate = null;
+        QueryResultIterable<Message> iterate = null;
         try {
             int countMessages = 0;
-            iterate = cupboard().withCursor(cursor).iterate(CupboardMessage.class);
-            for(CupboardMessage message : iterate)
+            iterate = cupboard().withCursor(cursor).iterate(Message.class);
+            for(Message message : iterate)
             {
                 countMessages++;
             }

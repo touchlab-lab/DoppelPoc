@@ -8,7 +8,6 @@ import com.littleinc.orm_benchmark.util.BenchUtil;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -23,39 +22,39 @@ public class SqueakyExecutor implements BenchmarkExecutable
 
     private static final String TAG = "SqueakyExecutor";
 
-    private SqueakyDataBaseHelper mHelper;
+    private DataBaseHelper mHelper;
 
     @Override
     public void init(Context context, boolean useInMemoryDb)
     {
         Log.d(TAG, "Creating DataBaseHelper");
-        SqueakyDataBaseHelper.init(context, useInMemoryDb);
-        mHelper = SqueakyDataBaseHelper.getInstance();
+        DataBaseHelper.init(context, useInMemoryDb);
+        mHelper = DataBaseHelper.getInstance();
     }
 
     @Override
     public long createDbStructure() throws SQLException
     {
         long start = System.nanoTime();
-        TableUtils.createTables(mHelper.getWrappedDatabase(), SqueakyUser.class, SqueakyMessage.class);
+        TableUtils.createTables(mHelper.getWrappedDatabase(), User.class, Message.class);
         return System.nanoTime() - start;
     }
 
     @Override
     public long writeWholeData() throws SQLException {
         Random random = new Random();
-        List<SqueakyUser> users = new ArrayList<SqueakyUser>();
+        List<User> users = new ArrayList<User>();
         for (int i = 0; i < NUM_USER_INSERTS; i++) {
-            SqueakyUser newUser = new SqueakyUser();
+            User newUser = new User();
             newUser.lastName = (BenchUtil.getRandomString(10));
             newUser.firstName = (BenchUtil.getRandomString(10));
 
             users.add(newUser);
         }
 
-        List<SqueakyMessage> messages = new ArrayList<SqueakyMessage>();
+        List<Message> messages = new ArrayList<Message>();
         for (int i = 0; i < NUM_MESSAGE_INSERTS; i++) {
-            SqueakyMessage newMessage = new SqueakyMessage();
+            Message newMessage = new Message();
             newMessage.commandId = (i);
             newMessage.sortedBy = (System.nanoTime());
             newMessage.content = (BenchUtil.getRandomString(100));
@@ -74,14 +73,14 @@ public class SqueakyExecutor implements BenchmarkExecutable
         db.beginTransaction();
 
         try {
-            Dao userDao = mHelper.getDao(SqueakyUser.class);
-            for (SqueakyUser user : users) {
+            Dao userDao = mHelper.getDao(User.class);
+            for (User user : users) {
                 userDao.create(user);
             }
             Log.d(TAG, "Done, wrote " + NUM_USER_INSERTS + " users");
 
-            Dao messageDao = mHelper.getDao(SqueakyMessage.class);
-            for (SqueakyMessage message : messages) {
+            Dao messageDao = mHelper.getDao(Message.class);
+            for (Message message : messages) {
                 messageDao.create(message);
             }
             Log.d(TAG, "Done, wrote " + NUM_MESSAGE_INSERTS + " messages");
@@ -97,7 +96,7 @@ public class SqueakyExecutor implements BenchmarkExecutable
     public long readWholeData() throws SQLException {
         long start = System.nanoTime();
         Log.d(TAG,
-              "Read, " + mHelper.getDao(SqueakyMessage.class).queryForAll().list().size()
+              "Read, " + mHelper.getDao(Message.class).queryForAll().list().size()
                       + " rows");
         return System.nanoTime() - start;
     }
@@ -106,7 +105,7 @@ public class SqueakyExecutor implements BenchmarkExecutable
     public long dropDb() throws SQLException {
         long start = System.nanoTime();
 
-        TableUtils.dropTables(mHelper.getWrappedDatabase(), true, SqueakyUser.class, SqueakyMessage.class);
+        TableUtils.dropTables(mHelper.getWrappedDatabase(), true, User.class, Message.class);
         return System.nanoTime() - start;
     }
 

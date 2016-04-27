@@ -12,23 +12,40 @@ import co.touchlab.android.threading.tasks.utils.TaskQueueHelper;
  */
 public class BenchmarkPresenter
 {
-    public BenchmarkPresenter(Host host)
+    public BenchmarkPresenter(Host host, boolean startup)
     {
         this.host = host;
         EventBusExt.getDefault().register(this);
+        refreshUi();
+        if(startup)
+            host.showText("(Output)");
     }
 
     public interface Host
     {
-        void benchmarkResults(String results);
         Context getContext();
+        void buttonEnabled(boolean enabled);
+        void showText(String text);
     }
 
     private final Host host;
 
+    @SuppressWarnings("unused")
     public void onEventMainThread(OrmBenchmarksTask task)
     {
-        host.benchmarkResults(task.resultString);
+        host.showText(task.resultString);
+        refreshUi();
+    }
+
+    @SuppressWarnings("unused")
+    public void onEventMainThread(OrmBenchmarksTask.BenchmarkMessage message)
+    {
+        host.showText(message.message);
+    }
+
+    private void refreshUi()
+    {
+        host.buttonEnabled(! benchmarkRunning());
     }
 
     public void startBenchmark()
@@ -38,6 +55,8 @@ public class BenchmarkPresenter
         {
             TaskQueue.loadQueueDefault(host.getContext()).execute(new OrmBenchmarksTask());
         }
+        refreshUi();
+        host.showText("Running...");
     }
 
     public boolean benchmarkRunning()
@@ -50,4 +69,6 @@ public class BenchmarkPresenter
     {
         EventBusExt.getDefault().unregister(this);
     }
+
+
 }
