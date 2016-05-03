@@ -11,14 +11,14 @@ dependencies {
     testCompile project(':truthcore')
     testCompile 'com.google.guava:guava:19.0-rc2'
     //testCompile 'com.google.code.findbugs:jsr305:2.0.1'
-    
+    j2objcTestLinkage project(':truthcore')
     //testCompile 'com.google.truth:truth:0.26'
     
 }
 
 j2objcConfig {
     // Sets up libraries you depend on
-    autoConfigureDeps true
+//    autoConfigureDeps true
 
     //headerMappingFiles 'j2objcheaders.properties'
 
