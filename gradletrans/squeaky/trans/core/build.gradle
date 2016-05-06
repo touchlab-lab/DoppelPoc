@@ -1,5 +1,5 @@
 apply plugin: 'java'
-apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -34,6 +34,8 @@ testPattern {
 //extraObjcCompilerArgs '-I/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/src/main/objc', '-Wno-deprecated'
     extraObjcCompilerArgs '-Wno-deprecated'
     extraLinkerArgs '-lsqlite3'
+
+    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
 
     finalConfigure()          // Must be last call to configuration
 

@@ -1,7 +1,6 @@
 package co.touchlab.android.threading.tasks.persisted;
 
 import android.app.Application;
-import android.content.Context;
 import android.os.Message;
 
 import java.util.ArrayList;

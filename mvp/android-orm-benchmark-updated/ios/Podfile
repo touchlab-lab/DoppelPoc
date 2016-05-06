@@ -69,14 +69,6 @@ def j2objc_androidbase
     pod 'j2objc-androidbase-debug', :configuration => ['Debug'], :path => '../../../gradletrans/androidbase/trans/lib/build/j2objcOutputs'
     pod 'j2objc-androidbase-release', :configuration => ['Release'], :path => '../../../gradletrans/androidbase/trans/lib/build/j2objcOutputs'
 end
-def j2objc_gson
-    pod 'j2objc-gson-debug', :configuration => ['Debug'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
-    pod 'j2objc-gson-release', :configuration => ['Release'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
-end
-def j2objc_rxjava
-    pod 'j2objc-rxjava-debug', :configuration => ['Debug'], :path => '../../../gradletrans/rxjava/trans/rxjava/build/j2objcOutputs'
-    pod 'j2objc-rxjava-release', :configuration => ['Release'], :path => '../../../gradletrans/rxjava/trans/rxjava/build/j2objcOutputs'
-end
 def j2objc_rxjava
     pod 'j2objc-rxjava-debug', :configuration => ['Debug'], :path => '../../../gradletrans/rxjava/trans/rxjava/build/j2objcOutputs'
     pod 'j2objc-rxjava-release', :configuration => ['Release'], :path => '../../../gradletrans/rxjava/trans/rxjava/build/j2objcOutputs'
@@ -92,14 +84,6 @@ end
 def j2objc_magicthreads
     pod 'j2objc-magicthreads-debug', :configuration => ['Debug'], :path => '../../../gradletrans/magicthreads/trans/magicthreads/build/j2objcOutputs'
     pod 'j2objc-magicthreads-release', :configuration => ['Release'], :path => '../../../gradletrans/magicthreads/trans/magicthreads/build/j2objcOutputs'
-end
-def j2objc_androidbase
-    pod 'j2objc-androidbase-debug', :configuration => ['Debug'], :path => '../../../gradletrans/androidbase/trans/lib/build/j2objcOutputs'
-    pod 'j2objc-androidbase-release', :configuration => ['Release'], :path => '../../../gradletrans/androidbase/trans/lib/build/j2objcOutputs'
-end
-def j2objc_eventbus
-    pod 'j2objc-eventbus-debug', :configuration => ['Debug'], :path => '../../../gradletrans/eventbus/trans/eb/build/j2objcOutputs'
-    pod 'j2objc-eventbus-release', :configuration => ['Release'], :path => '../../../gradletrans/eventbus/trans/eb/build/j2objcOutputs'
 end
 def j2objc_androidbase
     pod 'j2objc-androidbase-debug', :configuration => ['Debug'], :path => '../../../gradletrans/androidbase/trans/lib/build/j2objcOutputs'
@@ -124,14 +108,6 @@ end
 def j2objc_androidbase
     pod 'j2objc-androidbase-debug', :configuration => ['Debug'], :path => '../../../gradletrans/androidbase/trans/lib/build/j2objcOutputs'
     pod 'j2objc-androidbase-release', :configuration => ['Release'], :path => '../../../gradletrans/androidbase/trans/lib/build/j2objcOutputs'
-end
-def j2objc_gson
-    pod 'j2objc-gson-debug', :configuration => ['Debug'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
-    pod 'j2objc-gson-release', :configuration => ['Release'], :path => '../../../gradletrans/gson/trans/gson/build/j2objcOutputs'
-end
-def j2objc_rxjava
-    pod 'j2objc-rxjava-debug', :configuration => ['Debug'], :path => '../../../gradletrans/rxjava/trans/rxjava/build/j2objcOutputs'
-    pod 'j2objc-rxjava-release', :configuration => ['Release'], :path => '../../../gradletrans/rxjava/trans/rxjava/build/j2objcOutputs'
 end
 def j2objc_rxjava
     pod 'j2objc-rxjava-debug', :configuration => ['Debug'], :path => '../../../gradletrans/rxjava/trans/rxjava/build/j2objcOutputs'

@@ -1,5 +1,5 @@
 apply plugin: 'java'
-apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -15,7 +15,7 @@ j2objcConfig {
 
     //headerMappingFiles 'j2objcheaders.properties'
 
-    finalConfigure()          // Must be last call to configuration
+
 
 testPattern {
 
@@ -28,6 +28,8 @@ testPattern {
 
 extraObjcCompilerArgs '-Wno-deprecated'
 
+    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+
     /*translateArgs '--prefix', 'com.google.gson=GSON'
     translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'
     translateArgs '--prefix', 'com.google.gson.internal=GSONInternal'
@@ -35,4 +37,6 @@ extraObjcCompilerArgs '-Wno-deprecated'
     translateArgs '--prefix', 'com.google.gson.stream=GSONStream'
 
     translatedPathPrefix("ComGoogleGson", "GSON")*/
+
+    finalConfigure()          // Must be last call to configuration
 }

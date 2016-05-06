@@ -14,7 +14,7 @@ buildscript {
         classpath "com.neenbedankt.gradle.plugins:android-apt:1.4"
         classpath "net.ltgt.gradle:gradle-apt-plugin:0.5"
         classpath 'com.squareup.sqldelight:gradle-plugin:0.1.2'
-        classpath 'com.github.j2objccontrib.j2objcgradle:j2objc-touchlab:0.7.2-alpha-SNAPSHOT'
+        classpath 'com.touchlab.doppel:doppelgradle:0.1.0-alpha-SNAPSHOT'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

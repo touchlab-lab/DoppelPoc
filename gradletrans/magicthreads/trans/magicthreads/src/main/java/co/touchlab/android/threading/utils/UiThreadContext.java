@@ -41,4 +41,5 @@ public class UiThreadContext
             nativeThrow("This call must be in background thread");
         }
     }
+
 }

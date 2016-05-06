@@ -1,5 +1,8 @@
 apply plugin: 'java'
-apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
+/*plugins {
+    id "com.jfrog.bintray" version "1.6"
+}*/
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -14,8 +17,8 @@ dependencies {
     compile 'junit:junit:4.11'
     provided 'com.google.android:android:4.1.1.4'
     j2objcLinkage project(":androidbase")
-    compile project(":eventbus")
-    j2objcLinkage project(":eventbus")
+    compile 'de.greenrobot:eventbus:2.2.1'
+//    j2objcLinkage project(":eventbus")
     compile project(":gson")
     j2objcLinkage project(":gson")
     compile project(":retrofit")
@@ -37,9 +40,14 @@ j2objcConfig {
 
     }
 
+    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+
     extraLinkerArgs '-lsqlite3'
 
-    finalConfigure()          // Must be last call to configuration
+    extraObjcCompilerArgs '-I/Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/build/j2objcOutputs/src/main/objc'
+    translateClasspaths '/Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/build/classes/main'
+    extraLinkerArgs '-L/Users/kgalligan/devel/xp/gradletrans/eventbus/trans/eb/build/j2objcOutputs/lib/x86_64Debug'
+    extraLinkerArgs '-leventbus-j2objc'
 
     testMinExpectedTests 0
 
@@ -52,4 +60,36 @@ extraObjcCompilerArgs '-Wno-deprecated'
     translateArgs '--prefix', 'com.google.gson.stream=GSONStream'
 
     translatedPathPrefix("ComGoogleGson", "GSON")*/
+
+    finalConfigure()          // Must be last call to configuration
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    publications = ['MyPublication']
+    pkg {
+        repo = 'magicthreads'
+        name = 'magicthreads'
+        userOrg = 'touchlab'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/touchlab/MagicThreads'
+        version {
+            name = '0.9.0'
+            desc = 'Magicthreads Android Threading 0.9.0'
+            released  = new Date()
+            vcsTag = '0.9.0'
+        }
+    }
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            groupId 'co.touchlab'
+            artifactId 'magicthreads'
+            version '0.9.0'
+        }
+    }
 }
