@@ -18,19 +18,9 @@ include ":agera"
 include ":ageradatabase"
 include ":ageranet"
 
-//RecyclerView is a UI thing
-//include ":agerarvadapter"
-
-//Broadcasts aren't yet supported
-//include ":ageracontent"
-
-//project(":agerarvadapter").projectDir = new File(gradleBaseString + "/" +"agera/trans/extensions/rvadapter")
-//project(":ageracontent").projectDir = new File(gradleBaseString + "/" +"agera/trans/extensions/content")
-
 include ':javalib', ':ORM-Benchmark', ':GreenDAO-Generator'
 
 String gradleBaseString = "/Users/kgalligan/devel/xp/gradletrans"//System.getenv("DOPPEL_GRADLE_PROJECT_HOME")
-//File gradleBase = new File(gradleBaseString)
 
 project(":androidbase").projectDir = new File(gradleBaseString + "/" +"androidbase/trans/lib")
 project(":dagger").projectDir = new File(gradleBaseString + "/" +"dagger/trans/core")

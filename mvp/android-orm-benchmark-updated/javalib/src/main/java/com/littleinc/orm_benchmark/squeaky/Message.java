@@ -32,4 +32,5 @@ public class Message
 
     @DatabaseField(canBeNull = false)
     public long channelId;
+
 }

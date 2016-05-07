@@ -72,6 +72,7 @@ public class SqueakyExecutor implements BenchmarkExecutable
         SQLiteDatabase db = mHelper.getReadableDatabase();
         db.beginTransaction();
 
+        Random r = new Random();
         try {
             Dao userDao = mHelper.getDao(User.class);
             for (User user : users) {
@@ -95,9 +96,9 @@ public class SqueakyExecutor implements BenchmarkExecutable
     @Override
     public long readWholeData() throws SQLException {
         long start = System.nanoTime();
-        Log.d(TAG,
-              "Read, " + mHelper.getDao(Message.class).queryForAll().list().size()
-                      + " rows");
+//        Log.d(TAG,
+//              "Read, " + mHelper.getDao(Message.class).queryForAll().list().size()
+//                      + " rows");
         return System.nanoTime() - start;
     }
 
@@ -106,6 +107,7 @@ public class SqueakyExecutor implements BenchmarkExecutable
         long start = System.nanoTime();
 
         TableUtils.dropTables(mHelper.getWrappedDatabase(), true, User.class, Message.class);
+//        mHelper.close();
         return System.nanoTime() - start;
     }
 

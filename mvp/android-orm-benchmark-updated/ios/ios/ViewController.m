@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "com/littleinc/orm_benchmark/BenchmarkPresenter.h"
 #import "android/content/IOSContext.h"
 #import "android/os/Looper.h"
 #import "java/util/ArrayList.h"
@@ -23,9 +22,12 @@
     
     [AndroidOsLooper prepareMainLooper];
     _benchmarkPresenter = [[ComLittleincOrm_benchmarkBenchmarkPresenter alloc] initWithComLittleincOrm_benchmarkBenchmarkPresenter_Host:self withBoolean:true];
+    _simpleTestPresenter = [[MEMSimpleTestPresenter alloc] initWithMEMSimpleTestPresenter_Host:self];
 }
+
 - (IBAction)runClicked:(id)sender {
     [_benchmarkPresenter startBenchmark];
+//    [_simpleTestPresenter runDbTest];
 }
 
 - (void)showTextWithNSString:(NSString *)results{

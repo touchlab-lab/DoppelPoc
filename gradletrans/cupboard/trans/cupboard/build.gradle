@@ -30,10 +30,10 @@ testPattern {
 
     }
 
+    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+
     extraObjcCompilerArgs '-Wno-deprecated'
     extraLinkerArgs '-lsqlite3'
-
-    finalConfigure()          // Must be last call to configuration
 
     testMinExpectedTests 0
 
@@ -46,4 +46,6 @@ testPattern {
     translateArgs '--prefix', 'com.google.gson.stream=GSONStream'
 
     translatedPathPrefix("ComGoogleGson", "GSON")*/
+
+    finalConfigure()          // Must be last call to configuration
 }

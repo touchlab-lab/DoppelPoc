@@ -30,6 +30,8 @@ import android.util.Log;
 import android.util.Pair;
 import android.util.Printer;
 
+import com.google.j2objc.annotations.WeakOuter;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
@@ -73,14 +75,17 @@ public final class SQLiteDatabase extends SQLiteClosable {
     // Thread-local for database sessions that belong to this database.
     // Each thread has its own database session.
     // INVARIANT: Immutable.
-    private final ThreadLocal<SQLiteSession> mThreadSession = new ThreadLocal<SQLiteSession>()
+    private final ThreadLocal<SQLiteSession> mThreadSession = new SessionThreadLocal();
+
+    @WeakOuter private class SessionThreadLocal extends ThreadLocal<SQLiteSession>
     {
         @Override
         protected SQLiteSession initialValue()
         {
             return createSession();
         }
-    };
+    }
+
 
     // The optional factory to use when creating new Cursors.  May be null.
     // INVARIANT: Immutable.

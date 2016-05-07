@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteException;
 import android.text.TextUtils;
 
 import com.google.j2objc.annotations.AutoreleasePool;
+import com.google.j2objc.annotations.WeakOuter;
 
 import co.touchlab.squeaky.Config;
 import co.touchlab.squeaky.db.SQLiteStatement;
@@ -34,13 +35,18 @@ public class ModelDao<T> implements Dao<T>
 
 	private final Class<T>                entityClass;
 	private final GeneratedTableMapper<T> generatedTableMapper;
-	private final Set<DaoObserver> daoObserverSet = Collections.newSetFromMap(new ConcurrentHashMap<DaoObserver, Boolean>());
+	private final Set<DaoObserver> daoObserverSet = Collections
+			.newSetFromMap(new ConcurrentHashMap<DaoObserver, Boolean>());
 	private final String[]       tableCols;
 	private final SqueakyContext squeakyContext;
 	private final FieldType      idFieldType;
 	private final List<SQLiteStatement>        statementList   = Collections
 			.synchronizedList(new ArrayList<SQLiteStatement>());
-	private       ThreadLocal<SQLiteStatement> createStatement = new ThreadLocal<SQLiteStatement>()
+
+	private       ThreadLocal<SQLiteStatement> createStatement = new CreateStatementThreadLocal();
+	private ThreadLocal<SQLiteStatement> updateStatement = new UpdateStatementThreadLocal();
+
+	@WeakOuter private class CreateStatementThreadLocal extends ThreadLocal<SQLiteStatement>
 	{
 		@Override
 		protected SQLiteStatement initialValue()
@@ -49,8 +55,9 @@ public class ModelDao<T> implements Dao<T>
 			statementList.add(sqLiteStatement);
 			return sqLiteStatement;
 		}
-	};
-	private       ThreadLocal<SQLiteStatement> updateStatement = new ThreadLocal<SQLiteStatement>()
+	}
+
+	@WeakOuter private class UpdateStatementThreadLocal extends ThreadLocal<SQLiteStatement>
 	{
 		@Override
 		protected SQLiteStatement initialValue()
@@ -59,7 +66,7 @@ public class ModelDao<T> implements Dao<T>
 			statementList.add(sqLiteStatement);
 			return sqLiteStatement;
 		}
-	};
+	}
 
 	protected ModelDao(SqueakyContext openHelper, Class<T> entityClass, GeneratedTableMapper<T> generatedTableMapper)
 	{
@@ -145,9 +152,9 @@ public class ModelDao<T> implements Dao<T>
 		StringBuilder query = new StringBuilder();
 		List<String> params = new ArrayList<>();
 
-		for (String field : fieldValues.keySet())
+		for(String field : fieldValues.keySet())
 		{
-			if (query.length() > 0)
+			if(query.length() > 0)
 				query.append(" and ");
 
 			Class<T> dataClass = generatedTableMapper.getTableConfig().dataClass;

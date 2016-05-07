@@ -14,35 +14,40 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.google.android:android:4.1.1.4'
 
-    compile 'co.touchlab.squeaky:squeaky-core:0.5.0.0'
     apt 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
+    compile 'co.touchlab.squeaky:squeaky-core:0.5.0.0'
 
     compile 'nl.qbusict:cupboard:2.1.4'
     compile 'de.greenrobot:greendao:2.1.0'
 
+    compile 'de.greenrobot:eventbus:2.4.0'
 //    compile 'de.greenrobot:eventbus:2.2.1'
 
-    j2objcLinkage project(":cupboard")
-    j2objcLinkage project(":greendao")
-    j2objcLinkage project(":squeakycore")
-    j2objcLinkage project(":squeakyquery")
-    j2objcLinkage project(":androidbase")
-    j2objcLinkage project(":retrofit")
-    j2objcLinkage project(":rxjava")
-    j2objcLinkage project(":gson")
-    provided 'com.intellij:annotations:9.0.4'
-    j2objcLinkage project(":intellij")
+//    j2objcLinkage project(":cupboard")
+//    j2objcLinkage project(":greendao")
+//    j2objcLinkage project(":squeakycore")
+//    j2objcLinkage project(":squeakyquery")
+//    j2objcLinkage project(":androidbase")
+//    j2objcLinkage project(":retrofit")
+//    j2objcLinkage project(":rxjava")
+//    j2objcLinkage project(":gson")
 
-    provided project(":magicthreads")
-    j2objcLinkage project(":magicthreads")
-    compile project(":eventbus")
-    j2objcLinkage project(":eventbus")
+    provided 'com.intellij:annotations:9.0.4'
+//    j2objcLinkage project(":intellij")
+
+    compile 'commons-io:commons-io:2.4'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+
+    compile 'co.touchlab:magicthreads:0.9.0'
+
+//    provided project(":magicthreads-0.9.0")
+
+//    compile project(":eventbus")
 
 }
 
 j2objcConfig {
-    // Sets up libraries you depend on
-//    autoConfigureDeps true
+    translateDoppelLibs 'eventbus', 'squeakycore', 'cupboard', 'greendao', 'androidbase', 'magicthreads-0.9.0', 'commons-io', 'commons-lang3', 'retrofit', 'rxjava', 'intellij', 'gson'
 
     // Omit these two lines if you don't configure your Xcode project with CocoaPods
     xcodeProjectDir '../ios'  //  suggested directory name
@@ -58,7 +63,7 @@ j2objcConfig {
 
     extraLinkerArgs '-lsqlite3'
 
-    finalConfigure()          // Must be last call to configuration
+    translateArgs '--prefix', 'com.littleinc.orm_benchmark.memtest=MEM'
 
 //    podDependency 'Gson,../../Gson'
 //    podDependency 'Dagger2,../../Dagger2'
@@ -70,4 +75,6 @@ j2objcConfig {
 //    podDependency 'EventBus,../../EventBus'
 //    podDependency 'MagicThreads,../../MagicThreads'
 //    podDependency 'J2OBJC,../../J2OBJC'
+
+    finalConfigure()          // Must be last call to configuration
 }

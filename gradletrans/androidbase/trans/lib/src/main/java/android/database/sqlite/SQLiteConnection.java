@@ -31,6 +31,9 @@ import android.util.Log;
 import android.util.LruCache;
 import android.util.Printer;
 
+import com.google.j2objc.annotations.Weak;
+import com.google.j2objc.annotations.WeakOuter;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -93,6 +96,7 @@ public final class SQLiteConnection /*implements CancellationSignal.OnCancelList
 
     private final CloseGuard mCloseGuard = CloseGuard.get();
 
+    @Weak
     private final SQLiteConnectionPool        mPool;
     private final SQLiteDatabaseConfiguration mConfiguration;
     private final int                         mConnectionId;
@@ -1301,6 +1305,7 @@ public final class SQLiteConnection /*implements CancellationSignal.OnCancelList
         public boolean mInUse;
     }
 
+    @WeakOuter
     private final class PreparedStatementCache
             extends LruCache<String, PreparedStatement> {
         public PreparedStatementCache(int size) {

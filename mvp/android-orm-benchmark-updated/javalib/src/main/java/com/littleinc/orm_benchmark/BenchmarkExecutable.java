@@ -10,7 +10,7 @@ public interface BenchmarkExecutable {
 
     long SEARCH_LIMIT = 100;
 
-    int NUM_USER_INSERTS = 2000;
+    int NUM_USER_INSERTS = 20;
 
     int NUM_MESSAGE_INSERTS = 20000;
 

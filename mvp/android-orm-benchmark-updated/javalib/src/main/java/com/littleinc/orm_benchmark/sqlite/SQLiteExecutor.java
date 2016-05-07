@@ -36,6 +36,13 @@ public class SQLiteExecutor implements BenchmarkExecutable {
         mHelper = new DataBaseHelper(context, useInMemoryDb);
     }
 
+    public void cleanup()
+    {
+
+        mHelper.close();
+        mHelper = null;
+    }
+
     @Override
     public long createDbStructure() throws SQLException
     {

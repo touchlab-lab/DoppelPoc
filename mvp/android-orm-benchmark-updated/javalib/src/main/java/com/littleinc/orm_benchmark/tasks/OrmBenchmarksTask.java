@@ -26,18 +26,29 @@ public class OrmBenchmarksTask extends Task
 {
     public static final  String  TAG              = "OrmBenchmarksTask";
     private static final boolean USE_IN_MEMORY_DB = false;
-    private static final int     NUM_ITERATIONS   = 2;
+    private static final int     NUM_ITERATIONS   = 1;
 
     private BenchmarkExecutable[] mOrms = new BenchmarkExecutable[] {
-            new SQLiteExecutor(), new SqueakyExecutor(), new SqueakyFinalExecutor(), new OptimizedSQLiteExecutor(),
+//            new SqueakyExecutor()
+
+            new SqueakyExecutor(),
+//            new SqueakyFinalExecutor(),
+//            new OptimizedSQLiteExecutor(),
+//            new SQLiteExecutor(),
+//            new CupboardExecutor(),
+//            new GreenDaoExecutor()
+
+
+
             //            new SquidbExecutor(),
             //            new SugarOrmExecutor(),
             //            new DBFlowExecutor(),
-            new CupboardExecutor(),
+
             //            new RealmExecutor(),
             //                    new RequeryExecutor(),
             //                    new ORMLiteExecutor(),
-            new GreenDaoExecutor()};
+
+             };
 
     public String resultString;
 
@@ -49,6 +60,18 @@ public class OrmBenchmarksTask extends Task
         WRITE_DATA,
         READ_DATA,
         DROP_DB;
+    }
+
+    public void overlove(Context context)
+    {
+        try
+        {
+            run(context);
+        }
+        catch(Throwable throwable)
+        {
+            throw new RuntimeException(throwable);
+        }
     }
 
     @Override
@@ -106,7 +129,11 @@ public class OrmBenchmarksTask extends Task
                 }
 
                 sb.append("Finished: ").append(item.getOrmName()).append("\n");
-                EventBusExt.getDefault().post(new BenchmarkMessage(sb.toString()));
+
+                if(item instanceof SQLiteExecutor)
+                    ((SQLiteExecutor)item).cleanup();
+
+//                EventBusExt.getDefault().post(new BenchmarkMessage(sb.toString()));
             }
         }
 

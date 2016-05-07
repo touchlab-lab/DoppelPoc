@@ -38,7 +38,7 @@ public class CursorWindow extends SQLiteClosable/* implements Parcelable*/ {
     private static final String STATS_TAG = "CursorWindowStats";
 
     // This static member will be evaluated when first used.
-    private static final int sCursorWindowSize = /*2 * 1024 * 1024*/ 256 * 1024;
+    private static final int sCursorWindowSize = 2 * 1024 * 1024;
 
     /**
      * The native CursorWindow object pointer.  (FOR INTERNAL USE ONLY)
