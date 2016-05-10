@@ -1,25 +1,22 @@
 package co.touchlab.squeaky.field;
 
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.sql.SQLException;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.dao.DaoHelper;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
 import co.touchlab.squeaky.stmt.Where;
 import co.touchlab.squeaky.table.DatabaseTable;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-
-import java.sql.SQLException;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * Created by kgalligan on 7/26/15.
  */
-@RunWith(RobolectricTestRunner.class)
+
 public class ForeignFieldRefreshTest extends BaseTypeTest
 {
 	public static final String PREFIX = "Hello ";

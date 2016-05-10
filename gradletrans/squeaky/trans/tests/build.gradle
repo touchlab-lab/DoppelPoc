@@ -1,30 +1,39 @@
 apply plugin: 'java'
-apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
+configurations {
+    provided
+    compile.extendsFrom provided
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'junit:junit:4.11'
-    testCompile 'org.robolectric:robolectric:3.0'
+    provided project(':squeakycore')
+    j2objcLinkage project(':squeakycore')
+    provided project(':squeakyquery')
+    j2objcLinkage project(':squeakyquery')
+    provided project(':androidbasetest')
+    j2objcLinkage project(':androidbasetest')
+    provided project(':commons-lang3')
+    j2objcLinkage project(':commons-lang3')
 }
 
 j2objcConfig {
-    // Sets up libraries you depend on
-    autoConfigureDeps true
 
-    //headerMappingFiles 'j2objcheaders.properties'
+    testPattern {
+        include '**/BasicEntityTests.java'
+//        exclude '**/Message.java'
 
-extraObjcCompilerArgs '-I/Users/kgalligan/devel/xp/gradletrans/squeaky/trans/core/build/j2objcOutputs/src/main/objc', '-I/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/src/main/objc', '-Wno-deprecated'
-    extraLinkerArgs '-L/Users/kgalligan/devel/xp/gradletrans/squeaky/trans/core/build/j2objcOutputs/lib/x86_64Debug', '-L/Users/kgalligan/devel/xp/gradletrans/androidbase/trans/lib/build/j2objcOutputs/lib/x86_64Debug'
-    extraLinkerArgs '-lcore-j2objc', '-llib-j2objc', '-lsqlite3'
+    }
 
-    finalConfigure()          // Must be last call to configuration
-
-    testMinExpectedTests 0
-
+    extraLinkerArgs '-lsqlite3'
 extraObjcCompilerArgs '-Wno-deprecated'
+    testMinExpectedTests 0
+    finalConfigure()          // Must be last call to configuration
 
     /*translateArgs '--prefix', 'com.google.gson=GSON'
     translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'

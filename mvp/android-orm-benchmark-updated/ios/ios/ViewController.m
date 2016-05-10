@@ -26,8 +26,8 @@
 }
 
 - (IBAction)runClicked:(id)sender {
-    [_benchmarkPresenter startBenchmark];
-//    [_simpleTestPresenter runDbTest];
+//    [_benchmarkPresenter startBenchmark];
+    [_simpleTestPresenter runDbTest];
 }
 
 - (void)showTextWithNSString:(NSString *)results{

@@ -1,7 +1,9 @@
 package co.touchlab.squeaky.field.types;
 
-import co.touchlab.squeaky.field.DataType;
 import org.junit.Test;
+
+import co.touchlab.squeaky.field.DataType;
+
 
 import static org.junit.Assert.assertNull;
 

@@ -1,23 +1,23 @@
 package co.touchlab.squeaky.field.types;
 
-import co.touchlab.squeaky.dao.Dao;
-import co.touchlab.squeaky.field.DataType;
-import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.table.DatabaseTable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.junit.Before;
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
+import co.touchlab.squeaky.dao.Dao;
+import co.touchlab.squeaky.field.DataType;
+import co.touchlab.squeaky.field.DatabaseField;
+import co.touchlab.squeaky.table.DatabaseTable;
+
+
 import static org.junit.Assert.assertTrue;
 
-@RunWith(RobolectricTestRunner.class)
+
 public class TimeStampTypeTest extends BaseTypeTest
 {
 

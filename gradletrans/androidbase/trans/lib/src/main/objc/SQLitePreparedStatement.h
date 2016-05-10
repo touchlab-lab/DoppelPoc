@@ -10,6 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+#include "J2ObjC_header.h"
 
 @interface SQLitePreparedStatement : NSObject
 

@@ -1,4 +1,5 @@
 include ":androidbase"
+include ":androidbasetest"
 include ":dagger"
 include ":eventbus"
 include ":gson"
@@ -8,6 +9,7 @@ include ":rxandroid"
 include ":rxjava"
 include ":squeakycore"
 include ":squeakyquery"
+include ":squeakytests"
 include ":cupboard"
 include ":greendao"
 include ":truthcore"
@@ -23,6 +25,7 @@ include ':javalib', ':ORM-Benchmark', ':GreenDAO-Generator'
 String gradleBaseString = "/Users/kgalligan/devel/xp/gradletrans"//System.getenv("DOPPEL_GRADLE_PROJECT_HOME")
 
 project(":androidbase").projectDir = new File(gradleBaseString + "/" +"androidbase/trans/lib")
+project(":androidbasetest").projectDir = new File(gradleBaseString + "/" +"androidbasetest/trans/androidbasetest")
 project(":dagger").projectDir = new File(gradleBaseString + "/" +"dagger/trans/core")
 project(":eventbus").projectDir = new File(gradleBaseString + "/" +"eventbus/trans/eb")
 project(":gson").projectDir = new File(gradleBaseString + "/" +"gson/trans/gson")
@@ -32,6 +35,7 @@ project(":rxandroid").projectDir = new File(gradleBaseString + "/" +"rxandroid/t
 project(":rxjava").projectDir = new File(gradleBaseString + "/" +"rxjava/trans/rxjava")
 project(":squeakycore").projectDir = new File(gradleBaseString + "/" +"squeaky/trans/core")
 project(":squeakyquery").projectDir = new File(gradleBaseString + "/" +"squeaky/trans/query")
+project(":squeakytests").projectDir = new File(gradleBaseString + "/" +"squeaky/trans/tests")
 project(":cupboard").projectDir = new File(gradleBaseString + "/" +"cupboard/trans/cupboard")
 project(":greendao").projectDir = new File(gradleBaseString + "/" +"greendao/trans/greendao")
 project(":truthcore").projectDir = new File(gradleBaseString + "/" +"truth/trans/core")

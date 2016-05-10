@@ -13,7 +13,7 @@ import java.util.List;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public static final String TAG = DataBaseHelper.class.getSimpleName();
-    public static final int INSERT_COUNT = 20;
+    public static final int INSERT_COUNT = 10000;
 
     // DB CONFIG
     private static int DB_VERSION = 1;
@@ -44,7 +44,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         List<Message> messages = new ArrayList<>();
         for (int i = 0; i < INSERT_COUNT; i++) {
             Message newMessage = new Message();
-            newMessage.fillMessageWithRandomData(i, 20);
+            newMessage.fillMessageWithRandomData(i, INSERT_COUNT);
             messages.add(newMessage);
         }
 
@@ -56,7 +56,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             for (Message message : messages) {
                 db.insert(Message.TABLE_NAME, null, message.prepareForInsert());
             }
-            Log.d(TAG, "Done, wrote " + 20 + " messages");
+            Log.d(TAG, "Done, wrote " + INSERT_COUNT + " messages");
             db.setTransactionSuccessful();
         } finally {
             db.endTransaction();

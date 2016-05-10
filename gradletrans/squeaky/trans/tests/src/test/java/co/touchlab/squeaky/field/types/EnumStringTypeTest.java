@@ -1,23 +1,21 @@
 package co.touchlab.squeaky.field.types;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.sql.SQLException;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.field.SqlType;
 import co.touchlab.squeaky.table.DatabaseTable;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 
-import java.sql.SQLException;
-import java.util.List;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(RobolectricTestRunner.class)
+
 public class EnumStringTypeTest extends BaseTypeTest
 {
 

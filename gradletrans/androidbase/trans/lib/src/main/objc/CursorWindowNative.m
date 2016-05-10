@@ -42,17 +42,18 @@ static void throwUnknownTypeException(jint type) {
 
 // Class methods
 + (id<NSObject>) nativeCreate:(NSString *)name cursorWindowSize:(jint)cursorWindowSize {
-    return [[CursorWindowNative alloc] initWithName:name size:cursorWindowSize isReadOnly:NO];
+CursorWindowNative* ret = [[CursorWindowNative alloc] initWithName:name size:cursorWindowSize isReadOnly:NO];
+//[ret autorelease];
+    return ret;
 }
 
 + (void) nativeDispose:(id<NSObject>)windowPtr {
     CursorWindowNative *window = (CursorWindowNative *)(windowPtr);
-    [window dealloc];
+    [window release];
 }
 
 + (void) nativeClear:(id<NSObject>)windowPtr {
     CursorWindowNative *window = (CursorWindowNative *)(windowPtr);
-//    LOG_WINDOW("Clearing window %p", window);
     status_t status = [window clear];
     if (status) {
 //        LOG_WINDOW("Could not clear window. error=%d", status);
@@ -129,6 +130,7 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
             throw_sqlite3_exception_message(NULL, "Native could not create new byte[]");
             return NULL;
         }
+        [byteArray autorelease];
 //        env->SetByteArrayRegion(byteArray, 0, size, static_cast<const jbyte*>(value));
         return byteArray;
     } else if (type == FIELD_TYPE_INTEGER) {
@@ -163,6 +165,9 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 
         IOSByteArray *bytes = [IOSByteArray newArrayWithBytes:(const jbyte *)value count:sizeIncludingNull - 1];
         NSString *result = [NSString stringWithBytes:bytes];
+#if ! __has_feature(objc_arc)
+[bytes release];
+#endif
         return result;
     } else if (type == FIELD_TYPE_INTEGER) {
         int64_t value = fieldSlot->data.l;
@@ -570,12 +575,11 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 }
 
 - (void)dealloc {
-    if(data != NULL)
-    {
-        free(data);
-        data = NULL;
-    }
+    free(data);
+    data = NULL;
+RELEASE_(mName);
     mHeader = NULL;
+    [super dealloc];
 }
 
 @end

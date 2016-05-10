@@ -1,24 +1,23 @@
 package co.touchlab.squeaky.stmt;
 
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.sql.SQLException;
+import java.util.Date;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
 import co.touchlab.squeaky.table.DatabaseTable;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-
-import java.sql.SQLException;
-import java.util.Date;
 
 /**
  * Created by kgalligan on 9/13/15.
  */
-@RunWith(RobolectricTestRunner.class)
+
 public class JoinTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

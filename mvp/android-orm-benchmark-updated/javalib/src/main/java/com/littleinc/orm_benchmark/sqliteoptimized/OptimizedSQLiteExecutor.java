@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 
+import com.google.j2objc.annotations.AutoreleasePool;
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
 
 import java.sql.SQLException;
@@ -103,13 +104,13 @@ public class OptimizedSQLiteExecutor implements BenchmarkExecutable {
         try {
             db.beginTransaction();
 
-            for (User user : users) {
+            for (@AutoreleasePool User user : users) {
                 user.prepareForInsert(insertUser);
                 insertUser.execute();
             }
             Log.d(TAG, "Done, wrote " + NUM_USER_INSERTS + " users");
 
-            for (Message message : messages) {
+            for (@AutoreleasePool Message message : messages) {
                 message.prepareForInsert(insertMessage);
                 insertMessage.execute();
             }

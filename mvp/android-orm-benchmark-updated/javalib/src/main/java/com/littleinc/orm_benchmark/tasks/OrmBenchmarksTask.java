@@ -5,6 +5,8 @@ import android.util.Log;
 import com.google.j2objc.annotations.AutoreleasePool;
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
 import com.littleinc.orm_benchmark.cupboard.CupboardExecutor;
+import com.littleinc.orm_benchmark.flat.GsonFileExecutor;
+import com.littleinc.orm_benchmark.flat.JsonFileExecutor;
 import com.littleinc.orm_benchmark.greendao.GreenDaoExecutor;
 import com.littleinc.orm_benchmark.sqlite.SQLiteExecutor;
 import com.littleinc.orm_benchmark.sqliteoptimized.OptimizedSQLiteExecutor;
@@ -29,15 +31,11 @@ public class OrmBenchmarksTask extends Task
     private static final int     NUM_ITERATIONS   = 1;
 
     private BenchmarkExecutable[] mOrms = new BenchmarkExecutable[] {
-//            new SqueakyExecutor()
+            //            new SqueakyExecutor()
+            //            new GsonFileExecutor(),
+            //            new JsonFileExecutor(),
 
-            new SqueakyExecutor(),
-//            new SqueakyFinalExecutor(),
-//            new OptimizedSQLiteExecutor(),
-//            new SQLiteExecutor(),
-//            new CupboardExecutor(),
-//            new GreenDaoExecutor()
-
+            new SqueakyExecutor(), new SqueakyFinalExecutor(), new OptimizedSQLiteExecutor(), new SQLiteExecutor()//, new CupboardExecutor(), new GreenDaoExecutor()
 
 
             //            new SquidbExecutor(),
@@ -48,7 +46,7 @@ public class OrmBenchmarksTask extends Task
             //                    new RequeryExecutor(),
             //                    new ORMLiteExecutor(),
 
-             };
+    };
 
     public String resultString;
 
@@ -62,6 +60,7 @@ public class OrmBenchmarksTask extends Task
         DROP_DB;
     }
 
+    @AutoreleasePool
     public void overlove(Context context)
     {
         try
@@ -133,7 +132,7 @@ public class OrmBenchmarksTask extends Task
                 if(item instanceof SQLiteExecutor)
                     ((SQLiteExecutor)item).cleanup();
 
-//                EventBusExt.getDefault().post(new BenchmarkMessage(sb.toString()));
+                EventBusExt.getDefault().post(new BenchmarkMessage(sb.toString()));
             }
         }
 

@@ -2,25 +2,25 @@ package co.touchlab.squeaky.experiments;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Date;
+import java.util.Random;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
 import co.touchlab.squeaky.table.DatabaseTable;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-
-import java.util.Date;
-import java.util.Random;
 
 /**
  * This should be removed.  Just playing around with ideas.
  *
  * Created by kgalligan on 10/24/15.
  */
-@RunWith(RobolectricTestRunner.class)
+
 public class InnerQueryTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

@@ -1,25 +1,23 @@
 package co.touchlab.squeaky.field;
 
-import co.touchlab.squeaky.dao.Dao;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
-import co.touchlab.squeaky.table.DatabaseQuery;
-import co.touchlab.squeaky.table.DatabaseTable;
-import co.touchlab.squeaky.table.DatabaseView;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.After;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import co.touchlab.squeaky.dao.Dao;
+import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.table.DatabaseQuery;
+import co.touchlab.squeaky.table.DatabaseTable;
+
 /**
  * Created by kgalligan on 7/26/15.
  */
-@RunWith(RobolectricTestRunner.class)
+
 public class QueryTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

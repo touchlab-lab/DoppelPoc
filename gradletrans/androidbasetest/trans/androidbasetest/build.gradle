@@ -1,0 +1,59 @@
+apply plugin: 'java'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+configurations {
+    provided
+    compile.extendsFrom provided
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'junit:junit:4.11'
+    compile 'com.google.j2objc:j2objc-annotations:0.1'
+    provided project(':androidbase')
+    j2objcLinkage project(':androidbase')
+}
+
+j2objcConfig {
+    // Sets up libraries you depend on
+//    autoConfigureDeps true
+
+    //headerMappingFiles 'j2objcheaders.properties'
+
+        testPattern {
+            exclude '**/DataBaseHelper.java'
+            exclude '**/Message.java'
+
+        }
+
+//testPattern {
+//
+//        // Exclude a single test without needing to specify the full path
+//        exclude '**/*.java'
+//
+//    }
+//    j2objcCycleFinder { enabled = true }
+
+	extraLinkerArgs '-lsqlite3'
+
+    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+
+//    testMinExpectedTests 0
+
+    extraObjcCompilerArgs '-Wno-deprecated'
+
+    finalConfigure()          // Must be last call to configuration
+
+
+
+    /*translateArgs '--prefix', 'com.google.gson=GSON'
+    translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'
+    translateArgs '--prefix', 'com.google.gson.internal=GSONInternal'
+    translateArgs '--prefix', 'com.google.gson.reflect=GSONReflect'
+    translateArgs '--prefix', 'com.google.gson.stream=GSONStream'
+
+    translatedPathPrefix("ComGoogleGson", "GSON")*/
+}

@@ -1,22 +1,21 @@
 package co.touchlab.squeaky.field;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Date;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
 import co.touchlab.squeaky.table.DatabaseTable;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-
-import java.util.Date;
 
 /**
  * Created by kgalligan on 8/8/15.
  */
-@RunWith(RobolectricTestRunner.class)
+
 public class InheritanceTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

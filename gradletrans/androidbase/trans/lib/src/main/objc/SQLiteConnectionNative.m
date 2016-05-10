@@ -94,6 +94,7 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
 
     sqlite3* db;
     int err = sqlite3_open_v2(pathChars, &db, sqliteFlags, NULL);
+
     if (err != SQLITE_OK) {
         throw_sqlite3_exception_errcode(err, "Could not open database");
         return 0;
@@ -201,6 +202,7 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
 //    ALOGV("Finalized statement %p on connection %p", statement, connection->db);
     sqlite3_finalize(statement);
     preparedStatement.statement = nil;
+
 }
 
 + (jint) nativeGetParameterCount:(NSObject *)connectionPtr statement:(NSObject *)statementPtr {
@@ -235,7 +237,9 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
             length += 1;
         }
         IOSCharArray *chars = [IOSCharArray newArrayWithChars:name count:length];
-        return [NSString stringWithCharacters:chars];
+        NSString* asdf = [NSString stringWithCharacters:chars];
+        [chars release];
+        return asdf;
     }
     return nil;
 }
@@ -353,7 +357,9 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
         if (text) {
             size_t length = sqlite3_column_bytes16(statement.statement, 0) / sizeof(jchar);
             IOSCharArray *chars = [IOSCharArray newArrayWithChars:text count:length];
-            return [NSString stringWithCharacters:chars];
+            NSString* asdf = [NSString stringWithCharacters:chars];
+            [chars release];
+            return asdf;
         }
     }
     return NULL;
@@ -569,5 +575,12 @@ static enum CopyRowResult copyRow(CursorWindowNative* window,
     sqlite3_db_status(connection.db, SQLITE_DBSTATUS_LOOKASIDE_USED, &cur, &unused, 0);
     return cur;
 }
+
+- (void)dealloc {
+[path release];
+[label release];
+[super dealloc];
+}
+
 
 @end

@@ -2,21 +2,22 @@ package co.touchlab.squeaky.old;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.sql.SQLException;
+
+import co.touchlab.squeaky.SuperBaseTest;
 import co.touchlab.squeaky.db.sqlite.SQLiteDatabaseImpl;
 import co.touchlab.squeaky.db.sqlite.SqueakyOpenHelper;
 import co.touchlab.squeaky.table.TableUtils;
-import org.robolectric.RuntimeEnvironment;
-
-import java.sql.SQLException;
 
 /**
  * Created by kgalligan on 7/19/15.
  */
-public class BaseTest
+public class BaseTest extends SuperBaseTest
 {
 	SimpleHelper createHelper(Class... c)
 	{
-		return new SimpleHelper(RuntimeEnvironment.application, getClass().getSimpleName() + ".db", c);
+		return new SimpleHelper(getApp(), getClass().getSimpleName() + ".db", c);
 	}
 
 	public static class SimpleHelper extends SqueakyOpenHelper

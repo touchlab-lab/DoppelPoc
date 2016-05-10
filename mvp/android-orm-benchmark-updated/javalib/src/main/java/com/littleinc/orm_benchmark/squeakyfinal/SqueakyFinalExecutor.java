@@ -3,6 +3,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.google.j2objc.annotations.AutoreleasePool;
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
 import com.littleinc.orm_benchmark.util.BenchUtil;
 
@@ -42,6 +43,7 @@ public class SqueakyFinalExecutor implements BenchmarkExecutable
     }
 
     @Override
+    @AutoreleasePool
     public long writeWholeData() throws SQLException
     {
         Random random = new Random();
@@ -70,13 +72,13 @@ public class SqueakyFinalExecutor implements BenchmarkExecutable
 
         try {
             Dao userDao = mHelper.getDao(User.class);
-            for (User user : users) {
+            for (@AutoreleasePool User user : users) {
                 userDao.create(user);
             }
             Log.d(TAG, "Done, wrote " + NUM_USER_INSERTS + " users");
 
             Dao messageDao = mHelper.getDao(Message.class);
-            for (Message message : messages) {
+            for (@AutoreleasePool Message message : messages) {
                 messageDao.create(message);
             }
             Log.d(TAG, "Done, wrote " + NUM_MESSAGE_INSERTS + " messages");

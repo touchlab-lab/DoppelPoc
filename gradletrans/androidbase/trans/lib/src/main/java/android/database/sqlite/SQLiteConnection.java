@@ -96,7 +96,6 @@ public final class SQLiteConnection /*implements CancellationSignal.OnCancelList
 
     private final CloseGuard mCloseGuard = CloseGuard.get();
 
-    @Weak
     private final SQLiteConnectionPool        mPool;
     private final SQLiteDatabaseConfiguration mConfiguration;
     private final int                         mConnectionId;
@@ -139,6 +138,9 @@ public final class SQLiteConnection /*implements CancellationSignal.OnCancelList
 
     private static native void nativeFinalizeStatement(Object connectionPtr, Object statementPtr)/*-[
         [SQLiteConnectionNative nativeFinalizeStatement:connectionPtr statement:statementPtr];
+        #if ! __has_feature(objc_arc)
+        [(NSObject *)statementPtr release];
+        #endif
     ]-*/;
 
     private static native int nativeGetParameterCount(Object connectionPtr, Object statementPtr)/*-[
@@ -987,6 +989,7 @@ public final class SQLiteConnection /*implements CancellationSignal.OnCancelList
 
     private void finalizePreparedStatement(PreparedStatement statement) {
         nativeFinalizeStatement(mConnectionPtr, statement.mStatementPtr);
+
         recyclePreparedStatement(statement);
     }
 

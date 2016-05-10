@@ -11,7 +11,6 @@
 #import "SQLitePreparedStatement.h"
 
 @implementation SQLitePreparedStatement
-
 @synthesize statement;
 
 - (id) initWithStatement:(sqlite3_stmt *)_statement {
@@ -19,6 +18,10 @@
         self.statement = _statement;
     }
     return self;
+}
+
+- (void) dealloc {
+    [super dealloc];
 }
 
 @end

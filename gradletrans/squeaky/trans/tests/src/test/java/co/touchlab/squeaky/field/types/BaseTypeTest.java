@@ -2,32 +2,34 @@ package co.touchlab.squeaky.field.types;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import co.touchlab.squeaky.db.sqlite.SQLiteDatabaseImpl;
-import co.touchlab.squeaky.db.sqlite.SqueakyOpenHelper;
-import co.touchlab.squeaky.table.TableUtils;
-import org.robolectric.RuntimeEnvironment;
 
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
 
-public abstract class BaseTypeTest
-{
+import co.touchlab.squeaky.SuperBaseTest;
+import co.touchlab.squeaky.db.sqlite.SQLiteDatabaseImpl;
+import co.touchlab.squeaky.db.sqlite.SqueakyOpenHelper;
+import co.touchlab.squeaky.table.TableUtils;
 
+public abstract class BaseTypeTest extends SuperBaseTest
+{
 	public SimpleHelper createHelper(Class... c)
 	{
-		return new SimpleHelper(RuntimeEnvironment.application, getClass().getSimpleName() + ".db", c);
+		return new SimpleHelper(getApp(), getClass().getSimpleName() + ".db",
+								c);
 	}
 
 	public SimpleHelper createViewHelper(String viewSql, Class... c)
 	{
-		return new SimpleHelper(RuntimeEnvironment.application, Collections.singletonList(viewSql), getClass().getSimpleName() + ".db", c);
+		return new SimpleHelper(getApp(), Collections.singletonList(viewSql),
+								getClass().getSimpleName() + ".db", c);
 	}
 
 	public static class SimpleHelper extends SqueakyOpenHelper
 	{
 		private final Class[] managingClasses;
-		private List<String> createSqlList;
+		private       List<String> createSqlList;
 
 		public SimpleHelper(Context context, String name, Class... managingClasses)
 		{
