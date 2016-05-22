@@ -4,11 +4,13 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
 import co.touchlab.squeaky.stmt.Where;
@@ -20,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by kgalligan on 7/26/15.
  */
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class ForeignFieldTest extends BaseTypeTest
 {
 	public static final String PREFIX = "Hello ";

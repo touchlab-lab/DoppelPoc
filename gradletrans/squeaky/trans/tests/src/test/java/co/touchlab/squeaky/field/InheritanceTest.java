@@ -5,9 +5,11 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.Date;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
 import co.touchlab.squeaky.table.DatabaseTable;
@@ -15,7 +17,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
 /**
  * Created by kgalligan on 8/8/15.
  */
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class InheritanceTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

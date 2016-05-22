@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
@@ -22,7 +24,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
 /**
  * Created by kgalligan on 9/14/15.
  */
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class DaoTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

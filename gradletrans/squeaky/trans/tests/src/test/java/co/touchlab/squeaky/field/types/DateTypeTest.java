@@ -4,10 +4,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.table.DatabaseTable;
@@ -15,7 +17,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
 
 import static org.junit.Assert.assertTrue;
 
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class DateTypeTest extends BaseTypeTest
 {
 

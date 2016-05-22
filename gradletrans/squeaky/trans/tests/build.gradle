@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: "net.ltgt.apt"
 apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
@@ -12,27 +13,39 @@ configurations {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'junit:junit:4.11'
+    compile 'org.robolectric:robolectric:3.0'
+
+    j2objcLinkage project(':androidbase')
+    provided project(':androidbasetest')
+    j2objcLinkage project(':androidbasetest')
+
     provided project(':squeakycore')
     j2objcLinkage project(':squeakycore')
     provided project(':squeakyquery')
     j2objcLinkage project(':squeakyquery')
-    provided project(':androidbasetest')
-    j2objcLinkage project(':androidbasetest')
+
     provided project(':commons-lang3')
     j2objcLinkage project(':commons-lang3')
+
+    testApt 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
 }
 
 j2objcConfig {
 
     testPattern {
-        include '**/BasicEntityTests.java'
-//        exclude '**/Message.java'
+        include '**/*Tests.java'
+        include '**/*Test.java'
+        exclude '**/BaseTest.java'
+        exclude '**/DataPersisterManagerTest.java'
+        exclude '**/FieldTypeTest.java'
+        exclude '**/SuperBaseTest.java'
+        exclude '**/BaseTypeTest.java'
 
     }
 
     extraLinkerArgs '-lsqlite3'
 extraObjcCompilerArgs '-Wno-deprecated'
-    testMinExpectedTests 0
+    testMinExpectedTests 128
     finalConfigure()          // Must be last call to configuration
 
     /*translateArgs '--prefix', 'com.google.gson=GSON'

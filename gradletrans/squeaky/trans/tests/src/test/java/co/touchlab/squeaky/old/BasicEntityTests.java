@@ -5,11 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.doppel.testing.PlatformUtils;
 import co.touchlab.squeaky.SuperBaseTest;
 import co.touchlab.squeaky.dao.Dao;
@@ -22,15 +24,12 @@ import co.touchlab.squeaky.table.TableUtils;
 /**
  * Created by kgalligan on 7/18/15.
  */
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class BasicEntityTests extends SuperBaseTest
 {
 	@Test
 	public void basicDbTest() throws SQLException
 	{
-		if(!PlatformUtils.isJ2objc())
-			return;
-
 		System.out.println(getApp().getDatabasePath(OpenHelper.NAME));
 
 		OpenHelper openHelper = new OpenHelper(getApp());
@@ -220,7 +219,7 @@ public class BasicEntityTests extends SuperBaseTest
 		{
 			try
 			{
-				TableUtils.createTables(new SQLiteDatabaseImpl(sqLiteDatabase), A.class, BPackage.class, CProtected.class);
+				TableUtils.createTables(new SQLiteDatabaseImpl(sqLiteDatabase), A.class, BPackage.class, CProtected.class, DFinal.class);
 			}
 			catch (SQLException e)
 			{
@@ -233,7 +232,7 @@ public class BasicEntityTests extends SuperBaseTest
 		{
 			try
 			{
-				TableUtils.dropTables(new SQLiteDatabaseImpl(sqLiteDatabase), true, CProtected.class, BPackage.class, A.class);
+				TableUtils.dropTables(new SQLiteDatabaseImpl(sqLiteDatabase), true, DFinal.class, CProtected.class, BPackage.class, A.class);
 				onCreate(sqLiteDatabase);
 			}
 			catch (SQLException e)

@@ -2,7 +2,9 @@ package co.touchlab.squeaky.field.types;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
@@ -11,7 +13,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
 
 import static org.junit.Assert.assertTrue;
 
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class BooleanIntegerTypeTest extends BaseTypeTest
 {
 

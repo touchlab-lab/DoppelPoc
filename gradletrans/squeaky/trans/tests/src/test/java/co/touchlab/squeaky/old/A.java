@@ -27,6 +27,7 @@ public class A
 	@DatabaseField
 	public double d;
 
+
 	@Override
 	public boolean equals(Object o)
 	{

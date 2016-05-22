@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
 import com.littleinc.orm_benchmark.squeaky.Message;
+import com.littleinc.orm_benchmark.squeaky.User;
+import com.littleinc.orm_benchmark.util.BenchUtil;
 import com.wow.soreverse.MessageModel;
 import com.wow.soreverse.UserModel;
 
@@ -12,6 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
 
 /**
  * Created by kgalligan on 10/12/15.
@@ -54,22 +57,22 @@ public class SqldelightExecutor implements BenchmarkExecutable
 
     @Override
     public long writeWholeData() throws SQLException {
-        Random random = new Random();
-        /*List<User> users = new LinkedList<User>();
+        /*Random random = new Random();
+        List<User> users = new ArrayList<>();
         for (int i = 0; i < NUM_USER_INSERTS; i++) {
             User newUser = new User();
-            newUser.lastName = (Util.getRandomString(10));
-            newUser.firstName = (Util.getRandomString(10));
+            newUser.lastName = (BenchUtil.getRandomString(10));
+            newUser.firstName = (BenchUtil.getRandomString(10));
 
             users.add(newUser);
         }
 
-        List<Message> messages = new LinkedList<Message>();
+        List<Message> messages = new ArrayList<>();
         for (int i = 0; i < NUM_MESSAGE_INSERTS; i++) {
             Message newMessage = new Message();
             newMessage.commandId = (i);
             newMessage.sortedBy = (System.nanoTime());
-            newMessage.content = (Util.getRandomString(100));
+            newMessage.content = (BenchUtil.getRandomString(100));
             newMessage.clientId = (System.currentTimeMillis());
             newMessage
                     .senderId = (Math.round(Math.random() * NUM_USER_INSERTS));

@@ -6,10 +6,12 @@ import android.database.sqlite.SQLiteDatabase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.Date;
 import java.util.Random;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
@@ -20,7 +22,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
  *
  * Created by kgalligan on 10/24/15.
  */
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class InnerQueryTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

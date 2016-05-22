@@ -4,10 +4,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.sql.SQLException;
 import java.util.Arrays;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
@@ -17,7 +19,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
 
 import static org.junit.Assert.assertTrue;
 
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class ByteArrayTypeTest extends BaseTypeTest
 {
 

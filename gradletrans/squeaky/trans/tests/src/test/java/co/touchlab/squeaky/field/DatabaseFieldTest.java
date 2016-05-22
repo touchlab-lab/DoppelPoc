@@ -6,9 +6,11 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.List;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.db.sqlite.SQLiteDatabaseImpl;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
@@ -19,7 +21,7 @@ import co.touchlab.squeaky.table.TableUtils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class DatabaseFieldTest extends BaseTypeTest
 {
 	private SimpleHelper helper;

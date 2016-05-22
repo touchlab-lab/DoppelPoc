@@ -3,6 +3,7 @@ package co.touchlab.squeaky.field;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,6 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
+import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.types.BaseTypeTest;
 import co.touchlab.squeaky.table.DatabaseTable;
@@ -21,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by kgalligan on 7/26/15.
  */
-
+@RunWith(DoppelRobolectricTestRunner.class)
 public class ForeignCollectionTest extends BaseTypeTest
 {
 	private SimpleHelper helper;
