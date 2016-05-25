@@ -41,6 +41,7 @@ extraObjcCompilerArgs '-Wno-deprecated'
 
     translatedPathPrefix("ComGoogleGson", "GSON")*/
 
-    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+    doppelPackageDeploy = true
+
     finalConfigure()          // Must be last call to configuration
 }

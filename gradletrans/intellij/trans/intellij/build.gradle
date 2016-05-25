@@ -27,7 +27,7 @@ testPattern {
 
 extraObjcCompilerArgs '-Wno-deprecated'
 
-    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+    doppelPackageDeploy = true
 
     finalConfigure()          // Must be last call to configuration
     /*translateArgs '--prefix', 'com.google.gson=GSON'

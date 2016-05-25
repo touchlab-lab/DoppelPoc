@@ -31,7 +31,7 @@ j2objcConfig {
 
     }
 
-    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+    doppelPackageDeploy = true
 
     extraLinkerArgs '-lsqlite3'
 

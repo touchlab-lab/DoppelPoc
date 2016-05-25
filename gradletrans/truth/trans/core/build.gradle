@@ -29,7 +29,7 @@ testPattern {
 
     }
 
-    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+    doppelPackageDeploy = true
 
     finalConfigure()          // Must be last call to configuration
 

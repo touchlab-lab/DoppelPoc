@@ -30,7 +30,7 @@ testPattern {
 
     }
 
-    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+    doppelPackageDeploy = true
 
     extraObjcCompilerArgs '-Wno-deprecated'
     extraLinkerArgs '-lsqlite3'

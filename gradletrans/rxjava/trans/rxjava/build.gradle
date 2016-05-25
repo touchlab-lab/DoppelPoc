@@ -22,7 +22,7 @@ j2objcConfig {
 
     }
 
-    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+    doppelPackageDeploy = true
 
     testMinExpectedTests 0
 

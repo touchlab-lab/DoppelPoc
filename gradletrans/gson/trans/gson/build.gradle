@@ -26,7 +26,7 @@ j2objcConfig {
 
 //    j2objcCycleFinder { enabled = true }
 
-    doppelDeployDir = '/Users/kgalligan/devel/xp/gradletrans/out'
+    doppelPackageDeploy = true
 
     finalConfigure()          // Must be last call to configuration
 
