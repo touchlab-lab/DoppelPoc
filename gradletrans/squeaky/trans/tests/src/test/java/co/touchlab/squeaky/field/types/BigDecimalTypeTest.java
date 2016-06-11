@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.List;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.table.DatabaseTable;
@@ -19,9 +19,9 @@ import co.touchlab.squeaky.table.DatabaseTable;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class BigDecimalTypeTest extends BaseTypeTest
+public class BigDecimalTypeTest extends BaseTypeTestHide
 {
 	private final static String BIGDECIMAL_COLUMN = "bigDecimal";
 	private final static String DEFAULT_VALUE = "1.3452904234234732472343454353453453453453453453453453453";

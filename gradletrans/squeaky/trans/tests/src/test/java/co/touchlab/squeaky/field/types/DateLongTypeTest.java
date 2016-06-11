@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 
 import java.util.Date;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
@@ -17,9 +17,9 @@ import co.touchlab.squeaky.table.DatabaseTable;
 
 
 import static org.junit.Assert.assertTrue;
-
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class DateLongTypeTest extends BaseTypeTest
+public class DateLongTypeTest extends BaseTypeTestHide
 {
 
 	private static final String DATE_COLUMN = "date";

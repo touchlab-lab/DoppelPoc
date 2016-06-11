@@ -9,18 +9,19 @@ import org.junit.runner.RunWith;
 import java.sql.SQLException;
 import java.util.Date;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.field.types.BaseTypeTestHide;
 import co.touchlab.squeaky.table.DatabaseTable;
 
 /**
  * Created by kgalligan on 9/13/15.
  */
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class JoinTest extends BaseTypeTest
+public class JoinTest extends BaseTypeTestHide
 {
 	private SimpleHelper helper;
 
@@ -153,7 +154,7 @@ public class JoinTest extends BaseTypeTest
 		Bar bar;
 	}
 
-	private BaseTypeTest.SimpleHelper getHelper()
+	private BaseTypeTestHide.SimpleHelper getHelper()
 	{
 		return createHelper(
 				Asdf.class, Bar.class, Foo.class

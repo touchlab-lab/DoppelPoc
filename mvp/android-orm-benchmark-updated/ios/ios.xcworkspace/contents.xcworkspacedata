@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ios.xcodeproj">
+      location = "group:/Users/kgalligan/devel/xp/mvp/android-orm-benchmark-updated/ios/ios.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ios.xcodeproj">
    </FileRef>
 </Workspace>

@@ -29,88 +29,88 @@ PODS:
 
 DEPENDENCIES:
   - J2OBJC (from `/Users/kgalligan/devel/j2objc/dist`)
-  - j2objc-androidbase-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/androidbase`)
-  - j2objc-androidbase-release (from `/Users/kgalligan/devel/xp/gradletrans/out/androidbase`)
-  - j2objc-commons-io-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/commons-io`)
-  - j2objc-commons-io-release (from `/Users/kgalligan/devel/xp/gradletrans/out/commons-io`)
-  - j2objc-commons-lang3-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/commons-lang3`)
-  - j2objc-commons-lang3-release (from `/Users/kgalligan/devel/xp/gradletrans/out/commons-lang3`)
-  - j2objc-cupboard-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/cupboard`)
-  - j2objc-cupboard-release (from `/Users/kgalligan/devel/xp/gradletrans/out/cupboard`)
-  - j2objc-eventbus-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/eventbus`)
-  - j2objc-eventbus-release (from `/Users/kgalligan/devel/xp/gradletrans/out/eventbus`)
-  - j2objc-greendao-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/greendao`)
-  - j2objc-greendao-release (from `/Users/kgalligan/devel/xp/gradletrans/out/greendao`)
-  - j2objc-gson-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/gson`)
-  - j2objc-gson-release (from `/Users/kgalligan/devel/xp/gradletrans/out/gson`)
-  - j2objc-intellij-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/intellij`)
-  - j2objc-intellij-release (from `/Users/kgalligan/devel/xp/gradletrans/out/intellij`)
+  - j2objc-androidbase-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/androidbase`)
+  - j2objc-androidbase-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/androidbase`)
+  - j2objc-commons-io-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/commons-io`)
+  - j2objc-commons-io-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/commons-io`)
+  - j2objc-commons-lang3-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/commons-lang3`)
+  - j2objc-commons-lang3-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/commons-lang3`)
+  - j2objc-cupboard-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/cupboard`)
+  - j2objc-cupboard-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/cupboard`)
+  - j2objc-eventbus-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/eventbus`)
+  - j2objc-eventbus-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/eventbus`)
+  - j2objc-greendao-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/greendao`)
+  - j2objc-greendao-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/greendao`)
+  - j2objc-gson-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/gson`)
+  - j2objc-gson-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/gson`)
+  - j2objc-intellij-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/intellij`)
+  - j2objc-intellij-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/intellij`)
   - j2objc-javalib-debug (from `../javalib/build/j2objcOutputs`)
   - j2objc-javalib-release (from `../javalib/build/j2objcOutputs`)
-  - j2objc-magicthreads-0.9.0-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/magicthreads-0.9.0`)
-  - j2objc-magicthreads-0.9.0-release (from `/Users/kgalligan/devel/xp/gradletrans/out/magicthreads-0.9.0`)
-  - j2objc-retrofit-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/retrofit`)
-  - j2objc-retrofit-release (from `/Users/kgalligan/devel/xp/gradletrans/out/retrofit`)
-  - j2objc-rxjava-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/rxjava`)
-  - j2objc-rxjava-release (from `/Users/kgalligan/devel/xp/gradletrans/out/rxjava`)
-  - j2objc-squeakycore-debug (from `/Users/kgalligan/devel/xp/gradletrans/out/squeakycore`)
-  - j2objc-squeakycore-release (from `/Users/kgalligan/devel/xp/gradletrans/out/squeakycore`)
+  - j2objc-magicthreads-0.9.0-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/magicthreads-0.9.0`)
+  - j2objc-magicthreads-0.9.0-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/magicthreads-0.9.0`)
+  - j2objc-retrofit-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/retrofit`)
+  - j2objc-retrofit-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/retrofit`)
+  - j2objc-rxjava-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/rxjava`)
+  - j2objc-rxjava-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/rxjava`)
+  - j2objc-squeakycore-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/squeakycore`)
+  - j2objc-squeakycore-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/squeakycore`)
 
 EXTERNAL SOURCES:
   J2OBJC:
     :path: /Users/kgalligan/devel/j2objc/dist
   j2objc-androidbase-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/androidbase
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/androidbase
   j2objc-androidbase-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/androidbase
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/androidbase
   j2objc-commons-io-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/commons-io
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/commons-io
   j2objc-commons-io-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/commons-io
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/commons-io
   j2objc-commons-lang3-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/commons-lang3
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/commons-lang3
   j2objc-commons-lang3-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/commons-lang3
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/commons-lang3
   j2objc-cupboard-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/cupboard
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/cupboard
   j2objc-cupboard-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/cupboard
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/cupboard
   j2objc-eventbus-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/eventbus
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/eventbus
   j2objc-eventbus-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/eventbus
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/eventbus
   j2objc-greendao-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/greendao
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/greendao
   j2objc-greendao-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/greendao
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/greendao
   j2objc-gson-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/gson
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/gson
   j2objc-gson-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/gson
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/gson
   j2objc-intellij-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/intellij
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/intellij
   j2objc-intellij-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/intellij
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/intellij
   j2objc-javalib-debug:
     :path: ../javalib/build/j2objcOutputs
   j2objc-javalib-release:
     :path: ../javalib/build/j2objcOutputs
   j2objc-magicthreads-0.9.0-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/magicthreads-0.9.0
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/magicthreads-0.9.0
   j2objc-magicthreads-0.9.0-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/magicthreads-0.9.0
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/magicthreads-0.9.0
   j2objc-retrofit-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/retrofit
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/retrofit
   j2objc-retrofit-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/retrofit
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/retrofit
   j2objc-rxjava-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/rxjava
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/rxjava
   j2objc-rxjava-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/rxjava
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/rxjava
   j2objc-squeakycore-debug:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/squeakycore
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/squeakycore
   j2objc-squeakycore-release:
-    :path: /Users/kgalligan/devel/xp/gradletrans/out/squeakycore
+    :path: /Users/kgalligan/devel/j2objc/dist/doppel/squeakycore
 
 SPEC CHECKSUMS:
   J2OBJC: 1916b297a459b9d983b8f7a20e4683833646446a
@@ -130,7 +130,7 @@ SPEC CHECKSUMS:
   j2objc-gson-release: 9a97c3ddbd57767be87cf48eb9374ff153350cc3
   j2objc-intellij-debug: d889a88e55bf40ca7c1f2cb36cdc05c632be055e
   j2objc-intellij-release: 4060a8810dbe57a991a1c969808df73b1a148dba
-  j2objc-javalib-debug: 4380c0c6fca48b3fc636c8106f3530535b8724e1
+  j2objc-javalib-debug: 953d93b8b64ba0adee7cef7ad1c1172695ba3199
   j2objc-javalib-release: 84b5d32bb96fe261090ffbd1e204043542f43dcb
   j2objc-magicthreads-0.9.0-debug: ec68f96f18db52fe055b3a326a1920466fd27a3e
   j2objc-magicthreads-0.9.0-release: efd2e807d25cce664a25bc7c27fb7a8781594913
@@ -141,6 +141,6 @@ SPEC CHECKSUMS:
   j2objc-squeakycore-debug: b838f1f048c3f817e71b5b6fe67f55cca923204e
   j2objc-squeakycore-release: b4aa28e864239febece5864edf5af07c9e7c12fd
 
-PODFILE CHECKSUM: 8f11e7cb06ce45b41214ef15f3bd2712954d196d
+PODFILE CHECKSUM: d51acbb3f1ec9b6b5ffad5084981829d9ae55854
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.0.0

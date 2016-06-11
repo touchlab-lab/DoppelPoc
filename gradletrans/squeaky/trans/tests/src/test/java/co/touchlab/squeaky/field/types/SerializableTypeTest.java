@@ -10,7 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
 import java.sql.SQLException;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
@@ -19,9 +19,9 @@ import co.touchlab.squeaky.table.DatabaseTable;
 
 
 import static org.junit.Assert.assertTrue;
-
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class SerializableTypeTest extends BaseTypeTest
+public class SerializableTypeTest extends BaseTypeTestHide
 {
 
 	private static final String SERIALIZABLE_COLUMN = "serializable";

@@ -5,8 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.littleinc.orm_benchmark.sqlite.*;
-
 import java.util.ArrayList;
 import java.util.List;
 

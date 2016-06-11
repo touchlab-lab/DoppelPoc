@@ -2,7 +2,6 @@ package com.littleinc.orm_benchmark.memtest;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
 import com.littleinc.orm_benchmark.sqlite.User;

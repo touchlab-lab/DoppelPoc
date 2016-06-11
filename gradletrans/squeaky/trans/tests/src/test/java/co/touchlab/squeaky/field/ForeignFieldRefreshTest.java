@@ -8,18 +8,19 @@ import org.junit.runner.RunWith;
 
 import java.sql.SQLException;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.dao.DaoHelper;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.field.types.BaseTypeTestHide;
 import co.touchlab.squeaky.stmt.Where;
 import co.touchlab.squeaky.table.DatabaseTable;
 
 /**
  * Created by kgalligan on 7/26/15.
  */
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class ForeignFieldRefreshTest extends BaseTypeTest
+public class ForeignFieldRefreshTest extends BaseTypeTestHide
 {
 	public static final String PREFIX = "Hello ";
 	private SimpleHelper helper;

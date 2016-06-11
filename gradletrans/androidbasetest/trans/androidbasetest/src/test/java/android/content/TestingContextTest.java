@@ -14,9 +14,12 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import co.touchlab.doppel.testing.DoppelTest;
+
 /**
  * Created by kgalligan on 4/7/16.
  */
+@DoppelTest
 public class TestingContextTest
 {
     @Rule
@@ -29,7 +32,7 @@ public class TestingContextTest
     {
         try
         {
-            testPath("customizedExceptionUsed");
+//            testPath("customizedExceptionUsed");
 
             /*final SharedPreferences test = iosContext
                     .getSharedPreferences("test", Context.MODE_PRIVATE);
@@ -64,7 +67,7 @@ public class TestingContextTest
         }
     }
 
-    @Test
+    /*@Test
     public void testFolderAgain()
     {
         testPath("testFolderAgain");
@@ -132,5 +135,5 @@ public class TestingContextTest
         }
 //        System.getProperty("java.vendor")
         System.out.println("java.vendor: " + System.getProperty("java.vendor"));
-    }
+    }*/
 }

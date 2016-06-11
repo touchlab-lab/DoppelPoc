@@ -12,6 +12,8 @@
 #import "java/util/ArrayList.h"
 #import "java/util/LinkedList.h"
 #import "java/util/List.h"
+#import "com/littleinc/orm_benchmark/AllRun.h"
+
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *notesArray;
 @end
@@ -26,8 +28,14 @@
 }
 
 - (IBAction)runClicked:(id)sender {
+    
+    [ComLittleincOrm_benchmarkAllRun runAll];
 //    [_benchmarkPresenter startBenchmark];
-    [_simpleTestPresenter runDbTest];
+//    [_simpleTestPresenter runDbTest];
+}
+
+- (IBAction)runRetrofit:(id)sender{
+    [_benchmarkPresenter startRetrofitBench];
 }
 
 - (void)showTextWithNSString:(NSString *)results{

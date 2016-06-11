@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import java.sql.SQLException;
 import java.util.List;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.field.SqlType;
@@ -20,9 +20,9 @@ import co.touchlab.squeaky.table.DatabaseTable;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class BigIntegerTypeTest extends BaseTypeTest
+public class BigIntegerTypeTest extends BaseTypeTestHide
 {
 
 	private final static String BIGINTEGER_COLUMN = "bigInteger";

@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
@@ -15,6 +16,21 @@ dependencies {
     compile 'com.google.j2objc:j2objc-annotations:0.1'
     provided project(':androidbase')
     j2objcLinkage project(':androidbase')
+}
+
+tasks.withType(Test) {
+    scanForTestClasses = false
+    include "**/*Test.class" // whatever Ant pattern matches your test class files
+}
+
+group = 'co.touchlab.doppel'
+version = '0.1.0-SNAPSHOT'
+
+install {
+    repositories.mavenInstaller {
+        pom.version = project.version
+        pom.artifactId = 'androidbasetest'
+    }
 }
 
 j2objcConfig {

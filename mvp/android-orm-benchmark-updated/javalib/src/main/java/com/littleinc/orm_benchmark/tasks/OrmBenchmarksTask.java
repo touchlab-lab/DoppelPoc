@@ -4,10 +4,6 @@ import android.util.Log;
 
 import com.google.j2objc.annotations.AutoreleasePool;
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
-import com.littleinc.orm_benchmark.cupboard.CupboardExecutor;
-import com.littleinc.orm_benchmark.flat.GsonFileExecutor;
-import com.littleinc.orm_benchmark.flat.JsonFileExecutor;
-import com.littleinc.orm_benchmark.greendao.GreenDaoExecutor;
 import com.littleinc.orm_benchmark.sqlite.SQLiteExecutor;
 import com.littleinc.orm_benchmark.sqliteoptimized.OptimizedSQLiteExecutor;
 import com.littleinc.orm_benchmark.squeaky.SqueakyExecutor;
@@ -58,19 +54,6 @@ public class OrmBenchmarksTask extends Task
         WRITE_DATA,
         READ_DATA,
         DROP_DB;
-    }
-
-    @AutoreleasePool
-    public void overlove(Context context)
-    {
-        try
-        {
-            run(context);
-        }
-        catch(Throwable throwable)
-        {
-            throw new RuntimeException(throwable);
-        }
     }
 
     @Override

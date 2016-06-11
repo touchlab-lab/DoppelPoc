@@ -9,6 +9,15 @@ dependencies {
 
     compile 'junit:junit:4.11'
     compile 'com.google.j2objc:j2objc-annotations:0.1'
+
+    j2objcLinkage project(':androidbase')
+    provided project(':androidbasetest')
+    j2objcLinkage project(':androidbasetest')
+}
+test {
+    testLogging {
+        showStandardStreams = true
+    }
 }
 
 j2objcConfig {
@@ -16,13 +25,7 @@ j2objcConfig {
 //    autoConfigureDeps true
 
     //headerMappingFiles 'j2objcheaders.properties'
-
-    testPattern {
-
-        // Exclude a single test without needing to specify the full path
-        exclude '**/*.java'
-
-    }
+    extraLinkerArgs '-lsqlite3'
 
 //    j2objcCycleFinder { enabled = true }
 
@@ -30,7 +33,7 @@ j2objcConfig {
 
     finalConfigure()          // Must be last call to configuration
 
-    testMinExpectedTests 0
+    testMinExpectedTests 6
 
     extraObjcCompilerArgs '-Wno-deprecated'
 

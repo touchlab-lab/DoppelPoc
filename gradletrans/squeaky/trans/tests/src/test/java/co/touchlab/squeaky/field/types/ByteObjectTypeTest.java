@@ -6,16 +6,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.table.DatabaseTable;
 
 
 import static org.junit.Assert.assertTrue;
-
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class ByteObjectTypeTest extends BaseTypeTest
+public class ByteObjectTypeTest extends BaseTypeTestHide
 {
 
 	private static final String BYTE_COLUMN = "byteField";

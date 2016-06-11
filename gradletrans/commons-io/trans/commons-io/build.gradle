@@ -24,7 +24,7 @@ testPattern {
         exclude '**/*Abstract*.java'
         include '**/*Test*.java'
     }
-    //testMinExpectedTests 0
+    testMinExpectedTests 0
 
 extraObjcCompilerArgs '-Wno-deprecated'
 

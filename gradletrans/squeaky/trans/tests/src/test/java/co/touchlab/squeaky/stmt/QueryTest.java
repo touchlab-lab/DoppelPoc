@@ -1,11 +1,11 @@
 package co.touchlab.squeaky.stmt;
 
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.field.types.BaseTypeTestHide;
 import co.touchlab.squeaky.stmt.query.Queryable;
 import co.touchlab.squeaky.table.DatabaseTable;
 import org.junit.Before;
@@ -19,8 +19,9 @@ import java.util.Date;
 /**
  * Created by kgalligan on 5/11/16.
  */
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class QueryTest extends BaseTypeTest
+public class QueryTest extends BaseTypeTestHide
 {
     private static final String DATE_COLUMN = "date";
     private SimpleHelper helper;

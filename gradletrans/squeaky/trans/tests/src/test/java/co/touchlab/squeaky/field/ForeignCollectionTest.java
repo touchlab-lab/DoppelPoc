@@ -11,9 +11,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.field.types.BaseTypeTestHide;
 import co.touchlab.squeaky.table.DatabaseTable;
 import co.touchlab.squeaky.utils.AssertHelper;
 
@@ -23,8 +23,9 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by kgalligan on 7/26/15.
  */
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class ForeignCollectionTest extends BaseTypeTest
+public class ForeignCollectionTest extends BaseTypeTestHide
 {
 	private SimpleHelper helper;
 

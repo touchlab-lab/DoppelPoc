@@ -5,15 +5,12 @@ apply plugin: 'com.touchlab.doppel.doppelgradle'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-configurations {
-    provided
-    compile.extendsFrom provided
-}
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.google.android:android:4.1.1.4'
-    compile 'com.google.j2objc:j2objc-annotations:0.1'
+//    compile 'com.google.android:android:4.1.1.4'
+//    compile 'com.google.j2objc:j2objc-annotations:0.1'
+
+    compile 'junit:junit:4.11'
 
     apt 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
     compile 'co.touchlab.squeaky:squeaky-core:0.5.0.0'
@@ -23,29 +20,15 @@ dependencies {
 
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'de.greenrobot:eventbus:2.4.0'
-//    compile 'de.greenrobot:eventbus:2.2.1'
 
-//    j2objcLinkage project(":cupboard")
-//    j2objcLinkage project(":greendao")
-//    j2objcLinkage project(":squeakycore")
-//    j2objcLinkage project(":squeakyquery")
-//    j2objcLinkage project(":androidbase")
-//    j2objcLinkage project(":retrofit")
-//    j2objcLinkage project(":rxjava")
-//    j2objcLinkage project(":gson")
-
-    provided 'com.intellij:annotations:9.0.4'
-//    j2objcLinkage project(":intellij")
+//    provided 'com.intellij:annotations:9.0.4'
 
     compile 'commons-io:commons-io:2.4'
     compile 'org.apache.commons:commons-lang3:3.3.2'
 
     compile 'co.touchlab:magicthreads:0.9.0'
 
-//    provided project(":magicthreads-0.9.0")
-
-//    compile project(":eventbus")
-
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
 }
 
 j2objcConfig {
@@ -57,26 +40,9 @@ j2objcConfig {
 
     testMinExpectedTests 0
 
-//    podRetainSource true
-//
-//    translateArgs '-use-arc'
-//
-//    extraObjcCompilerArgs '-fobjc-arc'
-
     extraLinkerArgs '-lsqlite3'
 
     translateArgs '--prefix', 'com.littleinc.orm_benchmark.memtest=MEM'
-
-//    podDependency 'Gson,../../Gson'
-//    podDependency 'Dagger2,../../Dagger2'
-//    podDependency 'Okhttp,../../Okhttp'
-//    podDependency 'RxJava,../../RxJava'
-//    podDependency 'Retrofit,../../Retrofit'
-//    podDependency 'AndroidBase,../../AndroidBase'
-//    podDependency 'SqueakyCore,../../SqueakyCore'
-//    podDependency 'EventBus,../../EventBus'
-//    podDependency 'MagicThreads,../../MagicThreads'
-//    podDependency 'J2OBJC,../../J2OBJC'
 
     finalConfigure()          // Must be last call to configuration
 }

@@ -22,6 +22,8 @@ j2objcConfig {
 
     //headerMappingFiles 'j2objcheaders.properties'
 
+
+
 //testPattern {
 //
 //        // Exclude a single test without needing to specify the full path

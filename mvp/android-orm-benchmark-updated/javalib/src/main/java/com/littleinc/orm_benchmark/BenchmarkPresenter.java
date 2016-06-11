@@ -1,11 +1,9 @@
 package com.littleinc.orm_benchmark;
 import android.content.Context;
-import android.os.Handler;
 import android.util.Log;
 
-import com.google.j2objc.annotations.WeakOuter;
-import com.littleinc.orm_benchmark.sqlite.SQLiteExecutor;
 import com.littleinc.orm_benchmark.tasks.OrmBenchmarksTask;
+import com.littleinc.orm_benchmark.tasks.RetrofitTestTask;
 import com.littleinc.orm_benchmark.tasks.RunShitloadsTask;
 
 import co.touchlab.android.threading.eventbus.EventBusExt;
@@ -17,9 +15,6 @@ import co.touchlab.android.threading.tasks.utils.TaskQueueHelper;
  */
 public class BenchmarkPresenter
 {
-
-    private final Handler handler;
-
     public BenchmarkPresenter(Host host, boolean startup)
     {
         this.host = host;
@@ -27,8 +22,6 @@ public class BenchmarkPresenter
         refreshUi();
         if(startup)
             host.showText("(Output)");
-
-        handler = new Handler();
     }
 
     public void fillTests()
@@ -81,26 +74,6 @@ public class BenchmarkPresenter
 
     public void startBenchmark()
     {
-        runTest();
-//        handler.post(runTheTestRunnable);
-    }
-
-    @WeakOuter
-    class RunTheTestRunnable implements Runnable
-    {
-
-        @Override
-        public void run()
-        {
-            runTest();
-            handler.postDelayed(runTheTestRunnable, 20000);
-        }
-    }
-
-    RunTheTestRunnable runTheTestRunnable = new RunTheTestRunnable();
-
-    public void runTest()
-    {
         final boolean benchmarkRunning = benchmarkRunning();
         if(! benchmarkRunning)
         {
@@ -109,18 +82,26 @@ public class BenchmarkPresenter
         }
         refreshUi();
         host.showText("Running...");
+    }
 
-        /*host.showText("OK, OK");
-        final OrmBenchmarksTask ormBenchmarksTask = new OrmBenchmarksTask();
-        ormBenchmarksTask.overlove(host.getContext());
-        onEventMainThread(ormBenchmarksTask);*/
+    public void startRetrofitBench()
+    {
+        final boolean benchmarkRunning = benchmarkRunning();
+        if(! benchmarkRunning)
+        {
+            RetrofitTestTask theTask = new RetrofitTestTask();
+            TaskQueue.loadQueueDefault(host.getContext()).execute(theTask);
+        }
+        refreshUi();
+        host.showText("Running...");
     }
 
     public boolean benchmarkRunning()
     {
         final TaskQueue taskQueue = TaskQueue.loadQueueDefault(host.getContext());
         return TaskQueueHelper
-                .hasTasksOfType(taskQueue, OrmBenchmarksTask.class, RunShitloadsTask.class);
+                .hasTasksOfType(taskQueue, OrmBenchmarksTask.class, RunShitloadsTask.class,
+                        RetrofitTestTask.class);
     }
 
     public void unregister()

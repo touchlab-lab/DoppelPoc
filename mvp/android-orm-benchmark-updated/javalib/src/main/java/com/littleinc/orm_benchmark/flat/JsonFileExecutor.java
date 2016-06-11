@@ -3,7 +3,6 @@ package com.littleinc.orm_benchmark.flat;
 import android.content.Context;
 import android.util.Log;
 
-import com.google.gson.Gson;
 import com.google.j2objc.annotations.AutoreleasePool;
 import com.littleinc.orm_benchmark.BenchmarkExecutable;
 

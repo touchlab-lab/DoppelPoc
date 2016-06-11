@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.field.types.BaseTypeTestHide;
 import co.touchlab.squeaky.stmt.Where;
 import co.touchlab.squeaky.table.DatabaseTable;
 
@@ -22,8 +22,9 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by kgalligan on 7/26/15.
  */
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class ForeignFieldTest extends BaseTypeTest
+public class ForeignFieldTest extends BaseTypeTestHide
 {
 	public static final String PREFIX = "Hello ";
 	private SimpleHelper helper;

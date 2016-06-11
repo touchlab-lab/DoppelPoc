@@ -10,19 +10,19 @@ import org.junit.runner.RunWith;
 
 import java.util.List;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.db.sqlite.SQLiteDatabaseImpl;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.field.types.BaseTypeTestHide;
 import co.touchlab.squeaky.table.DatabaseTable;
 import co.touchlab.squeaky.table.TableUtils;
 
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class DatabaseFieldTest extends BaseTypeTest
+public class DatabaseFieldTest extends BaseTypeTestHide
 {
 	private SimpleHelper helper;
 

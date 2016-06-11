@@ -14,18 +14,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import co.touchlab.doppel.test.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelRobolectricTestRunner;
+import co.touchlab.doppel.testing.DoppelTest;
 import co.touchlab.squeaky.field.DataType;
 import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.field.types.BaseTypeTest;
+import co.touchlab.squeaky.field.types.BaseTypeTestHide;
 import co.touchlab.squeaky.stmt.Where;
 import co.touchlab.squeaky.table.DatabaseTable;
 
 /**
  * Created by kgalligan on 9/14/15.
  */
+@DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class DaoTest extends BaseTypeTest
+public class DaoTest extends BaseTypeTestHide
 {
 	private SimpleHelper helper;
 
@@ -487,7 +489,7 @@ public class DaoTest extends BaseTypeTest
 		final String name;
 	}
 
-	private BaseTypeTest.SimpleHelper getHelper()
+	private BaseTypeTestHide.SimpleHelper getHelper()
 	{
 		return createHelper(
 				Foo.class, Bar.class

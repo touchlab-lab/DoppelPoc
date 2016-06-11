@@ -32,20 +32,11 @@ dependencies {
 
 j2objcConfig {
 
-    testPattern {
-        include '**/*Tests.java'
-        include '**/*Test.java'
-        exclude '**/BaseTest.java'
-        exclude '**/DataPersisterManagerTest.java'
-        exclude '**/FieldTypeTest.java'
-        exclude '**/SuperBaseTest.java'
-        exclude '**/BaseTypeTest.java'
 
-    }
 
     extraLinkerArgs '-lsqlite3'
 extraObjcCompilerArgs '-Wno-deprecated'
-    testMinExpectedTests 128
+    testMinExpectedTests 127
     finalConfigure()          // Must be last call to configuration
 
     /*translateArgs '--prefix', 'com.google.gson=GSON'
