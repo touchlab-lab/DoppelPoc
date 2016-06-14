@@ -1,5 +1,7 @@
 package co.touchlab.squeaky.stmt;
 
+import com.google.j2objc.annotations.Weak;
+
 import co.touchlab.squeaky.field.FieldType;
 
 import java.sql.SQLException;
@@ -9,6 +11,7 @@ import java.sql.SQLException;
  */
 public class JoinAlias
 {
+	@Weak
 	public final Where where;
 	public final String parentPrefix;
 	public final Class tableType;

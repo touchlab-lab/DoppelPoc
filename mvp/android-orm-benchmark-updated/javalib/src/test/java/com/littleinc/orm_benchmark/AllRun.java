@@ -14,8 +14,6 @@ public class AllRun
     {
 
         JUnitCore junit = new JUnitCore();
-//        BasicTest basicTest = new BasicTest();
-//        basicTest.testParseComments();
         Result result = junit.run(BasicTest.class);
     }
 }

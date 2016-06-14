@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: "net.ltgt.apt"
 apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
@@ -10,9 +11,13 @@ dependencies {
     compile 'junit:junit:4.11'
     compile 'com.google.j2objc:j2objc-annotations:0.1'
 
-    j2objcLinkage project(':androidbase')
-    provided project(':androidbasetest')
-    j2objcLinkage project(':androidbasetest')
+//    j2objcLinkage project(':androidbase')
+//    provided project(':androidbasetest')
+//    testCompile project(':androidbasetest')
+//    j2objcLinkage project(':androidbasetest')
+    testCompile 'co.touchlab.doppel:androidbasetest:0.1.0-SNAPSHOT'
+//    testApt 'co.touchlab.doppel:testapt:0.1.0-SNAPSHOT'
+
 }
 test {
     testLogging {
@@ -27,9 +32,12 @@ j2objcConfig {
     //headerMappingFiles 'j2objcheaders.properties'
     extraLinkerArgs '-lsqlite3'
 
+    translateDoppelLibs 'eventbus', 'squeakycore', 'cupboard', 'greendao', 'androidbase', 'androidbasetest', 'magicthreads-0.9.0', 'commons-io', 'commons-lang3', 'retrofit', 'rxjava', 'intellij'
+
 //    j2objcCycleFinder { enabled = true }
 
-    doppelPackageDeploy = true
+    xcodeProjectDir '../../ios'  //  suggested directory name
+    xcodeTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
 
     finalConfigure()          // Must be last call to configuration
 

@@ -1,0 +1,76 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+
+
+
+# J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY START - can be moved as a block
+def j2objc_gson
+    pod 'j2objc-gson-debug', :path => '../trans/gson/build/j2objcOutputs'
+    pod 'j2objc-gson-test', :path => '../trans/gson/build/j2objcOutputs'
+end
+# J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY END
+
+target 'ios' do
+    platform :ios, '8.3'
+    j2objc_gson
+pod 'j2objc-eventbus-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/eventbus'
+pod 'j2objc-eventbus-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/eventbus'
+pod 'j2objc-squeakycore-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/squeakycore'
+pod 'j2objc-squeakycore-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/squeakycore'
+pod 'j2objc-cupboard-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/cupboard'
+pod 'j2objc-cupboard-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/cupboard'
+pod 'j2objc-greendao-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/greendao'
+pod 'j2objc-greendao-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/greendao'
+pod 'j2objc-androidbase-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbase'
+pod 'j2objc-androidbase-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbase'
+pod 'j2objc-androidbasetest-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbasetest'
+pod 'j2objc-androidbasetest-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbasetest'
+pod 'j2objc-magicthreads-0.9.0-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/magicthreads-0.9.0'
+pod 'j2objc-magicthreads-0.9.0-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/magicthreads-0.9.0'
+pod 'j2objc-commons-io-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-io'
+pod 'j2objc-commons-io-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-io'
+pod 'j2objc-commons-lang3-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-lang3'
+pod 'j2objc-commons-lang3-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-lang3'
+pod 'j2objc-retrofit-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/retrofit'
+pod 'j2objc-retrofit-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/retrofit'
+pod 'j2objc-rxjava-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/rxjava'
+pod 'j2objc-rxjava-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/rxjava'
+pod 'j2objc-intellij-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
+pod 'j2objc-intellij-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
+    
+    pod 'J2OBJC', :path => ENV['J2OBJC_HOME']
+end
+
+target 'iosTests' do
+    platform :ios, '8.3'
+    j2objc_gson
+pod 'j2objc-eventbus-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/eventbus'
+pod 'j2objc-eventbus-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/eventbus'
+pod 'j2objc-squeakycore-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/squeakycore'
+pod 'j2objc-squeakycore-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/squeakycore'
+pod 'j2objc-cupboard-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/cupboard'
+pod 'j2objc-cupboard-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/cupboard'
+pod 'j2objc-greendao-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/greendao'
+pod 'j2objc-greendao-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/greendao'
+pod 'j2objc-androidbase-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbase'
+pod 'j2objc-androidbase-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbase'
+pod 'j2objc-androidbasetest-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbasetest'
+pod 'j2objc-androidbasetest-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbasetest'
+pod 'j2objc-magicthreads-0.9.0-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/magicthreads-0.9.0'
+pod 'j2objc-magicthreads-0.9.0-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/magicthreads-0.9.0'
+pod 'j2objc-commons-io-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-io'
+pod 'j2objc-commons-io-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-io'
+pod 'j2objc-commons-lang3-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-lang3'
+pod 'j2objc-commons-lang3-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/commons-lang3'
+pod 'j2objc-retrofit-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/retrofit'
+pod 'j2objc-retrofit-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/retrofit'
+pod 'j2objc-rxjava-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/rxjava'
+pod 'j2objc-rxjava-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/rxjava'
+pod 'j2objc-intellij-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
+pod 'j2objc-intellij-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
+    
+
+end

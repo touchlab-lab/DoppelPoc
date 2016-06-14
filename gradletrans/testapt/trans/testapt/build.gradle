@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+configurations {
+    provided
+    compile.extendsFrom provided
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'junit:junit:4.11'
+    compile 'com.google.j2objc:j2objc-annotations:0.1'
+//    provided project(':androidbase')
+    compile 'co.touchlab.doppel:androidbasetest:0.1.0-SNAPSHOT'
+    compile 'com.squareup:javapoet:1.1.0'
+}
+
+group = 'co.touchlab.doppel'
+version = '0.1.0-SNAPSHOT'
+
+install {
+    repositories.mavenInstaller {
+        pom.version = project.version
+        pom.artifactId = 'testapt'
+    }
+}

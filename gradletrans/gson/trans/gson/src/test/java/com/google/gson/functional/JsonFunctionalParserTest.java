@@ -44,7 +44,7 @@ import co.touchlab.doppel.testing.DoppelTest;
  * @author Joel Leitch
  */
 @DoppelTest
-public class JsonParserTest extends TestCase {
+public class JsonFunctionalParserTest extends TestCase {
   private Gson gson;
 
   @Override

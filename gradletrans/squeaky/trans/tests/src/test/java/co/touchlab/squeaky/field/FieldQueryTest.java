@@ -21,7 +21,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
  */
 @DoppelTest
 @RunWith(DoppelRobolectricTestRunner.class)
-public class QueryTest extends BaseTypeTestHide
+public class FieldQueryTest extends BaseTypeTestHide
 {
 	private SimpleHelper helper;
 

@@ -1,5 +1,7 @@
 package co.touchlab.squeaky.stmt.query;
 
+import com.google.j2objc.annotations.Weak;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.dao.SqueakyContext;
 import co.touchlab.squeaky.stmt.JoinAlias;
@@ -18,6 +20,8 @@ public class Not<T> implements Clause, Queryable<T>
 
 	private final QueryFactory queryFactory;
 	private Clause comparison = null;
+
+	@Weak
 	private final Queryable<T> parent;
 	private final JoinAlias joinAlias;
 

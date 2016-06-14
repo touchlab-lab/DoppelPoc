@@ -10,6 +10,7 @@
 ./gradlew rxandroid:build
 ./gradlew magicthreads:build
 ./gradlew gson:build
+./gradlew androidbasetest:build
 ./gradlew dagger:build
 ./gradlew agera:build
 ./gradlew cupboard:build

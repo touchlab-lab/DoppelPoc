@@ -1,5 +1,6 @@
 include ":androidbase"
 include ":androidbasetest"
+include ":testapt"
 include ":dagger"
 include ":eventbus"
 include ":gson"
@@ -26,6 +27,7 @@ String gradleBaseString = "/Users/kgalligan/devel/xp/gradletrans"//System.getenv
 
 project(":androidbase").projectDir = new File(gradleBaseString + "/" +"androidbase/trans/lib")
 project(":androidbasetest").projectDir = new File(gradleBaseString + "/" +"androidbasetest/trans/androidbasetest")
+project(":testapt").projectDir = new File(gradleBaseString + "/" +"testapt/trans/testapt")
 project(":dagger").projectDir = new File(gradleBaseString + "/" +"dagger/trans/core")
 project(":eventbus").projectDir = new File(gradleBaseString + "/" +"eventbus/trans/eb")
 project(":gson").projectDir = new File(gradleBaseString + "/" +"gson/trans/gson")

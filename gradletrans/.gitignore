@@ -7,3 +7,5 @@ local.properties
 .idea/libraries
 .DS_Store
 out
+Pods
+*.xcworkspace

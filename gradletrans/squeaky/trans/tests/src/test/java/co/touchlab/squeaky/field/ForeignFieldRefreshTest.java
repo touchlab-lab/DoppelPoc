@@ -1,5 +1,8 @@
 package co.touchlab.squeaky.field;
 
+import com.google.j2objc.annotations.Weak;
+import com.google.j2objc.annotations.WeakOuter;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -181,6 +184,7 @@ public class ForeignFieldRefreshTest extends BaseTypeTestHide
 		String name;
 
 		@DatabaseField(foreign = true, foreignAutoRefresh = true)
+		@Weak
 		ChildEager childEager;
 	}
 

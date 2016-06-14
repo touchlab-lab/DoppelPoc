@@ -29,7 +29,7 @@ import co.touchlab.doppel.testing.DoppelTest;
  * @author Dillon Dixon
  */
 @DoppelTest
-public class JsonArrayTest extends TestCase {
+public class JsonFunctionalArrayTest extends TestCase {
 
   public void testStringPrimitiveAddition() {
     JsonArray jsonArray = new JsonArray();

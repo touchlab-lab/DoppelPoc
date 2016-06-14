@@ -1,5 +1,7 @@
 package co.touchlab.squeaky.stmt.query;
 
+import com.google.j2objc.annotations.Weak;
+
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.dao.SqueakyContext;
 import co.touchlab.squeaky.stmt.JoinAlias;
@@ -22,6 +24,7 @@ public class ManyClause<T> implements Clause, Queryable<T>
 	private final List<Clause> clauses;
 	private final String operation;
 	private final QueryFactory queryFactory;
+	@Weak
 	private final Queryable<T> parent;
 	private final JoinAlias joinAlias;
 
