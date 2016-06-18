@@ -125,8 +125,6 @@ public class IOSContext extends Application
         }
     }
 
-
-
     @Override
     public FileInputStream openFileInput(String name) throws FileNotFoundException
     {

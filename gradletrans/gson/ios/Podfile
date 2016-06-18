@@ -8,8 +8,8 @@
 
 # J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY START - can be moved as a block
 def j2objc_gson
-    pod 'j2objc-gson-debug', :path => '../trans/gson/build/j2objcOutputs'
-    pod 'j2objc-gson-test', :path => '../trans/gson/build/j2objcOutputs'
+    pod 'j2objc-gson-debug', :configuration => ['Debug'], :path => '../trans/gson/build/j2objcOutputs'
+    pod 'j2objc-gson-release', :configuration => ['Release'], :path => '../trans/gson/build/j2objcOutputs'
 end
 # J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY END
 

@@ -15,7 +15,7 @@ PODS:
   - j2objc-greendao-debug (1.0)
   - j2objc-greendao-release (1.0)
   - j2objc-gson-debug (1.0)
-  - j2objc-gson-test (1.0)
+  - j2objc-gson-release (1.0)
   - j2objc-intellij-debug (1.0)
   - j2objc-intellij-release (1.0)
   - j2objc-magicthreads-0.9.0-debug (1.0)
@@ -44,7 +44,7 @@ DEPENDENCIES:
   - j2objc-greendao-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/greendao`)
   - j2objc-greendao-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/greendao`)
   - j2objc-gson-debug (from `../trans/gson/build/j2objcOutputs`)
-  - j2objc-gson-test (from `../trans/gson/build/j2objcOutputs`)
+  - j2objc-gson-release (from `../trans/gson/build/j2objcOutputs`)
   - j2objc-intellij-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/intellij`)
   - j2objc-intellij-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/intellij`)
   - j2objc-magicthreads-0.9.0-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/magicthreads-0.9.0`)
@@ -89,7 +89,7 @@ EXTERNAL SOURCES:
     :path: /Users/kgalligan/devel/j2objc/dist/doppel/greendao
   j2objc-gson-debug:
     :path: ../trans/gson/build/j2objcOutputs
-  j2objc-gson-test:
+  j2objc-gson-release:
     :path: ../trans/gson/build/j2objcOutputs
   j2objc-intellij-debug:
     :path: /Users/kgalligan/devel/j2objc/dist/doppel/intellij
@@ -129,7 +129,7 @@ SPEC CHECKSUMS:
   j2objc-greendao-debug: ea9bf44da59c81caa9851f0c6998af46d5a14ddb
   j2objc-greendao-release: 428d8f3e9c9c5384d5eeaaee24d4ea881a9cebe3
   j2objc-gson-debug: c2b21b99d80ad457f78457ec8719f9db7377dfa8
-  j2objc-gson-test: 5c1d60b1bfbe4adc253acfe47f967d1f707d9517
+  j2objc-gson-release: 77f58f9a1e87a5ad7ae6a2a31373de171b7c9e2e
   j2objc-intellij-debug: 4043552ea1fce546542a5bdf4bd16b999337eed3
   j2objc-intellij-release: a2604c064e97754935426a73af9c0d56f739d9df
   j2objc-magicthreads-0.9.0-debug: 9743ab2a6d0c24e3bb9439fd4804b56cb5a5af0d
@@ -141,6 +141,6 @@ SPEC CHECKSUMS:
   j2objc-squeakycore-debug: e9c2525ae42c28fcb2a24699ef945285b4c19631
   j2objc-squeakycore-release: 7e5fe158ba580c34efdd85805c1a2bca8546142e
 
-PODFILE CHECKSUM: 47e0a0fe7b54907c82821bd363fb666047b96a3b
+PODFILE CHECKSUM: ad664ace2fa68f1cab0b11c8a5f64d6d69b39c0f
 
 COCOAPODS: 1.0.0

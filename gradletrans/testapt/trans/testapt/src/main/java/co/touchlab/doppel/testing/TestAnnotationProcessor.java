@@ -53,7 +53,7 @@ public class TestAnnotationProcessor extends AbstractProcessor
 //            throw new RuntimeException("Balls");
         try
         {
-            messager.printMessage(Diagnostic.Kind.ERROR, "Is running");
+            messager.printMessage(Diagnostic.Kind.NOTE, "Is running");
             return safeProcess(roundEnv);
         } catch (Exception e)
         {
@@ -83,7 +83,14 @@ public class TestAnnotationProcessor extends AbstractProcessor
     {
         Set<? extends Element> matchingElements = roundEnv.getElementsAnnotatedWith(DoppelTest.class);
         if(matchingElements.size() == 0)
+        {
+            messager.printMessage(Diagnostic.Kind.NOTE, "No test matches");
             return false;
+        }
+        else
+        {
+            messager.printMessage(Diagnostic.Kind.NOTE, "matching "+ matchingElements.size());
+        }
 
         ClassName allTests = ClassName.get("", "AllTests");
 

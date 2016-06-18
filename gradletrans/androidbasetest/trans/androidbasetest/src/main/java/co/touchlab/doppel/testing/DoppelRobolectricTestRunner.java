@@ -25,6 +25,7 @@ public class DoppelRobolectricTestRunner extends BlockJUnit4ClassRunner
     public DoppelRobolectricTestRunner(final Class<?> testClass) throws InitializationError
     {
         super(testClass);
+
         if(!PlatformUtils.isJ2objc())
         {
             try
