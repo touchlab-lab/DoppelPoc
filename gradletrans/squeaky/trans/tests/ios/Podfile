@@ -9,7 +9,8 @@
 
 # J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY START - can be moved as a block
 def j2objc_squeakytests
-    pod 'j2objc-squeakytests-debug', :path => '../build/j2objcOutputs'
+    pod 'j2objc-squeakytests-debug', :configuration => ['Debug'], :path => '../build/j2objcOutputs'
+    pod 'j2objc-squeakytests-release', :configuration => ['Release'], :path => '../build/j2objcOutputs'
     pod 'j2objc-squeakytests-test', :path => '../build/j2objcOutputs'
 end
 # J2ObjC Gradle Plugin - PodMethods - DO NOT MODIFY END

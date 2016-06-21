@@ -32,7 +32,7 @@ dependencies {
 }
 
 j2objcConfig {
-    translateDoppelLibs 'eventbus', 'squeakycore', 'cupboard', 'greendao', 'androidbase', 'magicthreads-0.9.0', 'commons-io', 'commons-lang3', 'retrofit', 'rxjava', 'intellij', 'gson'
+    translateDoppelLibs 'eventbus', 'squeakycore', 'cupboard', 'greendao', 'androidbase', 'androidbasetest', 'magicthreads-0.9.0', 'commons-io', 'commons-lang3', 'retrofit', 'rxjava', 'intellij', 'gson'
 
     // Omit these two lines if you don't configure your Xcode project with CocoaPods
     xcodeProjectDir '../ios'  //  suggested directory name

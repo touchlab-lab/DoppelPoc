@@ -26,18 +26,20 @@ test {
 }
 
 j2objcConfig {
-    // Sets up libraries you depend on
-//    autoConfigureDeps true
-
     //headerMappingFiles 'j2objcheaders.properties'
     extraLinkerArgs '-lsqlite3'
 
-    translateDoppelLibs 'eventbus', 'squeakycore', 'cupboard', 'greendao', 'androidbase', 'androidbasetest', 'magicthreads-0.9.0', 'commons-io', 'commons-lang3', 'retrofit', 'rxjava', 'intellij'
+    translateDoppelLibs 'androidbase', 'androidbasetest', 'intellij'
 
 //    j2objcCycleFinder { enabled = true }
 
-    xcodeProjectDir '../../ios'  //  suggested directory name
-    xcodeTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
+    doppelPackageDeploy = true
+
+//    xcodeProjectDir '../../ios'  //  suggested directory name
+//    xcodeTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
+
+    xcodeTestProjectDir '../../ios'  //  suggested directory name
+    xcodeTestTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
 
     finalConfigure()          // Must be last call to configuration
 
@@ -52,4 +54,8 @@ j2objcConfig {
     translateArgs '--prefix', 'com.google.gson.stream=GSONStream'
 
     translatedPathPrefix("ComGoogleGson", "GSON")*/
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
 }

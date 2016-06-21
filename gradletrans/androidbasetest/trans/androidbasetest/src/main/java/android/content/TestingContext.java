@@ -40,12 +40,13 @@ public class TestingContext extends IOSContext
     public TestingContext(File rootDir)
     {
         this.rootDir = rootDir;
+        Looper.prepareMainLooper();
     }
 
     @Override
     public Looper getMainLooper()
     {
-        throw new UnsupportedOperationException("Nope");
+        return Looper.getMainLooper();
     }
 
     private static File makeBackupFile(File prefsFile)

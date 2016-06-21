@@ -29,6 +29,7 @@ PODS:
   - j2objc-squeakyquery-debug (1.0)
   - j2objc-squeakyquery-release (1.0)
   - j2objc-squeakytests-debug (1.0)
+  - j2objc-squeakytests-release (1.0)
   - j2objc-squeakytests-test (1.0)
 
 DEPENDENCIES:
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - j2objc-squeakyquery-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/squeakyquery`)
   - j2objc-squeakyquery-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/squeakyquery`)
   - j2objc-squeakytests-debug (from `../build/j2objcOutputs`)
+  - j2objc-squeakytests-release (from `../build/j2objcOutputs`)
   - j2objc-squeakytests-test (from `../build/j2objcOutputs`)
 
 EXTERNAL SOURCES:
@@ -125,6 +127,8 @@ EXTERNAL SOURCES:
     :path: /Users/kgalligan/devel/j2objc/dist/doppel/squeakyquery
   j2objc-squeakytests-debug:
     :path: ../build/j2objcOutputs
+  j2objc-squeakytests-release:
+    :path: ../build/j2objcOutputs
   j2objc-squeakytests-test:
     :path: ../build/j2objcOutputs
 
@@ -159,8 +163,9 @@ SPEC CHECKSUMS:
   j2objc-squeakyquery-debug: 62007a9641ade1e2facba97f04ac419d420eb93a
   j2objc-squeakyquery-release: b82b9da7675057d4dcc7ef34db73a5c1274353df
   j2objc-squeakytests-debug: 8efb951b1de9f78bafb42d401135a2226623ec16
+  j2objc-squeakytests-release: fc0f963f6d79e97c58bd5fef13d0f4f51db3a6c3
   j2objc-squeakytests-test: 38535fa2be03683b27d2d26682f564cd7e60fc62
 
-PODFILE CHECKSUM: e4bf5846fa902a13af2a5ba6812b7e18123c147b
+PODFILE CHECKSUM: ad903287f42ca20d072649090a4d97a3ff9d0021
 
 COCOAPODS: 1.0.0

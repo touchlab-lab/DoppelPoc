@@ -5,30 +5,16 @@ apply plugin: 'com.touchlab.doppel.doppelgradle'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-configurations {
-    provided
-    compile.extendsFrom provided
-}
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'junit:junit:4.11'
-    compile 'org.robolectric:robolectric:3.0'
-
-//    j2objcLinkage project(':androidbase')
-//    provided project(':androidbasetest')
-//    j2objcLinkage project(':androidbasetest')
-
     compile 'co.touchlab.squeaky:squeaky-core:0.5.0.0'
-//    j2objcLinkage project(':squeakycore')
     compile 'co.touchlab.squeaky:squeaky-query:0.5.0.0'
-//    j2objcLinkage project(':squeakyquery')
-
     compile 'org.apache.commons:commons-lang3:3.3.2'
 
     compile 'co.touchlab.doppel:androidbasetest:0.1.0-SNAPSHOT'
     testApt 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
-//    testApt 'co.touchlab.doppel:testapt:0.1.0-SNAPSHOT'
+    testApt 'co.touchlab.doppel:testapt:0.1.0-SNAPSHOT'
 }
 
 j2objcConfig {
@@ -38,8 +24,9 @@ j2objcConfig {
     extraLinkerArgs '-lsqlite3'
 extraObjcCompilerArgs '-Wno-deprecated'
     testMinExpectedTests 127
-    xcodeProjectDir 'ios'  //  suggested directory name
-    xcodeTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
+
+    xcodeTestProjectDir 'ios'  //  suggested directory name
+    xcodeTestTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
 
     finalConfigure()          // Must be last call to configuration
 

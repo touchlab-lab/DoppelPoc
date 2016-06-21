@@ -113,12 +113,6 @@
 			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.robolectric</groupId>
-			<artifactId>robolectric</artifactId>
-			<version>3.0</version>
-			<scope>test</scope>
-		</dependency>
 
 
 	</dependencies>

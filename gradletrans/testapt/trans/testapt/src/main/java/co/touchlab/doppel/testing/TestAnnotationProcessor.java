@@ -6,9 +6,11 @@ import com.squareup.javapoet.TypeSpec;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
 import java.io.IOException;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -113,6 +115,20 @@ public class TestAnnotationProcessor extends AbstractProcessor
 
         runTestsMethodBuilder.addStatement("$T junit = new $T()", JUnitCore.class, JUnitCore.class);
         runTestsMethodBuilder.addStatement("$T result = junit.run("+ sb.toString() +")", Result.class);
+
+        runTestsMethodBuilder.addStatement("System.out.println(\"Junit complete\")");
+        runTestsMethodBuilder
+                .beginControlFlow("if(result.wasSuccessful())")
+        .addStatement("System.out.println(\"Success\")")
+        .nextControlFlow("else")
+        .addStatement("System.out.println(\"Failures \"+ result.getFailureCount())")
+        .addStatement("$T<$T> failures = result.getFailures()", List.class, Failure.class)
+        .beginControlFlow("for($T failure : failures)", Failure.class)
+        .addStatement("System.out.println(failure.toString())")
+        .endControlFlow()
+        .endControlFlow()
+                ;
+
 
         configBuilder.addMethod(runTestsMethodBuilder.build());
 
