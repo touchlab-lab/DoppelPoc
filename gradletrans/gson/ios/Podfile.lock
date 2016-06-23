@@ -1,5 +1,4 @@
 PODS:
-  - J2OBJC (1.0)
   - j2objc-androidbase-debug (1.0)
   - j2objc-androidbase-release (1.0)
   - j2objc-androidbasetest-debug (1.0)
@@ -11,7 +10,6 @@ PODS:
   - j2objc-intellij-release (1.0)
 
 DEPENDENCIES:
-  - J2OBJC (from `/Users/kgalligan/devel/j2objc/dist`)
   - j2objc-androidbase-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/androidbase`)
   - j2objc-androidbase-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/androidbase`)
   - j2objc-androidbasetest-debug (from `/Users/kgalligan/devel/j2objc/dist/doppel/androidbasetest`)
@@ -23,8 +21,6 @@ DEPENDENCIES:
   - j2objc-intellij-release (from `/Users/kgalligan/devel/j2objc/dist/doppel/intellij`)
 
 EXTERNAL SOURCES:
-  J2OBJC:
-    :path: /Users/kgalligan/devel/j2objc/dist
   j2objc-androidbase-debug:
     :path: /Users/kgalligan/devel/j2objc/dist/doppel/androidbase
   j2objc-androidbase-release:
@@ -45,17 +41,16 @@ EXTERNAL SOURCES:
     :path: /Users/kgalligan/devel/j2objc/dist/doppel/intellij
 
 SPEC CHECKSUMS:
-  J2OBJC: 1916b297a459b9d983b8f7a20e4683833646446a
   j2objc-androidbase-debug: 25b391e859348b394e3d781ac183e8b52ccc5083
   j2objc-androidbase-release: 1fa8d108cc916e107d97b76a398b81338ea66cab
   j2objc-androidbasetest-debug: a9b7780079fd2229ea2a12f34696795ed4377ed2
   j2objc-androidbasetest-release: 368867055a3296b5985702cceb9d2ed80470db23
-  j2objc-gson-debug: c2b21b99d80ad457f78457ec8719f9db7377dfa8
-  j2objc-gson-release: 77f58f9a1e87a5ad7ae6a2a31373de171b7c9e2e
-  j2objc-gson-test: 5c1d60b1bfbe4adc253acfe47f967d1f707d9517
+  j2objc-gson-debug: 5bb1263bef02cdb136a8ba957db8276876820f0a
+  j2objc-gson-release: 0a9d53a745eaa69aaa5cbb5e1a37ca5edc05ad80
+  j2objc-gson-test: fb4ad90f6f2868fb00d6054c264dd733a85705cf
   j2objc-intellij-debug: 4043552ea1fce546542a5bdf4bd16b999337eed3
   j2objc-intellij-release: a2604c064e97754935426a73af9c0d56f739d9df
 
-PODFILE CHECKSUM: 0f25f1fda6dc03d7b6ed7cca0366181108247beb
+PODFILE CHECKSUM: b954ee4251f5a1384050a2af50b4be7894c9b3fb
 
 COCOAPODS: 1.0.0

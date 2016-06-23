@@ -16,8 +16,9 @@ dependencies {
 //    testCompile project(':androidbasetest')
 //    j2objcLinkage project(':androidbasetest')
     compile 'co.touchlab.doppel:androidbasetest:0.1.0-SNAPSHOT'
-    testApt 'co.touchlab.doppel:testapt:0.1.0-SNAPSHOT'
+//    testApt 'co.touchlab.doppel:testapt:0.1.0-SNAPSHOT'
 
+//    doppel 'co.touchlab.doppel:androidbasetest:0.1.0-SNAPSHOT'
 }
 test {
     testLogging {

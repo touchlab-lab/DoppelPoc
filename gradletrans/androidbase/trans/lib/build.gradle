@@ -1,4 +1,6 @@
 apply plugin: 'java'
+//apply plugin: 'maven'
+apply plugin: 'maven-publish'
 apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
@@ -14,6 +16,26 @@ dependencies {
     compile 'junit:junit:4.11'
     compile 'com.google.j2objc:j2objc-annotations:0.1'
     provided 'com.google.android:android:4.1.1.4'
+}
+
+group = 'co.touchlab.doppel'
+version = '0.1.0-SNAPSHOT'
+
+/*install {
+    repositories.mavenInstaller {
+        pom.version = project.version
+        pom.artifactId = 'androidbase'
+    }
+}*/
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            artifact doppelArchive
+        }
+    }
 }
 
 j2objcConfig {

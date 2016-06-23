@@ -24,7 +24,7 @@ pod 'j2objc-androidbasetest-release', :configuration => ['Release'], :path => EN
 pod 'j2objc-intellij-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
 pod 'j2objc-intellij-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
     
-    pod 'J2OBJC', :path => ENV['J2OBJC_HOME']
+    
 end
 
 target 'iosTests' do
@@ -36,6 +36,6 @@ pod 'j2objc-androidbasetest-debug', :configuration => ['Debug'], :path => ENV['J
 pod 'j2objc-androidbasetest-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/androidbasetest'
 pod 'j2objc-intellij-debug', :configuration => ['Debug'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
 pod 'j2objc-intellij-release', :configuration => ['Release'], :path => ENV['J2OBJC_HOME'] + '/doppel/intellij'
-    
+
 
 end

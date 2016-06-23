@@ -1,5 +1,6 @@
 apply plugin: 'java'
-apply plugin: 'maven'
+//apply plugin: 'maven'
+apply plugin: 'maven-publish'
 apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
@@ -14,8 +15,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'junit:junit:4.11'
     compile 'com.google.j2objc:j2objc-annotations:0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
     provided project(':androidbase')
     j2objcLinkage project(':androidbase')
+    doppel 'co.touchlab.doppel:androidbase:0.1.0-SNAPSHOT@dop'
 }
 
 tasks.withType(Test) {
@@ -26,10 +29,21 @@ tasks.withType(Test) {
 group = 'co.touchlab.doppel'
 version = '0.1.0-SNAPSHOT'
 
-install {
+/*install {
     repositories.mavenInstaller {
         pom.version = project.version
         pom.artifactId = 'androidbasetest'
+        pom.packaging = 'dop'
+    }
+}*/
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            artifact doppelArchive
+        }
     }
 }
 
@@ -39,11 +53,11 @@ j2objcConfig {
 
     //headerMappingFiles 'j2objcheaders.properties'
 
-        testPattern {
-            exclude '**/DataBaseHelper.java'
-            exclude '**/Message.java'
+    testPattern {
+        exclude '**/DataBaseHelper.java'
+        exclude '**/Message.java'
 
-        }
+    }
 
 //testPattern {
 //
@@ -53,7 +67,7 @@ j2objcConfig {
 //    }
 //    j2objcCycleFinder { enabled = true }
 
-	extraLinkerArgs '-lsqlite3'
+    extraLinkerArgs '-lsqlite3'
 
     doppelPackageDeploy = true
 
@@ -62,8 +76,6 @@ j2objcConfig {
     extraObjcCompilerArgs '-Wno-deprecated'
 
     finalConfigure()          // Must be last call to configuration
-
-
 
     /*translateArgs '--prefix', 'com.google.gson=GSON'
     translateArgs '--prefix', 'com.google.gson.annotations=GSONAnnotations'
